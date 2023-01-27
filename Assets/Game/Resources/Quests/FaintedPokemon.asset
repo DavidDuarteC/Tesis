@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6574a1e8bfd3c4486267dbc643f67c, type: 3}
+  m_Name: FaintedPokemon
+  m_EditorClassIdentifier: 
+  name: FaintedPokemon
+  description: 
+  startDialog:
+    lines:
+    - My pokemon esta muerto
+    - Podrias traerme un revivir?
+  inProgressDialog:
+    lines:
+    - Porfa traeme un revivir
+  completedDialog:
+    lines:
+    - Gau lo conseguiste! Eres mi salvador
+    - Toma este HM como agradecimiento
+  requiredItem: {fileID: 11400000, guid: d7917b2d0ceca1846a53711ac8d164f9, type: 2}
+  rewardItem: {fileID: 11400000, guid: a69e517b218ca2c4aa354a6c7fe6ae17, type: 2}

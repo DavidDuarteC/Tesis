@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c01880a9026ad844a035ab3b2bb4549, type: 3}
+  m_Name: Butterfree
+  m_EditorClassIdentifier: 
+  name: Butterfree
+  description: 
+  frontSprite: {fileID: -1779852506, guid: a4f5eb2e9559378419b684110efd474b, type: 3}
+  backSprite: {fileID: -833900925, guid: 045988fcc4623ae409aa2645a69d7822, type: 3}
+  type1: 12
+  type2: 10
+  maxHp: 60
+  attack: 45
+  defense: 50
+  spAttack: 90
+  spDefense: 80
+  speed: 70
+  expYield: 60
+  growRate: 0
+  catchRate: 255
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 1def9a30b6c3e5443b115ee65c154bf9, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 44aa175fb333a594d9c2fce6b1c10f67, type: 2}
+    level: 10
+  learnableByItems:
+  - {fileID: 11400000, guid: 8c28f3cd50ac0f5409c52f78c6ef6a8e, type: 2}
+  - {fileID: 11400000, guid: 1def9a30b6c3e5443b115ee65c154bf9, type: 2}

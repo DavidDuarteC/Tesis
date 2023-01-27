@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b927a379f657ed4bbe3a49f7e2e059e, type: 3}
+  m_Name: TM01
+  m_EditorClassIdentifier: 
+  name: TM01
+  description: "Ense\xF1a Super Sonic al pokemon"
+  icon: {fileID: -1804011318, guid: 3ae12697ae504414bbf0797ea36dfddd, type: 3}
+  move: {fileID: 11400000, guid: c2f0a7210292edb45a46bdb414411e0f, type: 2}
