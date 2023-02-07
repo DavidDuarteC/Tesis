@@ -481,22 +481,29 @@ public class BattleSystem : MonoBehaviour
             if (nextPokemon != null)
                 OpenPartyScreen();
             else
+            {
+                StressLevel.i.AddLevel(StressLevel.i.LostMoreTimeRow ? StressLevel.i.LoseMultiply * 2 : StressLevel.i.LoseMultiply);
                 BattleOver(false);
+            }
         }
         else
         {
             if (!isTrainerBattle)
             {
+                StressLevel.i.LostMoreTimeRow = false;
                 BattleOver(true);
             }
             else
             {
                 var nextPokemon = trainerParty.GetHealthyPokemon();
-                if(nextPokemon != null)
+                if (nextPokemon != null)
                     //Envia el siguiente pokemon
                     StartCoroutine(AboutToUse(nextPokemon));
                 else
+                {
+                    StressLevel.i.LostMoreTimeRow = false;
                     BattleOver(true);
+                }
             }
         }
             

@@ -2213,6 +2213,7 @@ MonoBehaviour:
   worldCamera: {fileID: 253629661426502222}
   partyScreen: {fileID: 3413005330358004210}
   inventoryUI: {fileID: 3669126872460818413}
+  thermometerUI: {fileID: 5902747771826184707}
 --- !u!114 &253629661372716221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4764,6 +4765,46 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3676024153282413835, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676024153282413835, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676024153282413835, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676024153282413835, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676024153282413835, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676024153282413835, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -174.6932
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676024153282413835, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 228.76929
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676024153282413835, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676024153282413835, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -4.8075867
+      objectReference: {fileID: 0}
+    - target: {fileID: 3676024153282413835, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -93.30995
+      objectReference: {fileID: 0}
     - target: {fileID: 3756234187986491822, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -5123,6 +5164,14 @@ PrefabInstance:
     - target: {fileID: 5135693531669299722, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -425
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169596571623703399, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
+      propertyPath: m_Name
+      value: Thermometer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169596571623703399, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5252077107654818241, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5916,6 +5965,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -25
       objectReference: {fileID: 0}
+    - target: {fileID: 7730349587338900216, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7736218142793070197, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6638,6 +6691,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 622391577428903077, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
   m_PrefabInstance: {fileID: 4026510539159260653}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5902747771826184707 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7353199324049305582, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
+  m_PrefabInstance: {fileID: 4026510539159260653}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cdcd6a0a9191241996d4bb5e43f8fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5176403498246567712
 PrefabInstance:
   m_ObjectHideFlags: 0

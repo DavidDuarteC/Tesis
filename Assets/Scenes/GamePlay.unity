@@ -557,7 +557,7 @@ PrefabInstance:
       objectReference: {fileID: 1203709441}
     - target: {fileID: 253629661382041298, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: pokemons.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 253629661382041298, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: pokemons.Array.data[1]._base
@@ -4131,6 +4131,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5690291911959487116, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: seg
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5713148557282880174, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4154,6 +4158,10 @@ PrefabInstance:
     - target: {fileID: 5713148557282880174, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5727281899756709290, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: level
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 5742091741243850620, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5894,7 +5902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wildPokemons:
   - pokemon: {fileID: 11400000, guid: 606917c5c5200ee419404bcc3cad4c8f, type: 2}
-    levelRange: {x: 6, y: 7}
+    levelRange: {x: 100, y: 101}
     chancePercentage: 100
   wildPokemonsInWater:
   - pokemon: {fileID: 11400000, guid: 50c1b4d26c5c8d049ac03a10a0d69b81, type: 2}
