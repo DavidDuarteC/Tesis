@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     [SerializeField] Camera worldCamera;
     [SerializeField] PartyScreen partyScreen;
     [SerializeField] InventoryUI inventoryUI;
+    [SerializeField] ThermometerUI thermometerUI;
 
     GameState state;
     GameState prevState;
@@ -41,6 +42,7 @@ public class GameController : MonoBehaviour
         ConditionsDB.Init();
         ItemDB.Init();
         QuestDB.Init();
+        
     }
 
     private void Start()
@@ -51,6 +53,7 @@ public class GameController : MonoBehaviour
         battleSystem.OnBattleOver += EndBattle;
 
         partyScreen.Init();
+        thermometerUI.SetStress();
 
         DialogManager.Instance.OnShowDialog += () =>
         {
@@ -85,7 +88,7 @@ public class GameController : MonoBehaviour
 
         ShopController.i.OnStart += () => state = GameState.Shop;
         ShopController.i.OnFinish += () => state = GameState.FreeRoam;
-
+        thermometerUI.gameObject.SetActive(true);
 
     }
 
@@ -117,6 +120,7 @@ public class GameController : MonoBehaviour
         state = GameState.Battle;
         battleSystem.gameObject.SetActive(true);
         worldCamera.gameObject.SetActive(false);
+        thermometerUI.gameObject.SetActive(false);
 
         var playerParty = playerController.GetComponent<PokemonParty>();
         var wildPokmeon = CurrentScene.GetComponent<MapArea>().GetRandonWildPokemon(trigger);
@@ -133,6 +137,7 @@ public class GameController : MonoBehaviour
         state = GameState.Battle;
         battleSystem.gameObject.SetActive(true);
         worldCamera.gameObject.SetActive(false);
+        thermometerUI.gameObject.SetActive(false);
 
         this.trainer = trainer;
         var playerParty = playerController.GetComponent<PokemonParty>();
@@ -160,6 +165,7 @@ public class GameController : MonoBehaviour
         state = GameState.FreeRoam;
         battleSystem.gameObject.SetActive(false);
         worldCamera.gameObject.SetActive(true);
+        thermometerUI.gameObject.SetActive(true);
 
         var playerParty = playerController.GetComponent<PokemonParty>();
         bool hasEvolutions = playerParty.CheckForEvolutions();
@@ -177,6 +183,7 @@ public class GameController : MonoBehaviour
         if (state == GameState.FreeRoam)
         {
             playerController.HandleUpdate();
+            thermometerUI.SetStress();
 
             if (Input.GetKeyDown(KeyCode.Escape)) //Acceder al menu principal
             {

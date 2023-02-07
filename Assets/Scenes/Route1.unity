@@ -5076,7 +5076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2199313186856885455, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: pokemons.Array.data[0].level
-      value: 3
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}

@@ -32,6 +32,7 @@ public class ShopController : MonoBehaviour
     {
         inventory = Inventory.GetInventory();
     }
+
     public IEnumerator StartTrading(Merchant merchant)
     {
         this.merchant = merchant;
