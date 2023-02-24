@@ -14,11 +14,17 @@ public class Character : MonoBehaviour
 
     CharacterAnimator animator;
 
+    private PlayerController player;
 
     public void Awake()
     {
         animator = GetComponent<CharacterAnimator>();
         SetPositionAndSnapToTile(transform.position);
+    }
+
+    private void Start()
+    {
+        player = PlayerController.i;
     }
 
     public void SetPositionAndSnapToTile(Vector2 pos) //Pone al personaje en el centro de cada cuadrado del grid
@@ -113,7 +119,6 @@ public class Character : MonoBehaviour
         }
         else
             Debug.Log("Error en Look Towards: no se puede preguntar al personaje mirandolo diagonalmente");
-
     }
 
     public CharacterAnimator Animator

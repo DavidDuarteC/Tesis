@@ -121,7 +121,7 @@ Transform:
   m_GameObject: {fileID: 2132675003774014412}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.5, y: 0.8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.45, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2132675003613153170}
@@ -169,7 +169,7 @@ SpriteRenderer:
   m_SortingLayerID: 1651892781
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7152930139536384079, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  m_Sprite: {fileID: -218684229, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -194,6 +194,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: David
   sprite: {fileID: 21300000, guid: 263eba07f1860f34fa35fb96d04674d2, type: 3}
+  spriteGirl: {fileID: 0}
+  isHow: 0
 --- !u!114 &2132675003774014449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,31 +230,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkDownSprites:
-  - {fileID: 7152930139536384079, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: -5725962078152895296, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: -8401692288953904933, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: 7888922196035610388, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  - {fileID: -218684229, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
+  - {fileID: -1996887173, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
+  - {fileID: -90870012, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
+  - {fileID: -616737339, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
   walkUpSprites:
-  - {fileID: -4445699719359273135, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: 1892806461834874077, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: -8627026541424588849, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: -6780520195603233165, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  - {fileID: -457528302, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
+  - {fileID: -648571785, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
+  - {fileID: -1767254309, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
+  - {fileID: 1383346597, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
   walkRightSprites:
-  - {fileID: -3303779423006393323, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: -790699523677361007, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: 8470420716495695676, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: 6167071470516247665, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  - {fileID: 970474890, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
+  - {fileID: 1138357836, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
+  - {fileID: -943451915, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
+  - {fileID: 792598156, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
   walkLeftSprites:
-  - {fileID: -1038918931832879880, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: 2690600881683387669, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: 6634202828824015816, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
-  - {fileID: -5008138227279614530, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
+  - {fileID: -336942435, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
+  - {fileID: -744261665, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
+  - {fileID: -298377779, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
+  - {fileID: -1674354086, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
   surfSprites:
   - {fileID: -4465137455631916842, guid: 14ced2238d82c7149b8f5a0481222249, type: 3}
   - {fileID: 548946438817077065, guid: 14ced2238d82c7149b8f5a0481222249, type: 3}
   - {fileID: 4472088847651303106, guid: 14ced2238d82c7149b8f5a0481222249, type: 3}
   - {fileID: 6356773947664160301, guid: 14ced2238d82c7149b8f5a0481222249, type: 3}
   defaultDirection: 1
+  walkDownSpritesGirl:
+  - {fileID: -1674220530, guid: 6eaece49335311048bc117216acab021, type: 3}
+  - {fileID: -2021232298, guid: 6eaece49335311048bc117216acab021, type: 3}
+  - {fileID: 1040896098, guid: 6eaece49335311048bc117216acab021, type: 3}
+  - {fileID: 414583800, guid: 6eaece49335311048bc117216acab021, type: 3}
+  walkUpSpritesGirl:
+  - {fileID: -143351459, guid: 6eaece49335311048bc117216acab021, type: 3}
+  - {fileID: 554446397, guid: 6eaece49335311048bc117216acab021, type: 3}
+  - {fileID: 1148625929, guid: 6eaece49335311048bc117216acab021, type: 3}
+  - {fileID: -1474478862, guid: 6eaece49335311048bc117216acab021, type: 3}
+  walkRightSpritesGirl:
+  - {fileID: 733327530, guid: 6eaece49335311048bc117216acab021, type: 3}
+  - {fileID: 1101169565, guid: 6eaece49335311048bc117216acab021, type: 3}
+  - {fileID: 1506290772, guid: 6eaece49335311048bc117216acab021, type: 3}
+  - {fileID: -1979461249, guid: 6eaece49335311048bc117216acab021, type: 3}
+  walkLeftSpritesGirl:
+  - {fileID: -2133820681, guid: 6eaece49335311048bc117216acab021, type: 3}
+  - {fileID: 639925074, guid: 6eaece49335311048bc117216acab021, type: 3}
+  - {fileID: 1859088634, guid: 6eaece49335311048bc117216acab021, type: 3}
+  - {fileID: -432796422, guid: 6eaece49335311048bc117216acab021, type: 3}
+  surfSpritesGirl: []
 --- !u!114 &2132675003774014455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,18 +323,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.024540752, y: 0}
+  m_Offset: {x: 0.0003709793, y: -0.051450968}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
+    oldSize: {x: 2.125, y: 2.875}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.93622917, y: 1.213161}
+  m_Size: {x: 2.1248379, y: 2.8399997}
   m_EdgeRadius: 0
 --- !u!114 &587459466072929571
 MonoBehaviour:
@@ -413,3 +436,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
+  lostMoreTimeRow: 0
+  loseMultiply: 0.1
