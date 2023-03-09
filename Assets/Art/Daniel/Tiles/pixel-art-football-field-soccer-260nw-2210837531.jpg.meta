@@ -1,0 +1,2059 @@
+fileFormatVersion: 2
+guid: cac79e7f060421b41939592478f13063
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 225
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8f3657cc7de4042a3b061860c7e9f9
+      internalID: 1526299923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 225
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e5431b6796348b43ab6b85081dfda76
+      internalID: -1478905812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 225
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e0254eae5ebab64498e1f8bf128118f
+      internalID: 110949021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_3
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 225
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17d5e835ec88234cb51102aad77c397
+      internalID: 350968620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_4
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 225
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff4aac5143d10146ab9c9e226acc39d
+      internalID: -7730844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_5
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 225
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b0e4579a8f67c64fbbff965f06863de
+      internalID: 750505690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_6
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 225
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109e8da651e243145852017981a449e4
+      internalID: 11732609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_7
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 225
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a38a506439bed94b965f258f09a26b7
+      internalID: -1187734790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_8
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 225
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692b79a9a27598e4ba8c38ac75f62e02
+      internalID: -578411884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_9
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 225
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd862a66cc803b4085a66c0be20fde3
+      internalID: -1762159755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_10
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 225
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d84d4a4356493d44bc3f26b3b40f0be
+      internalID: 123293929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_11
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 193
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17817cc9fb7c33418b84ac9ef0b074a
+      internalID: -1396167971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_12
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 193
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a43afca7864680b41a34b7e78182af75
+      internalID: 1097106367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_13
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 193
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a247fe969b4871e44872ec80c5882e09
+      internalID: 2103922115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_14
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 193
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a782dea7394584458b309cc2d7468bc
+      internalID: -43746463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_15
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 193
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac14d9c82364c445a4823b26027ed57
+      internalID: 1935413035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_16
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 193
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911d0a39d4edf6a4398f5cd7182f9d12
+      internalID: 2029889342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_17
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 193
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e338efc6c32072a44a1c440fd5461afe
+      internalID: -1615896285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_18
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 193
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f81319e219bca4e8dd26b93598b53f
+      internalID: -1507380448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_19
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 193
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc24e85178e59a4a947050da0f5b1a1
+      internalID: -1988415813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_20
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 193
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 059c80488221d304692307cea0bdc649
+      internalID: -1030881028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_21
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 193
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ccc092664888c74eb35bc9b380037ca
+      internalID: 888840587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_22
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 161
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c748e4257082434458026f3bbf352bb7
+      internalID: -405837127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_23
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 161
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f9ddd29af2e6234ca955f79bda4246b
+      internalID: 262692485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_24
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 161
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5377fc8379da8604f8b830d5eab959ae
+      internalID: 681366851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_25
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 161
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 859f24e67ca98e14e938e4f7d68c85d6
+      internalID: -1295911900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_26
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 161
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f61518bca69e4440afa35d37c016e69
+      internalID: -480352485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_27
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 161
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 766a4a80e2c2e884490e4e3bda6ce5d9
+      internalID: -637668116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_28
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 161
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b318c32a9fb2ec440bfd4ee704e83f9d
+      internalID: 1721374246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_29
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 161
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ce292073f82614e9d67b3a002c3462
+      internalID: 1944996739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_30
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 161
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4053d8a9f53a79140be5a74d1de944c4
+      internalID: 179667074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_31
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 161
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81fa1e79a7a345e42892a046b56b0604
+      internalID: 877258147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_32
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 161
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a668c038c20f9748867661a1035edd3
+      internalID: -89971720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_33
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 129
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a5a4ec30b252a46a0cb5a27995440f
+      internalID: -1565874583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_34
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 129
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 482883e5f15b19a409b03c29f15d2116
+      internalID: 1718854188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_35
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 129
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0fa6a7d8dcb2b643857d02f984ce4b9
+      internalID: -1142474028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_36
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 129
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63cdba646fdb4944598edbbf03491d5c
+      internalID: -806641751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_37
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 129
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd308320ff0ccc544bf949d184d36bff
+      internalID: 1469454959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_38
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 129
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4bd174ca9806648be442b4d16b304e
+      internalID: -1767648224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_39
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 129
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21baa2f51d7bd444fb7c78136234539b
+      internalID: 1283834854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_40
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 129
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba51cafb483b91044b4c67e4b7045a13
+      internalID: -1337736668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_41
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 129
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f108fd3251afc4649998685d92f72933
+      internalID: 1224398914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_42
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 129
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15247c6a370ec1145a76de74f21cd563
+      internalID: 1792243128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_43
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 129
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19934b968d7748f4694090f006d248f4
+      internalID: 35830411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_44
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 97
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd0be146b2dbe3e46ba372a0f6806b5c
+      internalID: 1304327429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_45
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 97
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb7dd3daf858dc4d937d390ffe692bf
+      internalID: 468445901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_46
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 97
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae4e469f96cfc224b90985f01a2f1b47
+      internalID: 600735397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_47
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 97
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc93261b4f7b5c4c8ab39310dc070de
+      internalID: -867293015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_48
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 97
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b5edf1d845bd143800c287787e2f4f
+      internalID: 90980783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_49
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 97
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58eaad6a09e1c24498720d9a15815da
+      internalID: -1861592633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_50
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 97
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72b71f758e91b374ca2acb7fd3c66551
+      internalID: 226847778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_51
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 97
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b772c9f4765fd4eab0fefba30a39f9
+      internalID: -1010675800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_52
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 97
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49081cdf0983d0148a34deedbdc2dc62
+      internalID: -1202731673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_53
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 97
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a325225810bef6a4684007a52af699f4
+      internalID: -1720115649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_54
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 97
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3383c749001ff084db7e39f03922756c
+      internalID: 714404493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_55
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 65
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c15349f4c46d8649acca91def387d7a
+      internalID: -1626829689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_56
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 65
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf3712402eafe74b838a78fdfcb6a90
+      internalID: 1613016595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_57
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 65
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d24f6958040875e4dbdee1e84c4bde32
+      internalID: 1265327852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_58
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 65
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12767b5e7a2966f40bbc728a0f0c8764
+      internalID: 1776593402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_59
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 65
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a902c44f82ae8644bb581af0b9cd7d5
+      internalID: 461473440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_60
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 65
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 666f79afd608fd4478f7853f5cb2c08c
+      internalID: -809436379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_61
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 65
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c617a28ac0510946a5e00d0cef35f8e
+      internalID: -1493246016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_62
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 65
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2905ce19507dca4ab8f2f7707d20d8e
+      internalID: -1818753359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_63
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 65
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2fbe0508d37b2248846b23dcf34f518
+      internalID: 452176784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_64
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 65
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5daea797043a6644da2d34e8dbd974bc
+      internalID: -695129459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_65
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 65
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62bc0ce94be67b14ba88213bf50289e0
+      internalID: -1521619398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_66
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 33
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe4a7d22227e94478de3f87d681dbc2
+      internalID: -1788713623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_67
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 33
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3511b8cafcb9885449223f099c7f474f
+      internalID: 1141820629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_68
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 33
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bea942be25f29c4c84e3a0cea544aaf
+      internalID: -43586743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_69
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 33
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de9d97905071c6c4787c50a3f719d116
+      internalID: -845809120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_70
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 33
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70965ada9dce22247bfbc826e6d0be13
+      internalID: 559669287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_71
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 33
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 192f57b41b3dbab46b171dcdaf0fdac2
+      internalID: 249733816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_72
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 33
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ace5d59e8754a8478cc1f3bc8cc6bd6
+      internalID: -781878964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_73
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 33
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814520869bace8f4aacb782c6a2f7c69
+      internalID: 1777855325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_74
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 33
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03bffd7acaf92ee4ab7cdb6553aca7a0
+      internalID: -10828117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_75
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 33
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f91a9f81c591956498287e674be1cd32
+      internalID: 2083048886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_76
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 33
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0cfee500f855d144902fd1911907b54
+      internalID: -568315431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_77
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc9522d1cbe1d3469ecdae6eebb3b22
+      internalID: -1146524013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_78
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0cdd2eb46734de4da9519c275db6fb6
+      internalID: -1981685364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_79
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce8e70903ae1f2945a233c35eaac6030
+      internalID: 1818945488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_80
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 1
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e86deddca41de4e8f08eb109d3c5b4
+      internalID: -1966680691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_81
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 1
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b0d495a0b3c5a41818071b435ea234
+      internalID: -338169265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_82
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 1
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1f07f42dc330254f922fb636cc1968e
+      internalID: 789155255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_83
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcbcdc64502a04b488091f8835c0d4df
+      internalID: 1767824657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_84
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 1
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f09f1679841df87478e5eb9663570098
+      internalID: -1779584034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_85
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 1
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f305b99ece3ff3d459ce2be363c96d5d
+      internalID: 117316664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_86
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 1
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4f8c88b662c0fb4da43c269bc9839f3
+      internalID: -1496032803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-art-football-field-soccer-260nw-2210837531_87
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 1
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ad77a806deb994c8de165ca60ca6a4
+      internalID: -1779401346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      pixel-art-football-field-soccer-260nw-2210837531_69: -845809120
+      pixel-art-football-field-soccer-260nw-2210837531_13: 2103922115
+      pixel-art-football-field-soccer-260nw-2210837531_65: -1521619398
+      pixel-art-football-field-soccer-260nw-2210837531_63: 452176784
+      pixel-art-football-field-soccer-260nw-2210837531_75: 2083048886
+      pixel-art-football-field-soccer-260nw-2210837531_36: -806641751
+      pixel-art-football-field-soccer-260nw-2210837531_64: -695129459
+      pixel-art-football-field-soccer-260nw-2210837531_35: -1142474028
+      pixel-art-football-field-soccer-260nw-2210837531_37: 1469454959
+      pixel-art-football-field-soccer-260nw-2210837531_57: 1265327852
+      pixel-art-football-field-soccer-260nw-2210837531_23: 262692485
+      pixel-art-football-field-soccer-260nw-2210837531_40: -1337736668
+      pixel-art-football-field-soccer-260nw-2210837531_33: -1565874583
+      pixel-art-football-field-soccer-260nw-2210837531_42: 1792243128
+      pixel-art-football-field-soccer-260nw-2210837531_17: -1615896285
+      pixel-art-football-field-soccer-260nw-2210837531_76: -568315431
+      pixel-art-football-field-soccer-260nw-2210837531_46: 600735397
+      pixel-art-football-field-soccer-260nw-2210837531_58: 1776593402
+      pixel-art-football-field-soccer-260nw-2210837531_9: -1762159755
+      pixel-art-football-field-soccer-260nw-2210837531_20: -1030881028
+      pixel-art-football-field-soccer-260nw-2210837531_15: 1935413035
+      pixel-art-football-field-soccer-260nw-2210837531_41: 1224398914
+      pixel-art-football-field-soccer-260nw-2210837531_48: 90980783
+      pixel-art-football-field-soccer-260nw-2210837531_59: 461473440
+      pixel-art-football-field-soccer-260nw-2210837531_22: -405837127
+      pixel-art-football-field-soccer-260nw-2210837531_32: -89971720
+      pixel-art-football-field-soccer-260nw-2210837531_11: -1396167971
+      pixel-art-football-field-soccer-260nw-2210837531_80: -1966680691
+      pixel-art-football-field-soccer-260nw-2210837531_67: 1141820629
+      pixel-art-football-field-soccer-260nw-2210837531_87: -1779401346
+      pixel-art-football-field-soccer-260nw-2210837531_21: 888840587
+      pixel-art-football-field-soccer-260nw-2210837531_79: 1818945488
+      pixel-art-football-field-soccer-260nw-2210837531_84: -1779584034
+      pixel-art-football-field-soccer-260nw-2210837531_16: 2029889342
+      pixel-art-football-field-soccer-260nw-2210837531_10: 123293929
+      pixel-art-football-field-soccer-260nw-2210837531_85: 117316664
+      pixel-art-football-field-soccer-260nw-2210837531_25: -1295911900
+      pixel-art-football-field-soccer-260nw-2210837531_62: -1818753359
+      pixel-art-football-field-soccer-260nw-2210837531_28: 1721374246
+      pixel-art-football-field-soccer-260nw-2210837531_51: -1010675800
+      pixel-art-football-field-soccer-260nw-2210837531_44: 1304327429
+      pixel-art-football-field-soccer-260nw-2210837531_18: -1507380448
+      pixel-art-football-field-soccer-260nw-2210837531_83: 1767824657
+      pixel-art-football-field-soccer-260nw-2210837531_24: 681366851
+      pixel-art-football-field-soccer-260nw-2210837531_50: 226847778
+      pixel-art-football-field-soccer-260nw-2210837531_5: 750505690
+      pixel-art-football-field-soccer-260nw-2210837531_55: -1626829689
+      pixel-art-football-field-soccer-260nw-2210837531_31: 877258147
+      pixel-art-football-field-soccer-260nw-2210837531_19: -1988415813
+      pixel-art-football-field-soccer-260nw-2210837531_6: 11732609
+      pixel-art-football-field-soccer-260nw-2210837531_12: 1097106367
+      pixel-art-football-field-soccer-260nw-2210837531_47: -867293015
+      pixel-art-football-field-soccer-260nw-2210837531_71: 249733816
+      pixel-art-football-field-soccer-260nw-2210837531_3: 350968620
+      pixel-art-football-field-soccer-260nw-2210837531_29: 1944996739
+      pixel-art-football-field-soccer-260nw-2210837531_1: -1478905812
+      pixel-art-football-field-soccer-260nw-2210837531_68: -43586743
+      pixel-art-football-field-soccer-260nw-2210837531_4: -7730844
+      pixel-art-football-field-soccer-260nw-2210837531_73: 1777855325
+      pixel-art-football-field-soccer-260nw-2210837531_34: 1718854188
+      pixel-art-football-field-soccer-260nw-2210837531_81: -338169265
+      pixel-art-football-field-soccer-260nw-2210837531_43: 35830411
+      pixel-art-football-field-soccer-260nw-2210837531_52: -1202731673
+      pixel-art-football-field-soccer-260nw-2210837531_72: -781878964
+      pixel-art-football-field-soccer-260nw-2210837531_30: 179667074
+      pixel-art-football-field-soccer-260nw-2210837531_74: -10828117
+      pixel-art-football-field-soccer-260nw-2210837531_78: -1981685364
+      pixel-art-football-field-soccer-260nw-2210837531_7: -1187734790
+      pixel-art-football-field-soccer-260nw-2210837531_54: 714404493
+      pixel-art-football-field-soccer-260nw-2210837531_60: -809436379
+      pixel-art-football-field-soccer-260nw-2210837531_82: 789155255
+      pixel-art-football-field-soccer-260nw-2210837531_38: -1767648224
+      pixel-art-football-field-soccer-260nw-2210837531_61: -1493246016
+      pixel-art-football-field-soccer-260nw-2210837531_66: -1788713623
+      pixel-art-football-field-soccer-260nw-2210837531_45: 468445901
+      pixel-art-football-field-soccer-260nw-2210837531_53: -1720115649
+      pixel-art-football-field-soccer-260nw-2210837531_70: 559669287
+      pixel-art-football-field-soccer-260nw-2210837531_56: 1613016595
+      pixel-art-football-field-soccer-260nw-2210837531_0: 1526299923
+      pixel-art-football-field-soccer-260nw-2210837531_86: -1496032803
+      pixel-art-football-field-soccer-260nw-2210837531_8: -578411884
+      pixel-art-football-field-soccer-260nw-2210837531_49: -1861592633
+      pixel-art-football-field-soccer-260nw-2210837531_14: -43746463
+      pixel-art-football-field-soccer-260nw-2210837531_26: -480352485
+      pixel-art-football-field-soccer-260nw-2210837531_2: 110949021
+      pixel-art-football-field-soccer-260nw-2210837531_27: -637668116
+      pixel-art-football-field-soccer-260nw-2210837531_77: -1146524013
+      pixel-art-football-field-soccer-260nw-2210837531_39: 1283834854
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
