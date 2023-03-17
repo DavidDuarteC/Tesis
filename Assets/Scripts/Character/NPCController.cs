@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class NPCController : MonoBehaviour, Interactable, ISavable
@@ -15,6 +16,11 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
     [SerializeField] List<Vector2> movementPattern;
     [SerializeField] float timeBetweenPattern;
 
+    [Header("Quiz")]
+    [SerializeField] bool haveQuiz;
+    [SerializeField] List<string> categories;
+    [SerializeField] Dialog startQuiz;
+
     NPCState state;
     float idleTimer = 0f;
     int currentPattern = 0;
@@ -26,6 +32,9 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
     PokemonGiver pokemonGiver;
     Healer healer;
     Merchant merchant;
+    QuizManager quiz;
+
+    public static NPCController i;
 
     private void Awake()
     {
@@ -34,6 +43,11 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
         pokemonGiver = GetComponent<PokemonGiver>();
         healer = GetComponent<Healer>();
         merchant = GetComponent<Merchant>();
+    }
+
+    private void Start()
+    {
+        i = this;
     }
 
     public IEnumerator Interact(Transform initiator) // Muestra el dialogo si el jugador interactua con el NPCs
@@ -92,7 +106,12 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
             {
                 yield return merchant.Trade();
             }
-            else
+            else if (haveQuiz != false && categories.Any() == true)
+            {
+                StartCoroutine(DialogManager.Instance.ShowDialog(startQuiz));
+                yield return QuizGameUI.i.startQuiz(categories);
+            }
+            else 
             {
                 yield return DialogManager.Instance.ShowDialog(dialog);
             }
@@ -131,6 +150,12 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
         state = NPCState.Idle;
     }
 
+    public bool HaveQuiz
+    {
+        get { return haveQuiz; }
+        set { haveQuiz = value; }
+    }
+
     public object CaptureState()
     {
         var saveData = new NPCQuestSaveData();
@@ -142,6 +167,7 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
         if (questToCompleted != null)
             saveData.questToComplete = (new Quest(questToCompleted)).GetSaveData();
 
+        saveData.haveQ = haveQuiz;
         return saveData;
     }
 
@@ -154,9 +180,18 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
 
             questToStart = (saveData.questToStart != null) ? new Quest(saveData.questToStart).Base : null;
             questToCompleted = (saveData.questToComplete != null) ? new Quest(saveData.questToComplete).Base : null;
-
+            haveQuiz = saveData.haveQ;
 
         }
+    }
+
+    public void RemoveQuiz(string name)
+    {
+        if (categories.Contains(name))
+            categories.Remove(name);
+        if(!categories.Any())
+            HaveQuiz = false;
+
     }
 }
 
@@ -166,6 +201,7 @@ public class NPCQuestSaveData
     public QuestSaveData activeQuest;
     public QuestSaveData questToStart;
     public QuestSaveData questToComplete;
+    public bool haveQ;
 }
 
 public enum NPCState

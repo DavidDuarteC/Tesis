@@ -479,6 +479,91 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ab1d9c2d9ff9d140bb3a43bc33137cd, type: 3}
+--- !u!1001 &215027772
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 299747428922796489, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_Name
+      value: NPC Quiz
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796489, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: haveQuiz
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: categories.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: categories.Array.data[0]
+      value: Animal
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: categories.Array.data[1]
+      value: Bird
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: movementPattern.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -28.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679524117132791592, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: uniqueId
+      value: f359758c-7522-4c8c-8c4a-d937d97c1d8d
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
 --- !u!1001 &911440072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5704,8 +5789,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wildPokemons:
-  - _base: {fileID: 11400000, guid: 606917c5c5200ee419404bcc3cad4c8f, type: 2}
-    level: 8
+  - pokemon: {fileID: 0}
+    levelRange: {x: 0, y: 0}
+    chancePercentage: 0
+  wildPokemonsInWater: []
+  totalChance: 0
+  totalChanceWater: -1
 --- !u!1 &9171413942372701754
 GameObject:
   m_ObjectHideFlags: 0

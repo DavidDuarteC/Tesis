@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState{ FreeRoam, Battle, Dialog, Menu, PartyScreen, Bag , Cutscene, Paused, Evolution, Shop, ChooseCharacter }
+public enum GameState{ FreeRoam, Battle, Dialog, Menu, PartyScreen, Bag , Cutscene, Paused, Evolution, Shop, ChooseCharacter, Quiz }
 public class GameController : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
@@ -91,6 +91,10 @@ public class GameController : MonoBehaviour
 
         CharacterSelectorUI.i.OnSelectCharacter += () => state = GameState.ChooseCharacter;
         CharacterSelectorUI.i.OnFinishSelect += () => state = GameState.FreeRoam;
+
+        QuizGameUI.i.OnStartQuiz += () => state = GameState.Quiz;
+        QuizGameUI.i.OnFinishQuiz += () => state = GameState.FreeRoam;
+
 
         thermometerUI.gameObject.SetActive(true);
         

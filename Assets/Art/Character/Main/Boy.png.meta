@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a1cd82cb8e969134098d3287a451fe13
+guid: f7ec4331084cf20409eca47189df9bc3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Man_0
+      name: Boy_0
       rect:
         serializedVersion: 2
         x: 14
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5a85079416c55f4199fb1a2e05fe748
-      internalID: -218684229
+      spriteID: 9b13a90af69580447aeafb4afda01f01
+      internalID: 1758334782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_1
+      name: Boy_1
       rect:
         serializedVersion: 2
         x: 78
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 892b6ecc1e0aab643aa971f2515a2424
-      internalID: -1996887173
+      spriteID: 66f9f5e3fe390f44bb1adb0d5ca82f8c
+      internalID: 2073754555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_2
+      name: Boy_2
       rect:
         serializedVersion: 2
         x: 142
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14a9357941198764cbfca8d716368124
-      internalID: -90870012
+      spriteID: 709b1cde3cf783f4881bdbb3c4965404
+      internalID: -341480004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_3
+      name: Boy_3
       rect:
         serializedVersion: 2
         x: 206
@@ -182,19 +182,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04c69af0fcc5f4148b0caf9ca77e8084
-      internalID: -616737339
+      spriteID: 44cbf6945915a7e4abea5441cf8b56ce
+      internalID: -1019169769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_4
+      name: Boy_4
       rect:
         serializedVersion: 2
-        x: 14
+        x: 16
         y: 134
-        width: 38
+        width: 36
         height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -203,19 +203,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bccbc61a46210e744b86d43c2cb7e123
-      internalID: -336942435
+      spriteID: 75062553dbd62404b8a79b9534e20628
+      internalID: -1211544046
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_5
+      name: Boy_5
       rect:
         serializedVersion: 2
-        x: 78
+        x: 80
         y: 134
-        width: 38
+        width: 36
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -224,19 +224,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8f51d591c8b63b4099c01030800b5e1
-      internalID: -744261665
+      spriteID: a9a1298bb9d173b438b9d108cfc44a3d
+      internalID: 1389779906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_6
+      name: Boy_6
       rect:
         serializedVersion: 2
-        x: 142
+        x: 144
         y: 134
-        width: 38
+        width: 36
         height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -245,19 +245,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1f27fb49e2735b49af4674a505205dd
-      internalID: -298377779
+      spriteID: 9b0341a33c657454088479d2c5976737
+      internalID: 220964298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_7
+      name: Boy_7
       rect:
         serializedVersion: 2
-        x: 206
+        x: 208
         y: 136
-        width: 38
+        width: 36
         height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -266,19 +266,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ed67c2aec01d1b409026844b3762a64
-      internalID: -1674354086
+      spriteID: 6fdf128e5189b4b4884a004b02f7702c
+      internalID: 1124806043
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_8
+      name: Boy_8
       rect:
         serializedVersion: 2
         x: 12
         y: 70
-        width: 38
+        width: 36
         height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -287,19 +287,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b0d4236de3afdf42addbe4e12426d31
-      internalID: 970474890
+      spriteID: d5aaa50082313364aab0236f7c2ec845
+      internalID: 925219276
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_9
+      name: Boy_9
       rect:
         serializedVersion: 2
         x: 76
         y: 70
-        width: 38
+        width: 36
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -308,19 +308,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e62ceee9d9791c4c897982f151db36d
-      internalID: 1138357836
+      spriteID: 0d2f9e710d15e43458043030969497b5
+      internalID: 202478824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_10
+      name: Boy_10
       rect:
         serializedVersion: 2
         x: 140
         y: 70
-        width: 38
+        width: 36
         height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -329,19 +329,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4de7253ae8e48694cb1ba6d639a554ac
-      internalID: -943451915
+      spriteID: b5704d046a05c4a40b4276c9d0dba0ac
+      internalID: 1191284956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_11
+      name: Boy_11
       rect:
         serializedVersion: 2
         x: 204
         y: 72
-        width: 38
+        width: 36
         height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -350,14 +350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fc5d6b511bbadf46996fc1b603a7a4e
-      internalID: 792598156
+      spriteID: 946eda7a1fb88cc46b57a7302ba7b632
+      internalID: 1487015656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_12
+      name: Boy_12
       rect:
         serializedVersion: 2
         x: 14
@@ -371,14 +371,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62ec3ca7a00f0ff42b5984e9cf278e33
-      internalID: -457528302
+      spriteID: 2a0eda22f1cefa34e97cc351d538d12b
+      internalID: -1418432210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_13
+      name: Boy_13
       rect:
         serializedVersion: 2
         x: 78
@@ -392,14 +392,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 804c7c05b962f584d8c4ab1f5e93429e
-      internalID: -648571785
+      spriteID: fb6d6d44db8cb4d4996a43792dfe786d
+      internalID: 1475910833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_14
+      name: Boy_14
       rect:
         serializedVersion: 2
         x: 142
@@ -413,14 +413,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e568b6eac6c84694188dcfe0c923aec2
-      internalID: -1767254309
+      spriteID: 76525701863d5234a82bfb4b5986a638
+      internalID: -52369012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Man_15
+      name: Boy_15
       rect:
         serializedVersion: 2
         x: 206
@@ -434,8 +434,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5de7a85e283e8324d92d0c29702743a4
-      internalID: 1383346597
+      spriteID: f5a9adbc3458d714eb1657ae7853b2bf
+      internalID: -2063967727
       vertices: []
       indices: 
       edges: []
@@ -451,22 +451,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Man_15: 1383346597
-      Man_13: -648571785
-      Man_10: -943451915
-      Man_1: -1996887173
-      Man_14: -1767254309
-      Man_12: -457528302
-      Man_8: 970474890
-      Man_4: -336942435
-      Man_2: -90870012
-      Man_11: 792598156
-      Man_3: -616737339
-      Man_6: -298377779
-      Man_5: -744261665
-      Man_7: -1674354086
-      Man_0: -218684229
-      Man_9: 1138357836
+      Boy_15: -2063967727
+      Boy_9: 202478824
+      Boy_4: -1211544046
+      Boy_14: -52369012
+      Boy_13: 1475910833
+      Boy_2: -341480004
+      Boy_10: 1191284956
+      Boy_8: 925219276
+      Boy_5: 1389779906
+      Boy_12: -1418432210
+      Boy_11: 1487015656
+      Boy_7: 1124806043
+      Boy_0: 1758334782
+      Boy_6: 220964298
+      Boy_3: -1019169769
+      Boy_1: 2073754555
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

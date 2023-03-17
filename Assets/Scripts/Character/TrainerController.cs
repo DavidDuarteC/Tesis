@@ -5,7 +5,7 @@ using UnityEngine;
 public class TrainerController : MonoBehaviour, Interactable, ISavable
 {
     [SerializeField] new string name;
-    [SerializeField] Sprite sprite;
+    //[SerializeField] Sprite sprite;
     [SerializeField] Dialog dialog;
     [SerializeField] Dialog dialogAfterBattle;
     [SerializeField] GameObject exclamation;
@@ -106,8 +106,8 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
         get => name;
     }
 
-    public Sprite Sprite
-    {
-        get => sprite;
-    }
+    //public Sprite Sprite
+    //{
+    //    get => sprite;
+    //}
 }

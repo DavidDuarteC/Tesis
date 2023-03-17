@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510f992e5f6970849b69a3207fea1fb4, type: 3}
+  m_Name: QuestionsData
+  m_EditorClassIdentifier: 
+  categoryName: Mix
+  isComplete: 0
+  questions:
+  - questionInfo: Quess the animal?
+    questionType: 1
+    questionImage: {fileID: 21300000, guid: 183b6698f7feb3e4ca4ae5534d6b5f2a, type: 3}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Monkey
+    - Shark
+    - Porcupine
+    - Elephant
+    correctAns: Elephant
+  - questionInfo: Quess the animal?
+    questionType: 3
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 32900000, guid: 3019628b458982741b40c8c0a847fb0f, type: 3}
+    options:
+    - Dog
+    - Monkey
+    - Whale
+    - Cat
+    correctAns: Cat
+  - questionInfo: Quess the animal?
+    questionType: 2
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: acf43b6d3e29bcf4ca60891e87b1927d, type: 3}
+    videoClip: {fileID: 0}
+    options:
+    - Kangaroo
+    - Wolf
+    - Dolphine
+    - Frog
+    correctAns: Wolf

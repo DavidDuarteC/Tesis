@@ -238,6 +238,7 @@ MonoBehaviour:
   - rid: 3909835301371772930
   - rid: 3909835301371772932
   - rid: 3909835301371772931
+  - rid: 7275271943463370752
   references:
     version: 2
     RefIds:
@@ -328,6 +329,12 @@ MonoBehaviour:
         movePatterns:
         - {x: -2, y: 0}
         - {x: 0, y: 6}
+    - rid: 7275271943463370752
+      type: {class: DisableObjectAction, ns: , asm: Assembly-CSharp}
+      data:
+        name: DisableObjectAction
+        waitForCompletion: 1
+        go: {fileID: 110581140}
 --- !u!4 &110581143
 Transform:
   m_ObjectHideFlags: 0
@@ -1022,6 +1029,111 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d861d72aab15ff347804e78c2c00fb7f, type: 3}
+--- !u!1001 &895476988
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 299747428922796489, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_Name
+      value: NPC Quiz
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796489, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: haveQuiz
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: categories.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: categories.Array.data[0]
+      value: Mix
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: categories.Array.data[1]
+      value: Bird
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Sigue, puedes aumentar tus conocimientos
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: dialog.lines.Array.data[1]
+      value: Nunca te rindas
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: movementPattern.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: startQuiz.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: startQuiz.lines.Array.data[0]
+      value: Te voy a hacer unas preguntas
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: startQuiz.lines.Array.data[1]
+      value: Espero que puedas con ellas
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679524117132791592, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: uniqueId
+      value: f359758c-7522-4c8c-8c4a-d937d97c1d8d
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
 --- !u!1001 &934921802
 PrefabInstance:
   m_ObjectHideFlags: 0

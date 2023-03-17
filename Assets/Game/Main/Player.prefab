@@ -169,12 +169,12 @@ SpriteRenderer:
   m_SortingLayerID: 1651892781
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -218684229, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
+  m_Sprite: {fileID: 1758334782, guid: f7ec4331084cf20409eca47189df9bc3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 2.125, y: 2.875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -230,25 +230,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkDownSprites:
-  - {fileID: -218684229, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
-  - {fileID: -1996887173, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
-  - {fileID: -90870012, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
-  - {fileID: -616737339, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
+  - {fileID: 1758334782, guid: f7ec4331084cf20409eca47189df9bc3, type: 3}
+  - {fileID: 2073754555, guid: f7ec4331084cf20409eca47189df9bc3, type: 3}
+  - {fileID: -341480004, guid: f7ec4331084cf20409eca47189df9bc3, type: 3}
+  - {fileID: -1019169769, guid: f7ec4331084cf20409eca47189df9bc3, type: 3}
   walkUpSprites:
-  - {fileID: -457528302, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
-  - {fileID: -648571785, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
-  - {fileID: -1767254309, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
-  - {fileID: 1383346597, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
+  - {fileID: -1418432210, guid: f7ec4331084cf20409eca47189df9bc3, type: 3}
+  - {fileID: 1475910833, guid: f7ec4331084cf20409eca47189df9bc3, type: 3}
+  - {fileID: -52369012, guid: f7ec4331084cf20409eca47189df9bc3, type: 3}
+  - {fileID: -2063967727, guid: f7ec4331084cf20409eca47189df9bc3, type: 3}
   walkRightSprites:
-  - {fileID: 970474890, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
-  - {fileID: 1138357836, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
-  - {fileID: -943451915, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
-  - {fileID: 792598156, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
+  - {fileID: 925219276, guid: f7ec4331084cf20409eca47189df9bc3, type: 3}
+  - {fileID: 202478824, guid: f7ec4331084cf20409eca47189df9bc3, type: 3}
+  - {fileID: 1191284956, guid: f7ec4331084cf20409eca47189df9bc3, type: 3}
+  - {fileID: 1487015656, guid: f7ec4331084cf20409eca47189df9bc3, type: 3}
   walkLeftSprites:
-  - {fileID: -336942435, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
-  - {fileID: -744261665, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
-  - {fileID: -298377779, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
-  - {fileID: -1674354086, guid: a1cd82cb8e969134098d3287a451fe13, type: 3}
+  - {fileID: -1211544046, guid: f7ec4331084cf20409eca47189df9bc3, type: 3}
+  - {fileID: 1389779906, guid: f7ec4331084cf20409eca47189df9bc3, type: 3}
+  - {fileID: 220964298, guid: f7ec4331084cf20409eca47189df9bc3, type: 3}
+  - {fileID: 1124806043, guid: f7ec4331084cf20409eca47189df9bc3, type: 3}
   surfSprites:
   - {fileID: -4465137455631916842, guid: 14ced2238d82c7149b8f5a0481222249, type: 3}
   - {fileID: 548946438817077065, guid: 14ced2238d82c7149b8f5a0481222249, type: 3}
@@ -256,25 +256,25 @@ MonoBehaviour:
   - {fileID: 6356773947664160301, guid: 14ced2238d82c7149b8f5a0481222249, type: 3}
   defaultDirection: 1
   walkDownSpritesGirl:
-  - {fileID: -1674220530, guid: 6eaece49335311048bc117216acab021, type: 3}
-  - {fileID: -2021232298, guid: 6eaece49335311048bc117216acab021, type: 3}
-  - {fileID: 1040896098, guid: 6eaece49335311048bc117216acab021, type: 3}
-  - {fileID: 414583800, guid: 6eaece49335311048bc117216acab021, type: 3}
+  - {fileID: 1510456187, guid: 542f613239bdb3b4db0b88c07ab0523d, type: 3}
+  - {fileID: -965712840, guid: 542f613239bdb3b4db0b88c07ab0523d, type: 3}
+  - {fileID: -442325329, guid: 542f613239bdb3b4db0b88c07ab0523d, type: 3}
+  - {fileID: 498016024, guid: 542f613239bdb3b4db0b88c07ab0523d, type: 3}
   walkUpSpritesGirl:
-  - {fileID: -143351459, guid: 6eaece49335311048bc117216acab021, type: 3}
-  - {fileID: 554446397, guid: 6eaece49335311048bc117216acab021, type: 3}
-  - {fileID: 1148625929, guid: 6eaece49335311048bc117216acab021, type: 3}
-  - {fileID: -1474478862, guid: 6eaece49335311048bc117216acab021, type: 3}
+  - {fileID: 293209848, guid: 542f613239bdb3b4db0b88c07ab0523d, type: 3}
+  - {fileID: -920587527, guid: 542f613239bdb3b4db0b88c07ab0523d, type: 3}
+  - {fileID: 1844635841, guid: 542f613239bdb3b4db0b88c07ab0523d, type: 3}
+  - {fileID: -1691887337, guid: 542f613239bdb3b4db0b88c07ab0523d, type: 3}
   walkRightSpritesGirl:
-  - {fileID: 733327530, guid: 6eaece49335311048bc117216acab021, type: 3}
-  - {fileID: 1101169565, guid: 6eaece49335311048bc117216acab021, type: 3}
-  - {fileID: 1506290772, guid: 6eaece49335311048bc117216acab021, type: 3}
-  - {fileID: -1979461249, guid: 6eaece49335311048bc117216acab021, type: 3}
+  - {fileID: 514313922, guid: 542f613239bdb3b4db0b88c07ab0523d, type: 3}
+  - {fileID: 639451710, guid: 542f613239bdb3b4db0b88c07ab0523d, type: 3}
+  - {fileID: -1090917619, guid: 542f613239bdb3b4db0b88c07ab0523d, type: 3}
+  - {fileID: 587385816, guid: 542f613239bdb3b4db0b88c07ab0523d, type: 3}
   walkLeftSpritesGirl:
-  - {fileID: -2133820681, guid: 6eaece49335311048bc117216acab021, type: 3}
-  - {fileID: 639925074, guid: 6eaece49335311048bc117216acab021, type: 3}
-  - {fileID: 1859088634, guid: 6eaece49335311048bc117216acab021, type: 3}
-  - {fileID: -432796422, guid: 6eaece49335311048bc117216acab021, type: 3}
+  - {fileID: 1700904129, guid: 542f613239bdb3b4db0b88c07ab0523d, type: 3}
+  - {fileID: 1999300784, guid: 542f613239bdb3b4db0b88c07ab0523d, type: 3}
+  - {fileID: 1058985169, guid: 542f613239bdb3b4db0b88c07ab0523d, type: 3}
+  - {fileID: 2062716807, guid: 542f613239bdb3b4db0b88c07ab0523d, type: 3}
   surfSpritesGirl: []
 --- !u!114 &2132675003774014455
 MonoBehaviour:
@@ -328,7 +328,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.125, y: 2.875}
-    newSize: {x: 1, y: 2}
+    newSize: {x: 2.125, y: 2.875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0

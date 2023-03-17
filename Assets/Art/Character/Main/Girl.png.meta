@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6eaece49335311048bc117216acab021
+guid: 542f613239bdb3b4db0b88c07ab0523d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,8 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fe383a8a57476243834ff8cc21c6c54
-      internalID: -1674220530
+      spriteID: 293039bff43d8df4f9e755bad918b98a
+      internalID: 1510456187
       vertices: []
       indices: 
       edges: []
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6be4d4d0bf76e8a46a75d62cd2ad942c
-      internalID: -2021232298
+      spriteID: 1f4c8b5595e66094c8ab002400792a0f
+      internalID: -965712840
       vertices: []
       indices: 
       edges: []
@@ -161,8 +161,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b204417b23006846b64eed3674346dc
-      internalID: 1040896098
+      spriteID: f867dc4ea1fefa0498eff1793323c301
+      internalID: -442325329
       vertices: []
       indices: 
       edges: []
@@ -182,8 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efb89711df015ff47a76ec180e339f1b
-      internalID: 414583800
+      spriteID: e60cc36c095e8e2449889dd6a09d3b34
+      internalID: 498016024
       vertices: []
       indices: 
       edges: []
@@ -203,8 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18c985e8b04f8ae4f9e338a4ae5bf87c
-      internalID: -2133820681
+      spriteID: 1dd3039213186564d8cfba7bcb21a4e9
+      internalID: 1700904129
       vertices: []
       indices: 
       edges: []
@@ -224,8 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d05b68596a171243bc45fb79bcd8692
-      internalID: 639925074
+      spriteID: fe0ef51ef3642964c87b101305689b4e
+      internalID: 1999300784
       vertices: []
       indices: 
       edges: []
@@ -245,8 +245,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1be8b6f0a7946fc4dbf6791c4d64a55b
-      internalID: 1859088634
+      spriteID: e593af7496f6f204ba4fc62f9f28e559
+      internalID: 1058985169
       vertices: []
       indices: 
       edges: []
@@ -266,8 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf32a26ccdad60b458efec60b20138c8
-      internalID: -432796422
+      spriteID: 87a7ff0e1b70650428cb6f01ca013b38
+      internalID: 2062716807
       vertices: []
       indices: 
       edges: []
@@ -287,8 +287,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72f282d8ff1113b4c928b0632ae8ced9
-      internalID: 733327530
+      spriteID: 806566fd4b9b73b46a4fe3940c02335b
+      internalID: 514313922
       vertices: []
       indices: 
       edges: []
@@ -308,8 +308,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5710c4844e7a5b34aa9f232026d514bf
-      internalID: 1101169565
+      spriteID: 7f20eac2f073fb340821a937a1fc9fbe
+      internalID: 639451710
       vertices: []
       indices: 
       edges: []
@@ -329,8 +329,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 714710bb212070246a5ff8853b5aecf6
-      internalID: 1506290772
+      spriteID: bc0e35c97eb6caf49a3c0f520aa36316
+      internalID: -1090917619
       vertices: []
       indices: 
       edges: []
@@ -350,8 +350,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86ea24d1ff2b883429839b8ba7f0ea8a
-      internalID: -1979461249
+      spriteID: c73c30db74c2a994b9c69c06c5a084b1
+      internalID: 587385816
       vertices: []
       indices: 
       edges: []
@@ -371,8 +371,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17a5cbc0ba9cfa14aba9104b98851778
-      internalID: -143351459
+      spriteID: 14c2ad7ac91e4d24ba49baad64f96e07
+      internalID: 293209848
       vertices: []
       indices: 
       edges: []
@@ -392,8 +392,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 466cf25821080394ebb3499dd0b7aea5
-      internalID: 554446397
+      spriteID: cb39a3c18d5cf37428c62bf87fa698dc
+      internalID: -920587527
       vertices: []
       indices: 
       edges: []
@@ -413,8 +413,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb04b91c150479349be4b537ee02fb4f
-      internalID: 1148625929
+      spriteID: 5e049da95f626694eacb271d3ad304aa
+      internalID: 1844635841
       vertices: []
       indices: 
       edges: []
@@ -434,8 +434,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f9039696f2030f4cb185f8cc219524f
-      internalID: -1474478862
+      spriteID: 7473d146ec4b9b4408979ea9a0f12e2d
+      internalID: -1691887337
       vertices: []
       indices: 
       edges: []
@@ -451,22 +451,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Girl_9: 1101169565
-      Girl_6: 1859088634
-      Girl_0: -1674220530
-      Girl_8: 733327530
-      Girl_11: -1979461249
-      Girl_2: 1040896098
-      Girl_14: 1148625929
-      Girl_4: -2133820681
-      Girl_13: 554446397
-      Girl_1: -2021232298
-      Girl_12: -143351459
-      Girl_7: -432796422
-      Girl_5: 639925074
-      Girl_10: 1506290772
-      Girl_3: 414583800
-      Girl_15: -1474478862
+      Girl_9: 639451710
+      Girl_6: 1058985169
+      Girl_0: 1510456187
+      Girl_8: 514313922
+      Girl_11: 587385816
+      Girl_2: -442325329
+      Girl_14: 1844635841
+      Girl_4: 1700904129
+      Girl_13: -920587527
+      Girl_1: -965712840
+      Girl_12: 293209848
+      Girl_7: 2062716807
+      Girl_5: 1999300784
+      Girl_10: -1090917619
+      Girl_3: 498016024
+      Girl_15: -1691887337
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
