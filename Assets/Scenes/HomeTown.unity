@@ -238,7 +238,6 @@ MonoBehaviour:
   - rid: 3909835301371772930
   - rid: 3909835301371772932
   - rid: 3909835301371772931
-  - rid: 7275271943463370752
   references:
     version: 2
     RefIds:
@@ -329,12 +328,6 @@ MonoBehaviour:
         movePatterns:
         - {x: -2, y: 0}
         - {x: 0, y: 6}
-    - rid: 7275271943463370752
-      type: {class: DisableObjectAction, ns: , asm: Assembly-CSharp}
-      data:
-        name: DisableObjectAction
-        waitForCompletion: 1
-        go: {fileID: 110581140}
 --- !u!4 &110581143
 Transform:
   m_ObjectHideFlags: 0
