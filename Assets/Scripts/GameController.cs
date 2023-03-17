@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState{ FreeRoam, Battle, Dialog, Menu, PartyScreen, Bag , Cutscene, Paused, Evolution, Shop }
+public enum GameState{ FreeRoam, Battle, Dialog, Menu, PartyScreen, Bag , Cutscene, Paused, Evolution, Shop, ChooseCharacter, Quiz }
 public class GameController : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
@@ -34,15 +34,15 @@ public class GameController : MonoBehaviour
 
         menuController = GetComponent<MenuController>();
 
-        //Cursor.lockState = CursorLockMode.Locked; //Deshabilitar el mouse
-        //Cursor.visible= false;
+        //Cursor.lockState = CursorLockMode.Confined; //Deshabilitar el mouse
+        //Cursor.visible= true;
 
         PokemonDB.Init();
         MoveDB.Init();
         ConditionsDB.Init();
         ItemDB.Init();
         QuestDB.Init();
-        
+        state = GameState.ChooseCharacter;
     }
 
     private void Start()
@@ -88,8 +88,16 @@ public class GameController : MonoBehaviour
 
         ShopController.i.OnStart += () => state = GameState.Shop;
         ShopController.i.OnFinish += () => state = GameState.FreeRoam;
-        thermometerUI.gameObject.SetActive(true);
 
+        CharacterSelectorUI.i.OnSelectCharacter += () => state = GameState.ChooseCharacter;
+        CharacterSelectorUI.i.OnFinishSelect += () => state = GameState.FreeRoam;
+
+        QuizGameUI.i.OnStartQuiz += () => state = GameState.Quiz;
+        QuizGameUI.i.OnFinishQuiz += () => state = GameState.FreeRoam;
+
+
+        thermometerUI.gameObject.SetActive(true);
+        
     }
 
     public void PauseGame(bool pause)//Permite reliza una pausa para realizar el cambio de escena
@@ -194,6 +202,10 @@ public class GameController : MonoBehaviour
         if (state == GameState.Cutscene)
         {
             playerController.Character.HandleUpdate();
+        }
+        else if(state == GameState.ChooseCharacter)
+        {
+            CharacterSelectorUI.i.HandleUpdate();
         }
         else if(state == GameState.Battle)
         {

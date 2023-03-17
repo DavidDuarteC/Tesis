@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class CharacterAnimator : MonoBehaviour
 {
+    [Header("DEFAULT")]
     [SerializeField] List<Sprite> walkDownSprites;
     [SerializeField] List<Sprite> walkUpSprites;
     [SerializeField] List<Sprite> walkRightSprites;
     [SerializeField] List<Sprite> walkLeftSprites;
     [SerializeField] List<Sprite> surfSprites;
     [SerializeField] FacingDirection defaultDirection = FacingDirection.Down;
+
+    [Header("GIRL")]
+    [SerializeField] List<Sprite> walkDownSpritesGirl;
+    [SerializeField] List<Sprite> walkUpSpritesGirl;
+    [SerializeField] List<Sprite> walkRightSpritesGirl;
+    [SerializeField] List<Sprite> walkLeftSpritesGirl;
+    [SerializeField] List<Sprite> surfSpritesGirl;
 
     //Parametros
     public float MoveX { get; set; }
@@ -34,6 +42,7 @@ public class CharacterAnimator : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+
         walkDownAnim = new SpriteAnimator(walkDownSprites, spriteRenderer);
         walkUpAnim = new SpriteAnimator(walkUpSprites, spriteRenderer);
         walkRightAnim = new SpriteAnimator(walkRightSprites, spriteRenderer);
@@ -103,6 +112,30 @@ public class CharacterAnimator : MonoBehaviour
     {
         get { return defaultDirection; }
     }
+
+    public void ChangeSprites(Moving how)
+    {
+        if(how == Moving.None)
+        {
+            walkDownAnim = new SpriteAnimator(walkDownSpritesGirl, spriteRenderer);
+            walkUpAnim = new SpriteAnimator(walkUpSpritesGirl, spriteRenderer);
+            walkRightAnim = new SpriteAnimator(walkRightSpritesGirl, spriteRenderer);
+            walkLeftAnim = new SpriteAnimator(walkLeftSpritesGirl, spriteRenderer);
+        }
+        else
+        {
+            walkDownAnim = new SpriteAnimator(walkDownSprites, spriteRenderer);
+            walkUpAnim = new SpriteAnimator(walkUpSprites, spriteRenderer);
+            walkRightAnim = new SpriteAnimator(walkRightSprites, spriteRenderer);
+            walkLeftAnim = new SpriteAnimator(walkLeftSprites, spriteRenderer);
+        }
+        
+
+        currentAnim = walkDownAnim;
+    }
+
+    public Sprite SpriteBoy => walkDownSprites[0];
+    public Sprite SpriteGirl => walkDownSpritesGirl[0];
 }
 
 public enum FacingDirection { Up, Down, Left, Right }
