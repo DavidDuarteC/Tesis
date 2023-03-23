@@ -56,7 +56,7 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
         {
             state = NPCState.Dialog;
             character.LookTowards(initiator.position);
-
+            checkQuiz();
             if(questToCompleted != null)
             {
                 var quest = new Quest(questToCompleted);
@@ -134,6 +134,26 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
             }
         }
             character.HandleUpdate();
+    }
+
+    public void checkQuiz()
+    {
+        int i = 0, j = 0, count = 0;
+        while (i < categories.Count)
+        {
+            if (j < QuizManager.i.QuizData.Count)
+            {
+                if (categories[i] == QuizManager.i.QuizData[j].categoryName)
+                    if (QuizManager.i.QuizData[j].isComplete)
+                        count++;
+                j++;
+                continue;
+            }
+            j = 0;
+            i++;
+        }
+        if(count == categories.Count)
+            this.haveQuiz = false;
     }
 
     IEnumerator Walk() //Realiza el patron de caminar de los NPCs

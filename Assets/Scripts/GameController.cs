@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
     [SerializeField] PartyScreen partyScreen;
     [SerializeField] InventoryUI inventoryUI;
     [SerializeField] ThermometerUI thermometerUI;
+    [SerializeField] CharacterSelectorUI characterSelectorUI;
 
     GameState state;
     GameState prevState;
@@ -43,6 +44,7 @@ public class GameController : MonoBehaviour
         ItemDB.Init();
         QuestDB.Init();
         state = GameState.ChooseCharacter;
+        //characterSelectorUI.gameObject.SetActive(true);
     }
 
     private void Start()
@@ -89,8 +91,8 @@ public class GameController : MonoBehaviour
         ShopController.i.OnStart += () => state = GameState.Shop;
         ShopController.i.OnFinish += () => state = GameState.FreeRoam;
 
-        CharacterSelectorUI.i.OnSelectCharacter += () => state = GameState.ChooseCharacter;
-        CharacterSelectorUI.i.OnFinishSelect += () => state = GameState.FreeRoam;
+        characterSelectorUI.OnSelectCharacter += () => state = GameState.ChooseCharacter;
+        characterSelectorUI.OnFinishSelect += () => state = GameState.FreeRoam;
 
         QuizGameUI.i.OnStartQuiz += () => state = GameState.Quiz;
         QuizGameUI.i.OnFinishQuiz += () => state = GameState.FreeRoam;

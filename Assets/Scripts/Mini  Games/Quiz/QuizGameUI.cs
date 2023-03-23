@@ -226,6 +226,7 @@ public class QuizGameUI : MonoBehaviour
         quizManager.StartGame(index, category); //start the game
         mainMenu.SetActive(false);              //deactivate mainMenu
         gamePanel.SetActive(true);              //activate game panel
+        timer.SetActive(true);
     }
 
     //this give blink effect [if needed use or dont use]

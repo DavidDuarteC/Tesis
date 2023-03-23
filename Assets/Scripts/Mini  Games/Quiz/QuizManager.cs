@@ -108,6 +108,7 @@ public class QuizManager : MonoBehaviour, ISavable
             correct = true;
             gameScore += 50;
             quizGameUI.ScoreText.text = "Score:" + gameScore;
+            StressLevel.i.LostMoreTimeRow = false;
         }
         else
         {
@@ -115,7 +116,7 @@ public class QuizManager : MonoBehaviour, ISavable
             //Reduce Life
             lifesRemaining--;
             quizGameUI.ReduceLife(lifesRemaining);
-
+            StressLevel.i.AddLevel(StressLevel.i.LostMoreTimeRow ? StressLevel.i.LoseMultiply * 2 : StressLevel.i.LoseMultiply);
             if (lifesRemaining == 0)
             {
                 GameEnd();
