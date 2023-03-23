@@ -16,9 +16,7 @@ public class CharacterSelectorUI : MonoBehaviour
     [SerializeField] Image img;
     [SerializeField] new TextMeshProUGUI name;
     [SerializeField] Image leftArrow;
-    [SerializeField] Image leftArrow2;
     [SerializeField] Image rightArrow;
-    [SerializeField] Image rightArrow2;
 
     private Moving how;
 
@@ -58,9 +56,7 @@ public class CharacterSelectorUI : MonoBehaviour
             name.text = "Chico";
             how = Moving.Move;
             leftArrow.gameObject.SetActive(false);
-            leftArrow2.gameObject.SetActive(false);
             rightArrow.gameObject.SetActive(true);
-            rightArrow2.gameObject.SetActive(true);
         }
         else if (index == 1)
         {
@@ -68,9 +64,7 @@ public class CharacterSelectorUI : MonoBehaviour
             name.text = "Chica";
             how = Moving.None;
             rightArrow.gameObject.SetActive(false);
-            rightArrow2.gameObject.SetActive(false);
             leftArrow.gameObject.SetActive(true);
-            leftArrow2.gameObject.SetActive(true);
         }
 
 
