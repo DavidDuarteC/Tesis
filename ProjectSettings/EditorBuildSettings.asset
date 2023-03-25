@@ -9,15 +9,33 @@ EditorBuildSettings:
     path: Assets/Scenes/GamePlay.unity
     guid: b4efb472c5a36e2419fd6e011c5e5efa
   - enabled: 1
-    path: Assets/Scenes/HomeTown.unity
+    path: Assets/Scenes/CasaP2.unity
+    guid: 2cc006971bdd7db4e92fa3069475681d
+  - enabled: 1
+    path: Assets/Scenes/CasaP1.unity
+    guid: 90ace37527ba5584b904f55eb21d01c7
+  - enabled: 1
+    path: Assets/Scenes/BusStop.unity
+    guid: cf027555008f88245a6234d324b29e65
+  - enabled: 1
+    path: Assets/Scenes/CampusPUJ.unity
+    guid: b91765a7fdbd59e48bc62e2c4e4044b0
+  - enabled: 1
+    path: Assets/Scenes/PasilloIng.unity
+    guid: 053f5d3249c0fcf49b85a73b87c79297
+  - enabled: 1
+    path: Assets/Scenes/Salon1Ing.unity
+    guid: 7cba741959eef52449d858d0f53255be
+  - enabled: 0
+    path: Assets/Scenes/Demo/HomeTown.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Route1.unity
+  - enabled: 0
+    path: Assets/Scenes/Demo/Route1.unity
     guid: 972dbae2c4234d541b40be28f8f48a70
-  - enabled: 1
-    path: Assets/Scenes/House1.unity
+  - enabled: 0
+    path: Assets/Scenes/Demo/House1.unity
     guid: 138930f7ca07cb1439867ab240db0023
-  - enabled: 1
-    path: Assets/Scenes/Town2.unity
+  - enabled: 0
+    path: Assets/Scenes/Demo/Town2.unity
     guid: 2aa2b9a8d7ceb4d40a96aac025074471
   m_configObjects: {}
