@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
 using Unity.VisualScripting;
+using UnityEngine.Video;
 
 public class QuizGameUI : MonoBehaviour
 {
@@ -100,9 +101,18 @@ public class QuizGameUI : MonoBehaviour
                 questionVideo.transform.gameObject.SetActive(true);         //activate questionVideo
                 questionImg.transform.gameObject.SetActive(false);          //deactivate questionImg
                 questionAudio.transform.gameObject.SetActive(false);        //deactivate questionAudio
-
-                questionVideo.clip = question.videoClip;                    //set video clip
-                questionVideo.Play();                                       //play video
+                //if (question.urlVideo != null)
+                //{
+                    questionVideo.source = UnityEngine.Video.VideoSource.Url;
+                    questionVideo.url = question.urlVideo;
+                    questionVideo.Prepare();
+                    questionVideo.prepareCompleted += OnPrepareCompleted;
+                //}
+                //else
+                //{
+                //    questionVideo.clip = question.videoClip;                    //set video clip
+                //    questionVideo.Play();                                       //play video
+                //}
                 break;
         }
 
@@ -122,6 +132,10 @@ public class QuizGameUI : MonoBehaviour
 
         answered = false;
 
+    }
+    private void OnPrepareCompleted(VideoPlayer player)
+    {
+        questionVideo.Play();
     }
 
     public void ReduceLife(int remainingLife)
@@ -200,15 +214,15 @@ public class QuizGameUI : MonoBehaviour
         {
             if(count < categoriesShow.Count)
             {
-                if (quizManager.QuizData[i].categoryName == categoriesShow[count] && quizManager.QuizData[i].isComplete == false)
+                if (quizManager.QuizData[i].quiz.categoryName == categoriesShow[count] && quizManager.QuizData[i].isComplete == false)
                 {
                     //Create new CategoryBtn
                     CategoryBtnScript categoryBtn = Instantiate(categoryBtnPrefab, scrollHolder.transform);
                     //Set the button default values
-                    categoryBtn.SetButton(quizManager.QuizData[i].categoryName, quizManager.QuizData[i].questions.Count);
+                    categoryBtn.SetButton(quizManager.QuizData[i].quiz.categoryName, quizManager.QuizData[i].quiz.questions.Count);
                     int index = i;
                     //Add listner to button which calls CategoryBtn method
-                    categoryBtn.Btn.onClick.AddListener(() => CategoryBtn(index, quizManager.QuizData[index].categoryName));
+                    categoryBtn.Btn.onClick.AddListener(() => CategoryBtn(index, quizManager.QuizData[index].quiz.categoryName));
                     count++;
                     //quizManager.QuizData[index].active = true;
                 }
@@ -241,27 +255,27 @@ public class QuizGameUI : MonoBehaviour
         }
     }
 
-    public bool EndQuicesForNpc()
-    {
-        int i = 0, count = 0, quizComplete = 0;
+    //public bool EndQuicesForNpc()
+    //{
+    //    int i = 0, count = 0, quizComplete = 0;
 
-        while (i < categoriesShow.Count)
-        {
-            if (count < quizManager.QuizData.Count)
-            {
-                if (categoriesShow[i] == quizManager.QuizData[i].categoryName)
-                    if (quizManager.QuizData[i].isComplete)
-                        quizComplete++;
-                count++;
-                continue;
-            }
-            count = 0;
-            i++;
-        }
-        if (quizComplete == categoriesShow.Count)
-            return true;
-        else return false;
-    }
+    //    while (i < categoriesShow.Count)
+    //    {
+    //        if (count < quizManager.QuizData.Count)
+    //        {
+    //            if (categoriesShow[i] == quizManager.QuizData[i].quiz.categoryName)
+    //                if (quizManager.QuizData[i].isComplete)
+    //                    quizComplete++;
+    //            count++;
+    //            continue;
+    //        }
+    //        count = 0;
+    //        i++;
+    //    }
+    //    if (quizComplete == categoriesShow.Count)
+    //        return true;
+    //    else return false;
+    //}
 
     public void RetryButton()
     {

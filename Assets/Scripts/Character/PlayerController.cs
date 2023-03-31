@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour, ISavable
     [SerializeField] Moving isHow;
 
     bool howIs = true; //True si es hombre y False si es mujer
+    int day = 0;
 
 
     private Vector2 input;//Input para mover al personaje
@@ -39,6 +40,7 @@ public class PlayerController : MonoBehaviour, ISavable
         {
             input.x = Input.GetAxisRaw("Horizontal");
             input.y = Input.GetAxisRaw("Vertical");
+            
 
             if (input.x != 0) input.y = 0;
 
@@ -47,7 +49,6 @@ public class PlayerController : MonoBehaviour, ISavable
                 StartCoroutine(character.Move(input, OnMoveOver));
             }
         }
-
         character.HandleUpdate();
 
         if (Input.GetKeyDown(KeyCode.Z))
@@ -154,6 +155,15 @@ public class PlayerController : MonoBehaviour, ISavable
         get => isHow;
         set => isHow = value;
     }
+    public int Day
+    {
+        get => day;
+        set => day = value;
+    }
+    public void NextDay()
+    {
+        day++;
+    }
 }
 
 [Serializable]
@@ -163,4 +173,5 @@ public class PlayerSaveData
     public float[] position;
     public Moving isHow;
     public List<PokemonSaveData> pokemons;
+    public int day;
 }

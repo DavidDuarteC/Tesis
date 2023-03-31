@@ -281,7 +281,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6281090718104924762, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
   m_PrefabInstance: {fileID: 1179955180}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2084070280}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ed701de04f3a5e44b917317b9c74964, type: 3}
@@ -474,6 +474,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Salon1Ing
       objectReference: {fileID: 0}
+    - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
+      propertyPath: sceneMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 1555836638cd34283a3780a19b58d4c6, type: 3}
     - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
       propertyPath: connctedScenes.Array.size
       value: 1
@@ -5440,6 +5444,30 @@ PrefabInstance:
       propertyPath: quizDataList.Array.data[2]
       value: 
       objectReference: {fileID: 11400000, guid: 2befbdfc6c549874aa85fda8c3784bda, type: 2}
+    - target: {fileID: 6281090718104924762, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: quizDataList.Array.data[0].quiz
+      value: 
+      objectReference: {fileID: 11400000, guid: 9b85f3dce8ee2f04e9c2cdc4cd887336, type: 2}
+    - target: {fileID: 6281090718104924762, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: quizDataList.Array.data[1].quiz
+      value: 
+      objectReference: {fileID: 11400000, guid: 7847f211e5d17cc41ba7d12f1cc81569, type: 2}
+    - target: {fileID: 6281090718104924762, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: quizDataList.Array.data[2].quiz
+      value: 
+      objectReference: {fileID: 11400000, guid: 2befbdfc6c549874aa85fda8c3784bda, type: 2}
+    - target: {fileID: 6281090718104924762, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: quizDataList.Array.data[0].isComplete
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281090718104924762, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: quizDataList.Array.data[1].isComplete
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281090718104924762, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: quizDataList.Array.data[2].isComplete
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6282965228175530452, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7237,6 +7265,10 @@ PrefabInstance:
       value: CasaP2
       objectReference: {fileID: 0}
     - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
+      propertyPath: sceneMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 956ad2f73332544fd87365087825cc4f, type: 3}
+    - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
       propertyPath: connctedScenes.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -7317,6 +7349,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PasilloIng
       objectReference: {fileID: 0}
+    - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
+      propertyPath: sceneMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 1555836638cd34283a3780a19b58d4c6, type: 3}
     - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
       propertyPath: connctedScenes.Array.size
       value: 2
@@ -7605,6 +7641,10 @@ PrefabInstance:
       value: BusStop
       objectReference: {fileID: 0}
     - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
+      propertyPath: sceneMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 5059413ec429c4507bb7bca2286fad19, type: 3}
+    - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
       propertyPath: connctedScenes.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -7700,6 +7740,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CasaP1
       objectReference: {fileID: 0}
+    - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
+      propertyPath: sceneMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 956ad2f73332544fd87365087825cc4f, type: 3}
     - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
       propertyPath: connctedScenes.Array.size
       value: 2
@@ -7810,7 +7854,7 @@ PrefabInstance:
     - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
       propertyPath: sceneMusic
       value: 
-      objectReference: {fileID: 8300000, guid: fe80e93350ff7b94fb9efe94b1cf41c6, type: 3}
+      objectReference: {fileID: 8300000, guid: 5059413ec429c4507bb7bca2286fad19, type: 3}
     - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
       propertyPath: connctedScenes.Array.size
       value: 2
@@ -7836,6 +7880,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2084070280 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3573020922467370054, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+  m_PrefabInstance: {fileID: 1179955180}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2084070282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084070280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4881f89f8b930e34489bbb86116ccd4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueId: 00e6f30d-aaac-4e33-b99a-4b5557c7c8a0
 --- !u!114 &2103998738 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4117803483308124917, guid: 527182dd61ed34e4690411213b6988ff, type: 3}

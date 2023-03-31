@@ -6,6 +6,6 @@ using UnityEngine;
 public class QuizDataScriptable : ScriptableObject
 {
     public string categoryName;
-    public bool isComplete = false;
+    //public bool isComplete = false;
     public List<Question> questions;
 }

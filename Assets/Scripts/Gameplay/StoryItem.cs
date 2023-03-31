@@ -5,8 +5,6 @@ using UnityEngine;
 public class StoryItem : MonoBehaviour, IPlayerTriggerable
 {
     [SerializeField] Dialog dialog;
-
-
     public void OnPlayerTrigger(PlayerController player)
     {
         player.Character.Animator.IsMoving = false;

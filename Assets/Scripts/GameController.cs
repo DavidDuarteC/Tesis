@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public enum GameState{ FreeRoam, Battle, Dialog, Menu, PartyScreen, Bag , Cutscene, Paused, Evolution, Shop, ChooseCharacter, Quiz }
 public class GameController : MonoBehaviour
@@ -193,6 +194,14 @@ public class GameController : MonoBehaviour
         if (state == GameState.FreeRoam)
         {
             playerController.HandleUpdate();
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                playerController.Character.moveSpeed = 8;
+            }
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                playerController.Character.moveSpeed = 5;
+            }
             thermometerUI.SetStress();
 
             if (Input.GetKeyDown(KeyCode.Escape)) //Acceder al menu principal
@@ -277,12 +286,14 @@ public class GameController : MonoBehaviour
         {
             //Guardar
             SavingSystem.i.Save("saveSlot1");
+            //QuizManager.i.SaveData();
             state = GameState.FreeRoam;
         }
         else if(selectedItem == 3)
         {
             //Guardar
             SavingSystem.i.Load("saveSlot1");
+            //QuizManager.i.LoadData();
             state = GameState.FreeRoam;
         }
 

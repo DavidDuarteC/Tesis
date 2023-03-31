@@ -1,19 +1,13 @@
-﻿using DG.Tweening;
-using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-
 public class QuizManager : MonoBehaviour, ISavable
 {
-#pragma warning disable 649
     //ref to the QuizGameUI script
-    [SerializeField] private QuizGameUI quizGameUI;
+    [SerializeField] QuizGameUI quizGameUI;
     //ref to the scriptableobject file
-    [SerializeField] private List<QuizDataScriptable> quizDataList;
-    [SerializeField] private float timeInSeconds;
-#pragma warning restore 649
+    [SerializeField] List<DataQuiz> quizDataList;
+    [SerializeField] float timeInSeconds;
 
     private string currentCategory = "";
     private int correctAnswerCount = 0;
@@ -30,10 +24,17 @@ public class QuizManager : MonoBehaviour, ISavable
 
     public GameStatus GameStatus { get { return gameStatus; } }
 
-    public List<QuizDataScriptable> QuizData { get => quizDataList; set { quizDataList = value; } }
+    public List<DataQuiz> QuizData { get => quizDataList; set { quizDataList = value; } }
 
     public static QuizManager i;
 
+    //private void Awake()
+    //{
+    //    foreach (var data in quizDataList)
+    //    {
+    //        data.isComplete = false;
+    //    }
+    //}
     private void Start()
     {
         i = this;
@@ -48,7 +49,7 @@ public class QuizManager : MonoBehaviour, ISavable
         currentTime = timeInSeconds;
         //set the questions data
         questions = new List<Question>();
-        dataScriptable = quizDataList[categoryIndex];
+        dataScriptable = quizDataList[categoryIndex].quiz;
         questions.AddRange(dataScriptable.questions);
         //select the question
         SelectQuestion();
@@ -152,10 +153,9 @@ public class QuizManager : MonoBehaviour, ISavable
         {
             for (int i = 0; i < quizDataList.Count; i++)
             {
-                if (quizDataList[i].categoryName == currentCategory)
+                if (quizDataList[i].quiz.categoryName == currentCategory)
                 {
                     quizDataList[i].isComplete = true;
-                    NPCController.i.RemoveQuiz(currentCategory);
                 }
             }
         }
@@ -166,46 +166,40 @@ public class QuizManager : MonoBehaviour, ISavable
             
         //QuizGameUI.i.ScrollHolder().GetComponents<CategoryBtnScript>().ConvertTo
     }
-    public SaveDataQuiz GetSaveData(QuizDataScriptable quiz) //Crea el objeto con los datos para guadar la info de un pokemon
-    {
-        var saveData = new SaveDataQuiz()
-        {
-            categoryName = quiz.categoryName,
-            complete = quiz.isComplete,
-        };
-        return saveData;
-    }
 
     public object CaptureState()
     {
-        List<SaveDataQuiz> saveInfo = new List<SaveDataQuiz>();
+        var saveData = new List<SaveDataQuiz>();
+
         for (int i = 0; i < quizDataList.Count; i++)
         {
-            saveInfo[i] = GetSaveData(quizDataList[i]);
+            SaveDataQuiz save = new SaveDataQuiz(); // Crear una nueva instancia aquí
+            save.category = quizDataList[i].quiz.categoryName;
+            save.complete = quizDataList[i].isComplete;
+            saveData.Add(save);
         }
-        var saveData = saveInfo;
-
         return saveData;
     }
 
     public void RestoreState(object state)
     {
-        var saveData = (List<SaveDataQuiz>)state;
-        int i = 0;
-        int count = 0;
-        while(i < quizDataList.Count)
+        var saveData = state as List<SaveDataQuiz>;
+        //Debug.Log("null data");
+        if (saveData != null)
         {
-            if(count < saveData.Count)
+            //Debug.Log(saveData.ToArray());
+            for (int i = 0; i < saveData.Count; i++)
             {
-                if (quizDataList[i].categoryName == saveData[i].categoryName)
-                    quizDataList[i].isComplete= saveData[i].complete;
-                count++;
-                continue;
+                for (int j = 0; j < quizDataList.Count; j++)
+                {
+                    // Intercambia el uso de 'i' y 'j' aquí
+                    if (quizDataList[j].quiz.categoryName == saveData[i].category)
+                        quizDataList[j].isComplete = saveData[i].complete;
+                }
             }
-            count = 0;
-            i++;
         }
     }
+
 }
 
 //Datastructure for storeing the quetions data
@@ -219,6 +213,7 @@ public class Question
     public UnityEngine.Video.VideoClip videoClip;   //video for video type
     public List<string> options;        //options to select
     public string correctAns;           //correct option
+    public string urlVideo;
 }
 
 [System.Serializable]
@@ -237,9 +232,16 @@ public enum GameStatus
     NEXT
 }
 
-[SerializeField]
+[Serializable]
+public class DataQuiz
+{
+    public QuizDataScriptable quiz;
+    public bool isComplete;
+}
+
+[Serializable]
 public class SaveDataQuiz
 {
-    public string categoryName;
+    public string category;
     public bool complete;
 }

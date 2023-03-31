@@ -18,9 +18,10 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
 
     [Header("Quiz")]
     [SerializeField] bool haveQuiz;
+    //[SerializeField] List<DataQuizNpc> categories;
     [SerializeField] List<string> categories;
     [SerializeField] Dialog startQuiz;
-
+    
     NPCState state;
     float idleTimer = 0f;
     int currentPattern = 0;
@@ -31,9 +32,7 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
     ItemGiver itemGiver;
     PokemonGiver pokemonGiver;
     Healer healer;
-    Merchant merchant;
-    QuizManager quiz;
-
+    Merchant merchant;  
     public static NPCController i;
 
     private void Awake()
@@ -56,8 +55,9 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
         {
             state = NPCState.Dialog;
             character.LookTowards(initiator.position);
-            checkQuiz();
-            if(questToCompleted != null)
+            if (haveQuiz)
+                checkQuiz();
+            if (questToCompleted != null)
             {
                 var quest = new Quest(questToCompleted);
                 yield return quest.CompleteQuest(initiator);
@@ -143,7 +143,7 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
         {
             if (j < QuizManager.i.QuizData.Count)
             {
-                if (categories[i] == QuizManager.i.QuizData[j].categoryName)
+                if (categories[i] == QuizManager.i.QuizData[j].quiz.categoryName)
                     if (QuizManager.i.QuizData[j].isComplete)
                         count++;
                 j++;
@@ -152,8 +152,11 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
             j = 0;
             i++;
         }
-        if(count == categories.Count)
-            this.haveQuiz = false;
+        if (count == categories.Count)
+        {
+            haveQuiz = false;
+        }
+            
     }
 
     IEnumerator Walk() //Realiza el patron de caminar de los NPCs
@@ -170,11 +173,11 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
         state = NPCState.Idle;
     }
 
-    public bool HaveQuiz
-    {
-        get { return haveQuiz; }
-        set { haveQuiz = value; }
-    }
+    //public bool HaveQuiz
+    //{
+    //    get { return haveQuiz; }
+    //    set { haveQuiz = value; }
+    //}
 
     public object CaptureState()
     {
@@ -188,6 +191,8 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
             saveData.questToComplete = (new Quest(questToCompleted)).GetSaveData();
 
         saveData.haveQ = haveQuiz;
+        if(categories.Any())
+            saveData.categories = categories;
         return saveData;
     }
 
@@ -201,17 +206,8 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
             questToStart = (saveData.questToStart != null) ? new Quest(saveData.questToStart).Base : null;
             questToCompleted = (saveData.questToComplete != null) ? new Quest(saveData.questToComplete).Base : null;
             haveQuiz = saveData.haveQ;
-
+            categories = saveData.categories;
         }
-    }
-
-    public void RemoveQuiz(string name)
-    {
-        if (categories.Contains(name))
-            categories.Remove(name);
-        if(!categories.Any())
-            HaveQuiz = false;
-
     }
 }
 
@@ -222,6 +218,7 @@ public class NPCQuestSaveData
     public QuestSaveData questToStart;
     public QuestSaveData questToComplete;
     public bool haveQ;
+    public List<string> categories;
 }
 
 public enum NPCState
