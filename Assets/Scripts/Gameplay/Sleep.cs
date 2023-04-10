@@ -24,10 +24,12 @@ public class Sleep : MonoBehaviour, IPlayerTriggerable
             //Yes
             yield return Fader.i.FadeIn(0.6f);
             AudioManager.i.PlaySfx(audioClip, true);
+            PlayerController.i.Day++;
             yield return new WaitForSeconds(audioClip.length);
-            yield return DialogManager.Instance.ShowDialogText("Hoy es un nuevo día (Día " + (player.Day + 1) + ")");
+            DayUI.i.changeDay();
+            yield return DialogManager.Instance.ShowDialogText("Hoy es un nuevo día (Día " + player.Day + ")");
             yield return Fader.i.FadeOut(0.6f);
-            PlayerController.i.NextDay();
+            
 
         }
         else if (selectedChoice == 1)

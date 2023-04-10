@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 
-public enum GameState{ FreeRoam, Battle, Dialog, Menu, PartyScreen, Bag , Cutscene, Paused, Evolution, Shop, ChooseCharacter, Quiz }
+public enum GameState{ FreeRoam, Battle, Dialog, Menu, PartyScreen, Bag , Cutscene, Paused, Evolution, Shop, ChooseCharacter, Quiz, Info }
 public class GameController : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
@@ -15,6 +15,8 @@ public class GameController : MonoBehaviour
     [SerializeField] InventoryUI inventoryUI;
     [SerializeField] ThermometerUI thermometerUI;
     [SerializeField] CharacterSelectorUI characterSelectorUI;
+    [SerializeField] GameObject screenControl;
+    [SerializeField] DayUI dayUI;
 
     GameState state;
     GameState prevState;
@@ -100,6 +102,7 @@ public class GameController : MonoBehaviour
 
 
         thermometerUI.gameObject.SetActive(true);
+        dayUI.gameObject.SetActive(true);
         
     }
 
@@ -132,6 +135,7 @@ public class GameController : MonoBehaviour
         battleSystem.gameObject.SetActive(true);
         worldCamera.gameObject.SetActive(false);
         thermometerUI.gameObject.SetActive(false);
+        dayUI.gameObject.SetActive(false);
 
         var playerParty = playerController.GetComponent<PokemonParty>();
         var wildPokmeon = CurrentScene.GetComponent<MapArea>().GetRandonWildPokemon(trigger);
@@ -149,6 +153,7 @@ public class GameController : MonoBehaviour
         battleSystem.gameObject.SetActive(true);
         worldCamera.gameObject.SetActive(false);
         thermometerUI.gameObject.SetActive(false);
+        dayUI.gameObject.SetActive(false);
 
         this.trainer = trainer;
         var playerParty = playerController.GetComponent<PokemonParty>();
@@ -177,6 +182,7 @@ public class GameController : MonoBehaviour
         battleSystem.gameObject.SetActive(false);
         worldCamera.gameObject.SetActive(true);
         thermometerUI.gameObject.SetActive(true);
+        dayUI.gameObject.SetActive(true);
 
         var playerParty = playerController.GetComponent<PokemonParty>();
         bool hasEvolutions = playerParty.CheckForEvolutions();
@@ -258,6 +264,15 @@ public class GameController : MonoBehaviour
         {
             ShopController.i.HandleUpdate();
         }
+        else if(state == GameState.Info)
+        {
+            if(Input.GetKeyDown(KeyCode.X)) 
+            { 
+                screenControl.SetActive(false);
+                state = prevState;
+            }
+
+        }
     }
 
     public void SetCurrentScene(SceneDetails currScene) //agrega las escenas conectadas
@@ -284,15 +299,22 @@ public class GameController : MonoBehaviour
         }
         else if(selectedItem == 2)
         {
+            screenControl.SetActive(true);
+
+            state = GameState.Info;
+        }
+        else if(selectedItem == 3)
+        {
             //Guardar
             SavingSystem.i.Save("saveSlot1");
             //QuizManager.i.SaveData();
             state = GameState.FreeRoam;
         }
-        else if(selectedItem == 3)
+        else if(selectedItem == 4)
         {
             //Guardar
             SavingSystem.i.Load("saveSlot1");
+            dayUI.changeDay();
             //QuizManager.i.LoadData();
             state = GameState.FreeRoam;
         }

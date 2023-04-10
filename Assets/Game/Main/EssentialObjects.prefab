@@ -2215,6 +2215,7 @@ MonoBehaviour:
   inventoryUI: {fileID: 3669126872460818413}
   thermometerUI: {fileID: 5902747771826184707}
   characterSelectorUI: {fileID: 0}
+  screenControl: {fileID: 0}
 --- !u!114 &253629661372716221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5344,7 +5345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4222518651195397633, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4335896577634395537, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5670,6 +5671,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5469936647004566684, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5511993637387841299, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
       propertyPath: m_SizeDelta.y
       value: 900
@@ -5969,6 +5974,10 @@ PrefabInstance:
     - target: {fileID: 6162255028077721671, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181330062003527150, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
+      propertyPath: m_Size
+      value: 0.23529412
       objectReference: {fileID: 0}
     - target: {fileID: 6181656255093941642, guid: 9828157f96be05a4b99e9d9845a01c92, type: 3}
       propertyPath: m_AnchorMax.x

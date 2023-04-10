@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour, ISavable
     [SerializeField] Moving isHow;
 
     bool howIs = true; //True si es hombre y False si es mujer
-    int day = 0;
+    int day = 1;
 
 
     private Vector2 input;//Input para mover al personaje
@@ -103,6 +103,7 @@ public class PlayerController : MonoBehaviour, ISavable
             position = new float[] { transform.position.x, transform.position.y },
             pokemons = GetComponent<PokemonParty>().Pokemons.Select(p => p.GetSaveData()).ToList(),
             isHow = this.howIs ? Moving.Move : Moving.None,
+            day = this.day,
         };
         return saveData;
     }
@@ -113,6 +114,7 @@ public class PlayerController : MonoBehaviour, ISavable
         name = saveData.name;
         var pos = saveData.position;
         transform.position = new Vector3(pos[0], pos[1]);
+        day = saveData.day;
         isHow = saveData.isHow;
         if (isHow != Moving.None)
         {
