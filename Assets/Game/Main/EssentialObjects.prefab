@@ -2216,6 +2216,7 @@ MonoBehaviour:
   thermometerUI: {fileID: 5902747771826184707}
   characterSelectorUI: {fileID: 0}
   screenControl: {fileID: 0}
+  dayUI: {fileID: 0}
 --- !u!114 &253629661372716221
 MonoBehaviour:
   m_ObjectHideFlags: 0

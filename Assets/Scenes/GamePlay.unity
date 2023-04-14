@@ -479,6 +479,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Salon1Ing
       objectReference: {fileID: 0}
+    - target: {fileID: 8088529046401772938, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
       propertyPath: sceneMusic
       value: 
@@ -858,11 +862,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 253629661382041297, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 61.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 253629661382041297, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 37.8
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 253629661382041298, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: pokemons.Array.size
@@ -7288,6 +7292,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CasaP2
       objectReference: {fileID: 0}
+    - target: {fileID: 8088529046401772938, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
       propertyPath: sceneMusic
       value: 
@@ -7372,6 +7380,10 @@ PrefabInstance:
     - target: {fileID: 8088529046401772938, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
       propertyPath: m_Name
       value: PasilloIng
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088529046401772938, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
       propertyPath: sceneMusic
@@ -7664,6 +7676,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BusStop
       objectReference: {fileID: 0}
+    - target: {fileID: 8088529046401772938, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
       propertyPath: sceneMusic
       value: 
@@ -7763,6 +7779,10 @@ PrefabInstance:
     - target: {fileID: 8088529046401772938, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
       propertyPath: m_Name
       value: CasaP1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088529046401772938, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
       propertyPath: sceneMusic
@@ -7874,6 +7894,10 @@ PrefabInstance:
     - target: {fileID: 8088529046401772938, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
       propertyPath: m_Name
       value: CampusPUJ
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088529046401772938, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
       propertyPath: sceneMusic
