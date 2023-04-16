@@ -26,6 +26,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Salon1Ing.unity
     guid: 7cba741959eef52449d858d0f53255be
+  - enabled: 1
+    path: Assets/Scenes/Biblioteca.unity
+    guid: 93cca4c1d892afd418c683dd7e2b1a32
+  - enabled: 1
+    path: Assets/Scenes/Pasillo67.unity
+    guid: 57c418b652036c440a3879c4bc7b0845
+  - enabled: 1
+    path: Assets/Scenes/SalonUno67.unity
+    guid: 8ff5372444c01634db98cc7cf338c3c3
   - enabled: 0
     path: Assets/Scenes/Demo/HomeTown.unity
     guid: 2cda990e2423bbf4892e6590ba056729

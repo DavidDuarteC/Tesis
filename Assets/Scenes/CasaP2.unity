@@ -3811,7 +3811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 338787664298111855, guid: 3ab1d9c2d9ff9d140bb3a43bc33137cd, type: 3}
       propertyPath: m_Name
-      value: LocationPortal (1)
+      value: LocationPortal CasaP1
       objectReference: {fileID: 0}
     - target: {fileID: 6491617732323698141, guid: 3ab1d9c2d9ff9d140bb3a43bc33137cd, type: 3}
       propertyPath: m_LocalPosition.x
