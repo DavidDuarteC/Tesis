@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour, ISavable
 
     bool howIs = true; //True si es hombre y False si es mujer
     int day = 1;
+    int semester = 1;
 
 
     private Vector2 input;//Input para mover al personaje
@@ -104,6 +105,7 @@ public class PlayerController : MonoBehaviour, ISavable
             pokemons = GetComponent<PokemonParty>().Pokemons.Select(p => p.GetSaveData()).ToList(),
             isHow = this.howIs ? Moving.Move : Moving.None,
             day = this.day,
+            semester = this.semester,
         };
         return saveData;
     }
@@ -115,6 +117,7 @@ public class PlayerController : MonoBehaviour, ISavable
         var pos = saveData.position;
         transform.position = new Vector3(pos[0], pos[1]);
         day = saveData.day;
+        semester = saveData.semester;
         isHow = saveData.isHow;
         if (isHow != Moving.None)
         {
@@ -162,9 +165,10 @@ public class PlayerController : MonoBehaviour, ISavable
         get => day;
         set => day = value;
     }
-    public void NextDay()
+    public int Semester
     {
-        day++;
+        get => semester;
+        set => semester = value;
     }
 }
 
@@ -176,4 +180,5 @@ public class PlayerSaveData
     public Moving isHow;
     public List<PokemonSaveData> pokemons;
     public int day;
+    public int semester;
 }

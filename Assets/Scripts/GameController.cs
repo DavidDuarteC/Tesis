@@ -202,7 +202,7 @@ public class GameController : MonoBehaviour
             playerController.HandleUpdate();
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                playerController.Character.moveSpeed = 8;
+                playerController.Character.moveSpeed = 10;
             }
             if (Input.GetKeyUp(KeyCode.Space))
             {

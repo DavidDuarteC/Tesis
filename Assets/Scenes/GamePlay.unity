@@ -1031,11 +1031,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 253629661382041297, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5
+      value: 60.5
       objectReference: {fileID: 0}
     - target: {fileID: 253629661382041297, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8
+      value: 35.8
       objectReference: {fileID: 0}
     - target: {fileID: 253629661382041298, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: pokemons.Array.size
@@ -3121,6 +3121,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2827982293695401798, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2933582413380285097, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3925,6 +3929,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4090095713924766116, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: uniqueId
+      value: 3e5ab9a2-6162-49a6-bd6a-406d422fc792
+      objectReference: {fileID: 0}
     - target: {fileID: 4104580815113274371, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -4022,9 +4030,45 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4224887452634994808, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: slots.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4224887452634994808, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: collectibles.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4224887452634994808, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: pokeballSlots.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4224887452634994808, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: slots.Array.data[0].item
+      value: 
+      objectReference: {fileID: 11400000, guid: 38e8e031c93279449bde0b1ae82c591c, type: 2}
+    - target: {fileID: 4224887452634994808, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: slots.Array.data[7].item
       value: 
       objectReference: {fileID: 11400000, guid: 1fc088baecf36244295dfd3773c3ba6c, type: 2}
+    - target: {fileID: 4224887452634994808, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: slots.Array.data[0].count
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4224887452634994808, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: collectibles.Array.data[0].item
+      value: 
+      objectReference: {fileID: 11400000, guid: 81636947417f45c4ca6193254d6e685c, type: 2}
+    - target: {fileID: 4224887452634994808, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: collectibles.Array.data[1].item
+      value: 
+      objectReference: {fileID: 11400000, guid: 75627f13628c4e745aa1bd026d71ba07, type: 2}
+    - target: {fileID: 4224887452634994808, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: collectibles.Array.data[0].count
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4224887452634994808, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: collectibles.Array.data[1].count
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4226196576786865640, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7907,7 +7951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8088529046401772937, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 54.8
+      value: 54.01
       objectReference: {fileID: 0}
     - target: {fileID: 8088529046401772937, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
       propertyPath: m_LocalPosition.y

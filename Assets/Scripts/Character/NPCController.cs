@@ -189,10 +189,12 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
 
         if (questToCompleted != null)
             saveData.questToComplete = (new Quest(questToCompleted)).GetSaveData();
-
-        saveData.haveQ = haveQuiz;
-        if(categories.Any())
-            saveData.categories = categories;
+        if (haveQuiz)
+        {
+            saveData.haveQ = haveQuiz;
+            if (categories.Any())
+                saveData.categories = categories;
+        }
         return saveData;
     }
 

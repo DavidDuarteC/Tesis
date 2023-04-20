@@ -109,7 +109,7 @@ public class InventoryUI : MonoBehaviour
                 UpdateItemSelection();
             }
 
-            if (Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetKeyDown(KeyCode.Z) && selectedCategory != 0)
                 StartCoroutine(ItemSelected());
             else if (Input.GetKeyDown(KeyCode.X))
                 onBack?.Invoke();
@@ -177,11 +177,7 @@ public class InventoryUI : MonoBehaviour
             }
         }
 
-        if(selectedCategory == (int)ItemCategory.Pokeballs)
-        {
-            StartCoroutine(UseItem());
-        }
-        else
+        if(selectedCategory == (int)ItemCategory.Tms)
         {
             OpenPartyScreen();
             if(item is TmItem)//Muestra si es usable por el pokemon

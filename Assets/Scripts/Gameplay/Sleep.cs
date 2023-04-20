@@ -15,8 +15,8 @@ public class Sleep : MonoBehaviour, IPlayerTriggerable
     public IEnumerator SleepeEvent(Transform transform, PlayerController player) // Permite curar los pokemones que tenga el personaje
     {
         int selectedChoice = 0;
-        yield return DialogManager.Instance.ShowDialogText("Te ves cansado, deberias dormir un poco",
-            choices: new List<string>() { "Yes", "No" },
+        yield return DialogManager.Instance.ShowDialogText("Te ves cansado, deberías dormir un poco",
+            choices: new List<string>() { "Sí", "No" },
             onChoiceSelected: (choiceIndex) => selectedChoice = choiceIndex);
 
         if (selectedChoice == 0)

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac6574a1e8bfd3c4486267dbc643f67c, type: 3}
+  m_Name: LeerCarta
+  m_EditorClassIdentifier: 
+  name: LeerCarta
+  description: 
+  startDialog:
+    lines:
+    - "Hijo/a te lleg\xF3 una carta!"
+    - Seguro tiene que ver con tu solicitud de la Javeriana
+    - "Te la dej\xE9 en tu cuarto, encima de la mesa y al lado del computador"
+  inProgressDialog:
+    lines:
+    - Ve y revisa tu cuarto
+  completedDialog:
+    lines:
+    - "Te aceptaron en la Javeriana, \xBFVerdad? Lo veo en tu cara de emoci\xF3n"
+    - Estoy orgullosa de ti, hijo/a
+    - Ahora ve y cumple tus metas
+    - Ah, se me olvidaba
+    - "Te compr\xE9 este port\xE1til, t\xF3malo"
+    - "Ojal\xE1 sea tu principal herramienta en la carrera"
+  requiredItem: {fileID: 11400000, guid: 75627f13628c4e745aa1bd026d71ba07, type: 2}
+  rewardItem: {fileID: 11400000, guid: 81636947417f45c4ca6193254d6e685c, type: 2}

@@ -4,12 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public enum ItemCategory { Items, Pokeballs, Tms }
+public enum ItemCategory { Items, Tms }
 
 public class Inventory : MonoBehaviour, ISavable
 {
     [SerializeField] List<ItemSlot> slots;
-    [SerializeField] List<ItemSlot> pokeballSlots;
     [SerializeField] List<ItemSlot> tmSlots;
 
     List<List<ItemSlot>> allSlots;
@@ -18,11 +17,11 @@ public class Inventory : MonoBehaviour, ISavable
 
     private void Awake()
     {
-        allSlots = new List<List<ItemSlot>> { slots, pokeballSlots, tmSlots };
+        allSlots = new List<List<ItemSlot>> { slots, tmSlots };
     }
     public static List<string> ItemCategories { get; set; } = new List<string>()
     {
-        "ITEMS", "POKEBALLS", "TMs & HMs"
+        "COLECCIONABLE", "TMs & HMs"
     };
 
     public List<ItemSlot> GetSlotsByCategory(int categoryIndex)
@@ -108,10 +107,8 @@ public class Inventory : MonoBehaviour, ISavable
 
     ItemCategory GetCategoryFromItem(ItemBase item)//Retorna la categoria del item
     {
-        if (item is RecoveyItem || item is EvolutionItem)
+        if (item is CollectibleItem)
             return ItemCategory.Items;
-        else if(item is PokeBallItem) 
-            return ItemCategory.Pokeballs;
         else
             return ItemCategory.Tms;
     }
@@ -127,7 +124,6 @@ public class Inventory : MonoBehaviour, ISavable
         var saveData = new InventorySaveData()
         {
             items = slots.Select(i => i.GetSaveData()).ToList(),
-            pokeballs = pokeballSlots.Select(i => i.GetSaveData()).ToList(),
             tms = tmSlots.Select(i => i.GetSaveData()).ToList(),
 
         };
@@ -140,12 +136,11 @@ public class Inventory : MonoBehaviour, ISavable
         var saveData = state as InventorySaveData;
 
         slots = saveData.items.Select(i => new ItemSlot(i)).ToList();
-        pokeballSlots = saveData.pokeballs.Select(i => new ItemSlot(i)).ToList();
         tmSlots = saveData.tms.Select(i => new ItemSlot(i)).ToList();
 
 
 
-        allSlots = new List<List<ItemSlot>> { slots, pokeballSlots, tmSlots };
+        allSlots = new List<List<ItemSlot>> { slots };
 
         OnUpdated?.Invoke();
     }
@@ -202,6 +197,5 @@ public class ItemSaveData
 public class InventorySaveData
 {
     public List<ItemSaveData> items;
-    public List<ItemSaveData> pokeballs;
     public List<ItemSaveData> tms;
 }

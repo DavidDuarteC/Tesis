@@ -1,15 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
-public class Cutscene : MonoBehaviour, IPlayerTriggerable
+public class Cutscene : MonoBehaviour, IPlayerTriggerable, ISavable
 {
     [SerializeReference]
     [SerializeField] List<CutsceneAction> actions;
-
+    bool active = true;
     public bool TriggerRepeatedly => false;
+
+    public static Cutscene i;
+
+    private void Awake()
+    {
+        i = this;
+    }
+    private void Start()
+    {
+        i = this;
+        active = i.isActiveAndEnabled;
+    }
 
     public IEnumerator Play()
     {
@@ -40,5 +53,18 @@ public class Cutscene : MonoBehaviour, IPlayerTriggerable
     {
         player.Character.Animator.IsMoving = false;
         StartCoroutine(Play());
+    }
+
+    public object CaptureState()
+    {
+        var save = i.isActiveAndEnabled;
+        return save;
+    }
+
+    public void RestoreState(object state)
+    {
+        var save = (bool)state;
+        active = save;
+        i.gameObject.SetActive(save);
     }
 }

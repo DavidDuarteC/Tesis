@@ -10,6 +10,7 @@ public class ItemBase : ScriptableObject
     [SerializeField] Sprite icon;
     [SerializeField] float price;
     [SerializeField] bool isSellable;
+    [SerializeField] bool collectible;
 
     public virtual string Name => name;
     public string Description => description;
@@ -28,4 +29,9 @@ public class ItemBase : ScriptableObject
     public virtual bool CanUseInBattle => true;
     public virtual bool CanUseOutsideBattle => true;
 
+    public bool Collectible
+    {
+        get { return collectible; }
+
+    }
 }

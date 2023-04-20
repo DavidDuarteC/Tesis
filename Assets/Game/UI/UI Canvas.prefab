@@ -12948,6 +12948,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -25
       objectReference: {fileID: 0}
+    - target: {fileID: 1295280211769475030, guid: ab21850e11b2b8240b28216eb2623997, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 152
+      objectReference: {fileID: 0}
     - target: {fileID: 1336547881084934277, guid: ab21850e11b2b8240b28216eb2623997, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -13167,6 +13171,10 @@ PrefabInstance:
     - target: {fileID: 2899390483303250493, guid: ab21850e11b2b8240b28216eb2623997, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2959476690650463658, guid: ab21850e11b2b8240b28216eb2623997, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3069977210216237481, guid: ab21850e11b2b8240b28216eb2623997, type: 3}
       propertyPath: partyScreen
@@ -13504,6 +13512,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -25
       objectReference: {fileID: 0}
+    - target: {fileID: 5129270572285862004, guid: ab21850e11b2b8240b28216eb2623997, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -152
+      objectReference: {fileID: 0}
     - target: {fileID: 5203826008350099471, guid: ab21850e11b2b8240b28216eb2623997, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -13667,6 +13679,10 @@ PrefabInstance:
     - target: {fileID: 6028279932946722247, guid: ab21850e11b2b8240b28216eb2623997, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -425
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096015247237157279, guid: ab21850e11b2b8240b28216eb2623997, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6171838225120045518, guid: ab21850e11b2b8240b28216eb2623997, type: 3}
       propertyPath: m_AnchorMax.y
@@ -13987,6 +14003,10 @@ PrefabInstance:
     - target: {fileID: 8635284768784243815, guid: ab21850e11b2b8240b28216eb2623997, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8671450328602750279, guid: ab21850e11b2b8240b28216eb2623997, type: 3}
+      propertyPath: m_Text
+      value: COLLECCIONABLES
       objectReference: {fileID: 0}
     - target: {fileID: 8816138144557585955, guid: ab21850e11b2b8240b28216eb2623997, type: 3}
       propertyPath: m_AnchorMax.x
