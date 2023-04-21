@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510f992e5f6970849b69a3207fea1fb4, type: 3}
+  m_Name: "Introducci\xF3n a la programaci\xF3n"
+  m_EditorClassIdentifier: 
+  categoryName: "Introducci\xF3n a la programaci\xF3n"
+  questions:
+  - questionInfo: "\xBFQu\xE9 es una declaraci\xF3n de variable en C++?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Asigna un valor a una variable
+    - Crea una variable con un nombre
+    - Indica el tipo de dato de la variable
+    - "Define una operaci\xF3n matem\xE1tica"
+    correctAns: Crea una variable con un nombre
+    urlVideo: 
+  - questionInfo: "\xBFQu\xE9 es una sentencia if en C++?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - "Define una operaci\xF3n matem\xE1tica"
+    - 'Crea una variable con un nombre '
+    - "Ejecuta un bloque de c\xF3digo si se cumple una condici\xF3n"
+    - "Realiza una operaci\xF3n l\xF3gica AND"
+    correctAns: "Ejecuta un bloque de c\xF3digo si se cumple una condici\xF3n"
+    urlVideo: 
+  - questionInfo: "\xBFQu\xE9 es una sentencia if en C++?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - "Define una operaci\xF3n matem\xE1tica"
+    - Crea una variable con un nombre
+    - "Ejecuta un bloque de c\xF3digo si se cumple una condici\xF3n"
+    - "Realiza una operaci\xF3n l\xF3gica AND"
+    correctAns: "Una secci\xF3n de c\xF3digo que se ejecuta cuando se llama"
+    urlVideo: 
+  - questionInfo: "\xBFQu\xE9 es un bucle while en C++?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - "Ejecuta un bloque de c\xF3digo mientras se cumple una condici\xF3n"
+    - "Realiza una operaci\xF3n l\xF3gica OR"
+    - "Define una operaci\xF3n matem\xE1tica"
+    - Crea una variable con un nombre
+    correctAns: "Ejecuta un bloque de c\xF3digo mientras se cumple una condici\xF3n"
+    urlVideo: 
+  - questionInfo: "\xBFQu\xE9 es un puntero en C++?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Un tipo de datos que permite almacenar valores verdadero o falso
+    - "Una estructura de control que permite ejecutar un c\xF3digo repetidamente"
+    - "Una variable que almacena la direcci\xF3n de memoria de otra variable"
+    - "Una colecci\xF3n de elementos de datos relacionados con el mismo tipo y tama\xF1o"
+    correctAns: "Una variable que almacena la direcci\xF3n de memoria de otra variable"
+    urlVideo: 

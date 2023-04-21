@@ -346,5 +346,8 @@ public class GameController : MonoBehaviour
     //    }
     //}
 
-    public GameState State => state;
+    public GameState State{ 
+        get => state;
+        set => state = value;
+    } 
 }

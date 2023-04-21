@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c01880a9026ad844a035ab3b2bb4549, type: 3}
+  m_Name: C++
+  m_EditorClassIdentifier: 
+  name: C++
+  description: 
+  frontSprite: {fileID: 21300000, guid: a6536e061dda36c48b995def728d17e5, type: 3}
+  backSprite: {fileID: 0}
+  type1: 2
+  type2: 0
+  maxHp: 30
+  attack: 20
+  defense: 10
+  spAttack: 1
+  spDefense: 1
+  speed: 10
+  expYield: 1
+  growRate: 0
+  catchRate: 255
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: 44aa175fb333a594d9c2fce6b1c10f67, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 986898b5615a4f944bca4320566f268c, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 75691f8f6d73cee409d454a7cc4383ca, type: 2}
+    level: 1
+  learnableByItems: []
+  evolutions: []

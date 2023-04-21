@@ -160,24 +160,17 @@ public class Evolution
 public enum PokemonType
 {
     None,
-    Normal,
-    Fire,
-    Water,
-    Eletric,
-    Grass,
-    Ice,
-    Fighting,
-    Posion,
-    Ground,
-    Flying,
-    Psychic,
-    Bug,
-    Rock,
-    Ghost,
-    Dragon,
-    Dark,
-    Steel,
-    Fairy
+    Java,
+    CPlusPlus,
+    C,
+    Python,
+    Angular,
+    Linux,
+    Typescript,
+    SQL,
+    Kotlin,
+    Null
+   
 }
 
 public enum GrowRate
@@ -202,26 +195,17 @@ public class TypeChart
 {
     static float[][] chart =
     {
-        //                         NOR   FIR   WAT   ELC   GRA   ICE   FIG   POI   GRO   FLY   PSY   BUG
-        /*Normal*/  new float [] { 1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f},
-        /*Fire*/    new float [] { 1f,   0.5f, 0.5f, 1f,   2f,   2f,   1f,   1f,   1f,   1f,   1f,   2f},
-        /*Water*/   new float [] { 1f,   2f,   0.5f, 2f,   0.5f, 1f,   1f,   1f,   2f,   1f,   1f,   1f},
-        /*Electric*/new float [] { 1f,   1f,   2f,   0.5f, 0.5f, 2f,   1f,   1f,   0f,   2f,   1f,   1f},
-        /*Grass*/   new float [] { 1f,   0.5f, 2f,   2f,   0.5f, 1f,   1f,   0.5f, 2f,   0.5f, 1f,   0.5f},
-        /*Ice*/     new float [] { 1f,   0.5f, 0.5f, 1f,   2f,   0.5f, 1f,   1f,   2f,   2f,   1f,   1f},
-        /*Fighting*/new float [] { 2f,   1f,   1f,   1f,   1f,   2f,   1f,   0.5f, 1f,   0.5f, 0.5f, 0.5f},
-        /*Poison*/  new float [] { 1f,   1f,   1f,   1f,   2f,   1f,   1f,   0.5f, 0.5f, 1f,   1f,   1f},        
-        /*Ground*/  new float [] { 1f,   2f,   1f,   2f,   0.5f, 1f,   1f,   2f,   1f,   0f,   1f,   0.5f},
-        /*Flying*/  new float [] { 1f,   1f,   1f,   0.5f, 2f,   1f,   2f,   1f,   1f,   1f,   1f,   2f},
-        /*Psychic*/ new float [] { 1f,   1f,   1f,   1f,   1f,   1f,   2f,   2f,   1f,   1f,   0.5f, 1f},
-        /*Bug*/     new float [] { 1f,   0.5f, 1f,   1f,   2f,   1f,   0.5f, 0.5f, 1f,   0.5f, 2f,   1f},
-        /*Rock*/    new float [] { 1f,   2f,   1f,   1f,   1f,   2f,   0.5f, 1f,   0.5f, 2f,   1f,   2f},
-        /*Ghost*/   new float [] { 0f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   0.5f, 1f},
-        /*Dragon*/  new float [] { 1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f},
-        /*Dark*/    new float [] { 1f,   1f,   1f,   1f,   1f,   1f,   0.5f, 1f,   1f,   1f,   2f,   1f},
-        /*Steel*/   new float [] { 1f,   0.5f, 0.5f, 0.5f, 1f,   2f,   1f,   1f,   1f,   1f,   1f,   2f},
-        /*Fairy*/   new float [] { 1f,   0.5f, 1f,   1f,   1f,   1f,   2f,   0.5f, 1f,   1f,   1f,   1f}
-
+        //                             JAV   CPP   C     PHY   ANG   LIN   TPS   SQL   KTL   NULL
+        /*Java*/        new float [] { 1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   0f},
+        /*CPlusPlus*/   new float [] { 1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   0f},
+        /*C*/           new float [] { 1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   0f},
+        /*Phyton*/      new float [] { 1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   0f},
+        /*Angular*/     new float [] { 1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   0f},
+        /*Linux*/       new float [] { 1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   0f},
+        /*Typescript*/  new float [] { 1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   0f},
+        /*SQL*/         new float [] { 1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   0f},        
+        /*Kotlin*/      new float [] { 1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   0f},
+        /*Null*/        new float [] { 0f,   0f,   0f,   0f,   0f,   0f,   0f,   0f,   0f,   0f} 
     };
 
     public static float GetEffectiveness(PokemonType attackType, PokemonType defenseType)

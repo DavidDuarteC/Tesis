@@ -18,7 +18,7 @@ public class Healer : MonoBehaviour
 
             var playerParty = player.GetComponent<PokemonParty>();
             playerParty.Pokemons.ForEach(p => p.Heal());
-            playerParty.ParyUpdate();
+            playerParty.PartyUpdate();
 
             yield return Fader.i.FadeOut(0.5f);
 

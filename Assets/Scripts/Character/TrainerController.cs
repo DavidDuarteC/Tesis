@@ -8,10 +8,13 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
     //[SerializeField] Sprite sprite;
     [SerializeField] Dialog dialog;
     [SerializeField] Dialog dialogAfterBattle;
+    [SerializeField] Dialog dialogLoseBattle;
     [SerializeField] GameObject exclamation;
     [SerializeField] GameObject fov;
 
     [SerializeField] AudioClip trainerAppearsClip;
+
+    PokemonParty playerParty;
 
     //Estado
     bool battleLost = false;
@@ -35,14 +38,21 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
     public IEnumerator Interact(Transform initiator)
     {
         character.LookTowards(initiator.position);
+        playerParty = PlayerController.i.GetComponent<PokemonParty>();
+        var lenguagePlayer = playerParty.GetHealthyPokemon();
 
-        if(!battleLost )
+        if (lenguagePlayer == null)
+        {
+            yield return DialogManager.Instance.ShowDialog(dialogLoseBattle);
+            GameController.Instance.State = GameState.FreeRoam;
+            AudioManager.i.PrevPlayMusic();
+            yield break;
+        }else if (!battleLost )
         {
             AudioManager.i.PlayMusic(trainerAppearsClip);
-
             yield return DialogManager.Instance.ShowDialog(dialog);
             GameController.Instance.StartTrainerBattle(this);
-            Debug.Log("Empezo la batalla");;
+            Debug.Log("Empezo la batalla");
         }
         else
         {
@@ -58,7 +68,10 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
 
     public IEnumerator TriggerTrainerBattle(PlayerController player)
     {
-        AudioManager.i.PlayMusic(trainerAppearsClip);
+        playerParty = PlayerController.i.GetComponent<PokemonParty>();
+        var lenguagePlayer = playerParty.GetHealthyPokemon();
+        if (lenguagePlayer != null)
+            AudioManager.i.PlayMusic(trainerAppearsClip);
 
         exclamation.SetActive(true);
         yield return new WaitForSeconds(0.5f);
@@ -71,9 +84,21 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
         yield return character.Move(moveVec);
 
         //Muestra el dialogo
-        yield return DialogManager.Instance.ShowDialog(dialog);
-        GameController.Instance.StartTrainerBattle(this);
-        Debug.Log("Empezo la batalla");
+        
+
+        if (lenguagePlayer == null)
+        {
+            yield return DialogManager.Instance.ShowDialog(dialogLoseBattle);
+            GameController.Instance.State = GameState.FreeRoam;
+            AudioManager.i.PrevPlayMusic();
+            yield break;
+        }else
+        {
+            yield return DialogManager.Instance.ShowDialog(dialog);
+            GameController.Instance.StartTrainerBattle(this);
+            Debug.Log("Empezo la batalla");
+        }
+        
     }
 
     public void SetFovRotation(FacingDirection dir)
