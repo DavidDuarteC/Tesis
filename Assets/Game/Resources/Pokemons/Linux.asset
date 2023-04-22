@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Linux
   description: 
-  frontSprite: {fileID: 21300000, guid: a6536e061dda36c48b995def728d17e5, type: 3}
-  backSprite: {fileID: 781733673, guid: 045988fcc4623ae409aa2645a69d7822, type: 3}
+  frontSprite: {fileID: 21300000, guid: ac96e6a6aa7bd4c47b3030530d55a8ad, type: 3}
+  backSprite: {fileID: 0}
   type1: 6
   type2: 0
   maxHp: 1

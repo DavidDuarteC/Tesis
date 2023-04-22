@@ -30,5 +30,9 @@ MonoBehaviour:
     - Ah, se me olvidaba
     - "Te compr\xE9 este port\xE1til, t\xF3malo"
     - "Ojal\xE1 sea tu principal herramienta en la carrera"
+    - "Puedes ver el port\xE1til en el men\xFA principal"
+    - "Para ir al men\xFA principal, usa la tecla Esc, y para entrar a un submen\xFA,
+      la tecla Z"
+    - "Para volver al men\xFA anterior, usa la tecla X"
   requiredItem: {fileID: 11400000, guid: 75627f13628c4e745aa1bd026d71ba07, type: 2}
   rewardItem: {fileID: 11400000, guid: 81636947417f45c4ca6193254d6e685c, type: 2}

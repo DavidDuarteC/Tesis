@@ -9,10 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b927a379f657ed4bbe3a49f7e2e059e, type: 3}
-  m_Name: TM02
+  m_Script: {fileID: 11500000, guid: 910bd92b158b156479bdfd847e71fb11, type: 3}
+  m_Name: CleanCode
   m_EditorClassIdentifier: 
-  name: TM02
-  description: "Ense\xF1a Sing al pokemon"
+  name: Cto
+  description: "Te ense\xF1a Clean Code"
   icon: {fileID: -1804011318, guid: 3ae12697ae504414bbf0797ea36dfddd, type: 3}
-  move: {fileID: 11400000, guid: 058c40945d594e8408576f58e2b296fc, type: 2}
+  price: 0
+  isSellable: 0
+  collectible: 0
+  move: {fileID: 11400000, guid: 44aa175fb333a594d9c2fce6b1c10f67, type: 2}
+  isHM: 0

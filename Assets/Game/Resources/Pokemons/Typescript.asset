@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Typescript
   description: 
-  frontSprite: {fileID: 845338209, guid: a4f5eb2e9559378419b684110efd474b, type: 3}
-  backSprite: {fileID: 157362419, guid: 045988fcc4623ae409aa2645a69d7822, type: 3}
+  frontSprite: {fileID: 21300000, guid: ce8e6b7feb92a4f488c227aa03f3504c, type: 3}
+  backSprite: {fileID: 0}
   type1: 7
   type2: 0
   maxHp: 1

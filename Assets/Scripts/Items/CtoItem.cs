@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Items/Create new TM or HM")]
-public class TmItem : ItemBase
+[CreateAssetMenu(menuName = "Items/Create new Cto")]
+public class CtoItem : ItemBase
 {
     [SerializeField] MoveBase move;
     [SerializeField] bool isHM;
@@ -24,6 +24,4 @@ public class TmItem : ItemBase
     public override bool CanUseInBattle => false;
 
     public MoveBase Move => move;
-
-    public bool IsHM => isHM;
 }

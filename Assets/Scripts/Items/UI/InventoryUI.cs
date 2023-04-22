@@ -177,11 +177,11 @@ public class InventoryUI : MonoBehaviour
             }
         }
 
-        if(selectedCategory == (int)ItemCategory.Tms)
+        if(selectedCategory == (int)ItemCategory.Cto)
         {
             OpenPartyScreen();
-            if(item is TmItem)//Muestra si es usable por el pokemon
-                partyScreen.ShowIfTmIsUsable(item as TmItem);
+            if(item is CtoItem)//Muestra si es usable por el pokemon
+                partyScreen.ShowIfTmIsUsable(item as CtoItem);
                 
         }
     }
@@ -230,7 +230,7 @@ public class InventoryUI : MonoBehaviour
 
     IEnumerator HandleTMItems()
     {
-        var tmItem = inventory.GetItem(selectedItem, selectedCategory) as TmItem;
+        var tmItem = inventory.GetItem(selectedItem, selectedCategory) as CtoItem;
         if (tmItem == null)
             yield break;
 

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: SQL
   description: 
-  frontSprite: {fileID: -1403575324, guid: a4f5eb2e9559378419b684110efd474b, type: 3}
-  backSprite: {fileID: -1183584855, guid: 045988fcc4623ae409aa2645a69d7822, type: 3}
+  frontSprite: {fileID: 21300000, guid: f29f6470321c2404e99b871919a39fda, type: 3}
+  backSprite: {fileID: 0}
   type1: 8
   type2: 0
   maxHp: 1

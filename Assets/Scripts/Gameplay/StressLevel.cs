@@ -6,7 +6,7 @@ using UnityEngine;
 public class StressLevel : MonoBehaviour, ISavable
 {
     [SerializeField] float level = 0;
-    [SerializeField] bool lostMoreTimeRow = false;
+    //[SerializeField] bool lostMoreTimeRow = false;
     [SerializeField] float loseMultiply = 0.1f;
 
 
@@ -24,14 +24,13 @@ public class StressLevel : MonoBehaviour, ISavable
         OnStressLevelChange?.Invoke();
     }
 
-    public void AddLevel(float newLevel, bool lost = true)
+    public void AddLevel(float newLevel)
     {
-        if (lostMoreTimeRow)
-            level += newLevel * 2;
-        else
-            level += newLevel;
+        //if (lostMoreTimeRow)
+        //    level += newLevel * 2;
+        level += newLevel;
 
-        lostMoreTimeRow = lost? true: false;
+        //lostMoreTimeRow = lost? true: false;
         OnStressLevelChange?.Invoke();
     }
 
@@ -47,7 +46,7 @@ public class StressLevel : MonoBehaviour, ISavable
         var saveData = new StressLevelData()
         {
             level = this.level,
-            lostMoreTimeRow = this.lostMoreTimeRow
+            //lostMoreTimeRow = this.lostMoreTimeRow
         };
         return saveData;
     }
@@ -56,17 +55,17 @@ public class StressLevel : MonoBehaviour, ISavable
     {
         var savedData = state as StressLevelData;
         this.level = savedData.level;
-        this.lostMoreTimeRow = savedData.lostMoreTimeRow;
+        //this.lostMoreTimeRow = savedData.lostMoreTimeRow;
         OnStressLevelChange?.Invoke();
     }
 
     public float Level => level;
 
-    public bool LostMoreTimeRow
-    {
-        get { return lostMoreTimeRow; }
-        set { lostMoreTimeRow = value; }
-    }
+    //public bool LostMoreTimeRow
+    //{
+    //    get { return lostMoreTimeRow; }
+    //    set { lostMoreTimeRow = value; }
+    //}
 
     public float LoseMultiply => loseMultiply;
 }

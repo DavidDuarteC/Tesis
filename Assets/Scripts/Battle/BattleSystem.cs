@@ -479,7 +479,8 @@ public class BattleSystem : MonoBehaviour
                 OpenPartyScreen();
             else
             {
-                StressLevel.i.AddLevel(StressLevel.i.LostMoreTimeRow ? StressLevel.i.LoseMultiply * 2 : StressLevel.i.LoseMultiply);
+                //StressLevel.i.AddLevel(StressLevel.i.LostMoreTimeRow ? StressLevel.i.LoseMultiply * 2 : StressLevel.i.LoseMultiply);
+                StressLevel.i.AddLevel(StressLevel.i.LoseMultiply);
                 BattleOver(false);
             }
         }
@@ -487,7 +488,7 @@ public class BattleSystem : MonoBehaviour
         {
             if (!isTrainerBattle)
             {
-                StressLevel.i.LostMoreTimeRow = false;
+                //StressLevel.i.LostMoreTimeRow = false;
                 BattleOver(true);
             }
             else
@@ -498,7 +499,7 @@ public class BattleSystem : MonoBehaviour
                     StartCoroutine(AboutToUse(nextPokemon));
                 else
                 {
-                    StressLevel.i.LostMoreTimeRow = false;
+                    //StressLevel.i.LostMoreTimeRow = false;
                     BattleOver(true);
                 }
             }

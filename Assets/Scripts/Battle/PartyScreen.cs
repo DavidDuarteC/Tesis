@@ -91,7 +91,7 @@ public class PartyScreen : MonoBehaviour
         }
     }
 
-    public void ShowIfTmIsUsable(TmItem tmItem)
+    public void ShowIfTmIsUsable(CtoItem tmItem)
     {
         for (int i = 0; i < pokemons.Count; i++)
         {

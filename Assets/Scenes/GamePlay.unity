@@ -4034,6 +4034,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4224887452634994808, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: tmSlots.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4224887452634994808, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: collectibles.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -5311,7 +5315,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5727281899756709290, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: level
-      value: 0.8
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5727281899756709290, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: loseMultiply
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5742091741243850620, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7899,7 +7907,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 5059413ec429c4507bb7bca2286fad19, type: 3}
     - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
       propertyPath: connctedScenes.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
       propertyPath: connctedScenes.Array.data[0]
@@ -7909,6 +7917,10 @@ PrefabInstance:
       propertyPath: connctedScenes.Array.data[1]
       value: 
       objectReference: {fileID: 670578502}
+    - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
+      propertyPath: connctedScenes.Array.data[2]
+      value: 
+      objectReference: {fileID: 711373617}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
 --- !u!114 &1936521757 stripped
@@ -8129,7 +8141,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 5059413ec429c4507bb7bca2286fad19, type: 3}
     - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
       propertyPath: connctedScenes.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
       propertyPath: connctedScenes.Array.data[0]
@@ -8147,6 +8159,10 @@ PrefabInstance:
       propertyPath: connctedScenes.Array.data[3]
       value: 
       objectReference: {fileID: 1167809037}
+    - target: {fileID: 8088529046401772939, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
+      propertyPath: connctedScenes.Array.data[4]
+      value: 
+      objectReference: {fileID: 711373617}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3127042f7b389364cbae33476c2991e9, type: 3}
 --- !u!114 &2053596251 stripped

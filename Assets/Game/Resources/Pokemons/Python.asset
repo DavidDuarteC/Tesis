@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Python
   description: 
-  frontSprite: {fileID: 592668755, guid: a4f5eb2e9559378419b684110efd474b, type: 3}
-  backSprite: {fileID: -1462487451, guid: 045988fcc4623ae409aa2645a69d7822, type: 3}
+  frontSprite: {fileID: 21300000, guid: cc12653443c83aa449f2752a1f17a44f, type: 3}
+  backSprite: {fileID: 0}
   type1: 4
   type2: 0
   maxHp: 1

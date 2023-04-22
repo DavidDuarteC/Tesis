@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Angluar
   description: 
-  frontSprite: {fileID: 21300000, guid: 0f37bf3cf5680a64d863b5f155b2a597, type: 3}
-  backSprite: {fileID: 21300000, guid: aacaae602a38f884ab9e02e43de3736d, type: 3}
+  frontSprite: {fileID: 21300000, guid: 780ca96250049c8459198d93f54f0128, type: 3}
+  backSprite: {fileID: 0}
   type1: 5
   type2: 0
   maxHp: 1

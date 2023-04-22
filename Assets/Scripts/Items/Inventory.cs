@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public enum ItemCategory { Items, Tms }
+public enum ItemCategory { Items, Cto }
 
 public class Inventory : MonoBehaviour, ISavable
 {
     [SerializeField] List<ItemSlot> slots;
-    [SerializeField] List<ItemSlot> tmSlots;
+    [SerializeField] List<ItemSlot> ctoSlots;
 
     List<List<ItemSlot>> allSlots;
 
@@ -17,11 +17,11 @@ public class Inventory : MonoBehaviour, ISavable
 
     private void Awake()
     {
-        allSlots = new List<List<ItemSlot>> { slots, tmSlots };
+        allSlots = new List<List<ItemSlot>> { slots, ctoSlots };
     }
     public static List<string> ItemCategories { get; set; } = new List<string>()
     {
-        "COLECCIONABLE", "TMs & HMs"
+        "COLECCIONABLES", "APRENDIZAJES"
     };
 
     public List<ItemSlot> GetSlotsByCategory(int categoryIndex)
@@ -41,7 +41,7 @@ public class Inventory : MonoBehaviour, ISavable
         bool itemUsed = item.Use(selectedPokemon);
         if (itemUsed)
         {
-            if(!item.IsReusable)
+            if (!item.IsReusable)
                 RemoveItem(item);
             return item;
         }
@@ -51,11 +51,11 @@ public class Inventory : MonoBehaviour, ISavable
 
     public void AddItem(ItemBase item, int count = 1) //Permite añadir un item
     {
-        int category =  (int)GetCategoryFromItem(item);
+        int category = (int)GetCategoryFromItem(item);
         var currentSlots = GetSlotsByCategory(category);
 
         var itemSlot = currentSlots.FirstOrDefault(slot => slot.Item == item);
-        if(itemSlot != null)
+        if (itemSlot != null)
         {
             itemSlot.Count += count;
         }
@@ -110,13 +110,13 @@ public class Inventory : MonoBehaviour, ISavable
         if (item is CollectibleItem)
             return ItemCategory.Items;
         else
-            return ItemCategory.Tms;
+            return ItemCategory.Cto;
     }
 
     public static Inventory GetInventory()
     {
         return FindObjectOfType<PlayerController>().GetComponent<Inventory>();
-        
+
     }
 
     public object CaptureState()//Guardar los items almacenados
@@ -124,7 +124,7 @@ public class Inventory : MonoBehaviour, ISavable
         var saveData = new InventorySaveData()
         {
             items = slots.Select(i => i.GetSaveData()).ToList(),
-            tms = tmSlots.Select(i => i.GetSaveData()).ToList(),
+            tms = ctoSlots.Select(i => i.GetSaveData()).ToList(),
 
         };
 
@@ -136,11 +136,11 @@ public class Inventory : MonoBehaviour, ISavable
         var saveData = state as InventorySaveData;
 
         slots = saveData.items.Select(i => new ItemSlot(i)).ToList();
-        tmSlots = saveData.tms.Select(i => new ItemSlot(i)).ToList();
+        ctoSlots = saveData.tms.Select(i => new ItemSlot(i)).ToList();
 
 
 
-        allSlots = new List<List<ItemSlot>> { slots };
+        allSlots = new List<List<ItemSlot>> { slots, ctoSlots };
 
         OnUpdated?.Invoke();
     }
@@ -179,7 +179,7 @@ public class ItemSlot
         get { return item; }
         set { item = value; }
     }
-    public int Count 
+    public int Count
     {
         get => count;
         set => count = value;
