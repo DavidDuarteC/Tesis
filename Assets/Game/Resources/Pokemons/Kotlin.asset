@@ -19,14 +19,16 @@ MonoBehaviour:
   type1: 9
   type2: 0
   maxHp: 1
-  attack: 1
+  attack: 40
   defense: 1
   spAttack: 1
   spDefense: 1
-  speed: 1
+  speed: 10
   expYield: 1
   growRate: 0
   catchRate: 255
-  learnableMoves: []
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: f9f1906235e3558439e2d3efa12f6fb9, type: 2}
+    level: 0
   learnableByItems: []
   evolutions: []

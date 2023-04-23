@@ -6,13 +6,18 @@ using UnityEngine;
 public class Sleep : MonoBehaviour, IPlayerTriggerable
 {
     [SerializeField] AudioClip audioClip;
-    [SerializeField] GameObject NpcMovimeinto1;
+    [SerializeField] GameObject NpcMovimeintoCplusplus;
+    [SerializeField] GameObject NpcMovimeintoJava;
 
     private void Update()
     {
-        if (PlayerController.i.Day == 2 && PlayerController.i.Semester == 1)
+        if (PlayerController.i.Day <= 2 && PlayerController.i.Semester == 1)
         {
-            NpcMovimeinto1.SetActive(true);
+            NpcMovimeintoCplusplus.SetActive(true);
+        }
+        if (PlayerController.i.Day <= 3 && PlayerController.i.Semester == 1)
+        {
+            NpcMovimeintoJava.SetActive(true);
         }
     }
     public void OnPlayerTrigger(PlayerController player)
@@ -37,9 +42,13 @@ public class Sleep : MonoBehaviour, IPlayerTriggerable
             var playerParty = player.GetComponent<PokemonParty>();
             playerParty.Pokemons.ForEach(p => p.Heal());
             playerParty.PartyUpdate();
-            if (PlayerController.i.Day == 2 && PlayerController.i.Semester == 1)
+            if (PlayerController.i.Day <= 2 && PlayerController.i.Semester == 1)
             {
-                NpcMovimeinto1.SetActive(true);
+                NpcMovimeintoCplusplus.SetActive(true);
+            }
+            if (PlayerController.i.Day <= 3 && PlayerController.i.Semester == 1)
+            {
+                NpcMovimeintoJava.SetActive(true);
             }
             DayUI.i.changeDay();
             yield return DialogManager.Instance.ShowDialogText("Hoy es un nuevo día (Día " + player.Day + ")");

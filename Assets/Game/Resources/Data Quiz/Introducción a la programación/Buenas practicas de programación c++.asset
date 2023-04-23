@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510f992e5f6970849b69a3207fea1fb4, type: 3}
+  m_Name: "Buenas practicas de programaci\xF3n c++"
+  m_EditorClassIdentifier: 
+  categoryName: "Buenas pr\xE1cticas en C++"
+  questions:
+  - questionInfo: "\xBFCu\xE1l es una buena pr\xE1ctica al nombrar variables en C++?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Nombres cortos e imprecisos
+    - Nombres largos y descriptivos
+    - Nombres aleatorios
+    - Nombres de una sola letra
+    correctAns: Nombres largos y descriptivos
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es una buena pr\xE1ctica al utilizar comentarios en
+      C++?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - No usar comentarios
+    - Comentar al inicio
+    - "Comentar el qu\xE9 y por qu\xE9"
+    - "Comentar c\xF3mo funciona"
+    correctAns: "Comentar el qu\xE9 y por qu\xE9"
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es una buena pr\xE1ctica al escribir funciones en
+      C++?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Hacer varias tareas en funciones
+    - "Hacer Funciones cortas y espec\xEDficas"
+    - No usar funciones
+    - Hacer nombres aleatorios de funciones
+    correctAns: "Hacer Funciones cortas y espec\xEDficas"
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es una buena pr\xE1ctica al utilizar punteros en C++? "
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Usar punteros siempre
+    - Evitar punteros
+    - Comprobar nulidad de punteros
+    - No usar punteros
+    correctAns: Comprobar nulidad de punteros
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es una buena pr\xE1ctica al gestionar la memoria en
+      C++?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Usar siempre "new"
+    - Liberar memoria cuando ya no se necesite
+    - No liberar memoria
+    - Usar "delete[]" para matrices
+    correctAns: Liberar memoria cuando ya no se necesite
+    urlVideo: 

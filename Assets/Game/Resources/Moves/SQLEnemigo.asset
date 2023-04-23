@@ -15,7 +15,7 @@ MonoBehaviour:
   name: KeyNotFound
   description: 
   type: 8
-  power: 20
+  power: 50
   accuracy: 100
   alwaysHits: 1
   pp: 50

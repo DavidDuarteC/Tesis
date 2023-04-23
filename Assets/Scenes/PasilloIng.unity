@@ -2241,7 +2241,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 968212833422521858, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: uniqueId
-      value: 12d7a054-b0a6-4ac4-bbd0-30dff52943d3
+      value: 6a30178b-6f2a-445f-868e-c9a47fcfc949
       objectReference: {fileID: 0}
     - target: {fileID: 2199313186856885446, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: m_Name
@@ -2296,12 +2296,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: name
+      value: "Monitor de programaci\xF3n b\xE1sica"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: dialog.lines.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: Veo que tienes un buen manejo de Python
+      value: Veo que tienes un buen manejo de C++
       objectReference: {fileID: 0}
     - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: dialog.lines.Array.data[1]
@@ -2331,6 +2335,10 @@ PrefabInstance:
       propertyPath: pokemons.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885455, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: pokemons.Array.data[0]._base
+      value: 
+      objectReference: {fileID: 11400000, guid: 5868a449bc209f64b91a763ddcedfd34, type: 2}
     - target: {fileID: 2199313186856885455, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: pokemons.Array.data[0].level
       value: 15

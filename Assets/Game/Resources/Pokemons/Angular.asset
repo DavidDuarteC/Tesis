@@ -19,22 +19,16 @@ MonoBehaviour:
   type1: 5
   type2: 0
   maxHp: 1
-  attack: 1
+  attack: 50
   defense: 1
   spAttack: 1
   spDefense: 1
-  speed: 1
+  speed: 10
   expYield: 1
   growRate: 1
   catchRate: 255
   learnableMoves:
-  - moveBase: {fileID: 11400000, guid: 1def9a30b6c3e5443b115ee65c154bf9, type: 2}
+  - moveBase: {fileID: 11400000, guid: 4396c9619266489488e71af5440ddb4b, type: 2}
     level: 1
-  - moveBase: {fileID: 11400000, guid: feb62115ff5f65f49a2eaca7e3bce55d, type: 2}
-    level: 1
-  learnableByItems:
-  - {fileID: 11400000, guid: 8c28f3cd50ac0f5409c52f78c6ef6a8e, type: 2}
-  - {fileID: 11400000, guid: 1def9a30b6c3e5443b115ee65c154bf9, type: 2}
-  - {fileID: 11400000, guid: feb62115ff5f65f49a2eaca7e3bce55d, type: 2}
-  - {fileID: 11400000, guid: 44aa175fb333a594d9c2fce6b1c10f67, type: 2}
+  learnableByItems: []
   evolutions: []

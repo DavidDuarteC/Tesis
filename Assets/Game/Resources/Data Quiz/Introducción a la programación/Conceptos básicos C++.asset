@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 510f992e5f6970849b69a3207fea1fb4, type: 3}
-  m_Name: "Introducci\xF3n a la programaci\xF3n"
+  m_Name: "Conceptos b\xE1sicos C++"
   m_EditorClassIdentifier: 
-  categoryName: "Introducci\xF3n a la programaci\xF3n"
+  categoryName: "Conceptos b\xE1sicos C++"
   questions:
   - questionInfo: "\xBFQu\xE9 es una declaraci\xF3n de variable en C++?"
     questionType: 0
@@ -38,16 +38,16 @@ MonoBehaviour:
     - "Realiza una operaci\xF3n l\xF3gica AND"
     correctAns: "Ejecuta un bloque de c\xF3digo si se cumple una condici\xF3n"
     urlVideo: 
-  - questionInfo: "\xBFQu\xE9 es una sentencia if en C++?"
+  - questionInfo: "\xBFQu\xE9 es una funci\xF3n en C++?"
     questionType: 0
     questionImage: {fileID: 0}
     audioClip: {fileID: 0}
     videoClip: {fileID: 0}
     options:
-    - "Define una operaci\xF3n matem\xE1tica"
-    - Crea una variable con un nombre
-    - "Ejecuta un bloque de c\xF3digo si se cumple una condici\xF3n"
-    - "Realiza una operaci\xF3n l\xF3gica AND"
+    - "Una secci\xF3n de c\xF3digo que se ejecuta cuando se llama"
+    - Un tipo de datos que permite almacenar valores verdadero o falso
+    - "Una estructura de control que permite tomar decisiones basadas en una condici\xF3n"
+    - "Una colecci\xF3n de elementos de datos relacionados con el mismo tipo y tama\xF1o"
     correctAns: "Una secci\xF3n de c\xF3digo que se ejecuta cuando se llama"
     urlVideo: 
   - questionInfo: "\xBFQu\xE9 es un bucle while en C++?"

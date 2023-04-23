@@ -6,12 +6,12 @@ using UnityEngine;
 
 public class CollectibleItem: ItemBase
 {
-    [SerializeField] string dialog;
+    [SerializeField] Dialog dialog;
 
     public void showDialog()
     {
         //DialogManager.Instance.ShowDialog(dialog);
     }
 
-    public string Dialog => dialog;
+    public Dialog Dialog => dialog;
 }

@@ -19,11 +19,11 @@ MonoBehaviour:
   type1: 6
   type2: 0
   maxHp: 1
-  attack: 10
+  attack: 40
   defense: 10
   spAttack: 10
   spDefense: 1
-  speed: 15
+  speed: 10
   expYield: 1
   growRate: 0
   catchRate: 255

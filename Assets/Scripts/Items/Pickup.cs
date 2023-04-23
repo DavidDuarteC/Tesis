@@ -26,7 +26,7 @@ public class Pickup : MonoBehaviour, Interactable, ISavable
             if (item.Collectible)
             {
                 var it = item as CollectibleItem;
-                yield return DialogManager.Instance.ShowDialogText(it.Dialog);
+                yield return DialogManager.Instance.ShowDialog(it.Dialog);
             }
 
 

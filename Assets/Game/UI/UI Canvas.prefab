@@ -3928,7 +3928,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Bolsa
+  m_Text: Inventario
 --- !u!1 &3523279194097402697
 GameObject:
   m_ObjectHideFlags: 0

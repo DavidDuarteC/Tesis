@@ -169,7 +169,7 @@ public enum PokemonType
     Typescript,
     SQL,
     Kotlin,
-    Null
+    Conocimiento
    
 }
 
@@ -195,17 +195,17 @@ public class TypeChart
 {
     static float[][] chart =
     {
-        //                             JAV   CPP   C     PHY   ANG   LIN   TPS   SQL   KTL   NULL
-        /*Java*/        new float [] { 1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   0f},
-        /*CPlusPlus*/   new float [] { 1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   0f},
-        /*C*/           new float [] { 1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   0f},
-        /*Phyton*/      new float [] { 1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   0f},
-        /*Angular*/     new float [] { 1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   0f},
-        /*Linux*/       new float [] { 1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   0f},
-        /*Typescript*/  new float [] { 1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   0f},
-        /*SQL*/         new float [] { 1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   0f},        
-        /*Kotlin*/      new float [] { 1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   1f,   0f},
-        /*Null*/        new float [] { 0f,   0f,   0f,   0f,   0f,   0f,   0f,   0f,   0f,   0f} 
+        //                             JAV   CPP   C     PHY   ANG   LIN   TPS   SQL   KTL   CN
+        /*Java*/        new float [] { 1f,   0f,   0f,   0f,   0f,   0f,   0f,   0f,   0f,   2f},
+        /*CPlusPlus*/   new float [] { 0f,   1f,   0f,   0f,   0f,   0f,   0f,   0f,   0f,   2f},
+        /*C*/           new float [] { 0f,   0f,   1f,   0f,   0f,   0f,   0f,   0f,   0f,   2f},
+        /*Phyton*/      new float [] { 0f,   0f,   0f,   1f,   0f,   0f,   0f,   0f,   0f,   2f},
+        /*Angular*/     new float [] { 0f,   0f,   0f,   0f,   1f,   0f,   0f,   0f,   0f,   2f},
+        /*Linux*/       new float [] { 0f,   0f,   0f,   0f,   0f,   1f,   0f,   0f,   0f,   2f},
+        /*Typescript*/  new float [] { 0f,   0f,   0f,   0f,   0f,   0f,   1f,   0f,   0f,   2f},
+        /*SQL*/         new float [] { 0f,   0f,   0f,   0f,   0f,   0f,   0f,   1f,   0f,   2f},        
+        /*Kotlin*/      new float [] { 0f,   0f,   0f,   0f,   0f,   0f,   0f,   0f,   1f,   2f},
+        /*Conocimien*/  new float [] { 0f,   0f,   0f,   0f,   0f,   0f,   0f,   0f,   0f,   0f} 
     };
 
     public static float GetEffectiveness(PokemonType attackType, PokemonType defenseType)
