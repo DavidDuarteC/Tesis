@@ -10,8 +10,8 @@ public class PartyMemberUI : MonoBehaviour
     [SerializeField] HPBar hpBar;
     [SerializeField] Text messageText;
 
-    Pokemon _pokemon;
-    public void Init(Pokemon pokemon) //Asigna el nombre y el nivel para mostrarlo en pantalla
+    Approach _pokemon;
+    public void Init(Approach pokemon) //Asigna el nombre y el nivel para mostrarlo en pantalla
     {
         _pokemon = pokemon;
         UpdateData();

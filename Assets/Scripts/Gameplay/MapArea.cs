@@ -55,7 +55,7 @@ public class MapArea : MonoBehaviour
         }
     }
 
-    public Pokemon GetRandonWildPokemon(BattleTrigger trigger) //Elige cual pokemon me voy a encontrar en la hierba o en el agua
+    public Approach GetRandonWildPokemon(BattleTrigger trigger) //Elige cual pokemon me voy a encontrar en la hierba o en el agua
     {
         var pokemonList = (trigger == BattleTrigger.LongGrass) ? wildPokemons : wildPokemonsInWater;
         int randVal = UnityEngine.Random.Range(1, 101);
@@ -65,7 +65,7 @@ public class MapArea : MonoBehaviour
         int level = levelRange.y == 0 ? levelRange.x : UnityEngine.Random.Range(levelRange.x, levelRange.y + 1);
         
         Debug.Log($"Encontraste un {pokemonRecord.pokemon.Name}");
-        var wildPokemon = new Pokemon(pokemonRecord.pokemon, level);
+        var wildPokemon = new Approach(pokemonRecord.pokemon, level);
         wildPokemon.Init();
         return wildPokemon;
     }
@@ -74,7 +74,7 @@ public class MapArea : MonoBehaviour
 [Serializable]
 public class PokemonEncounterRecord
 {
-    public PokemonBase pokemon;
+    public ApproachBase pokemon;
     public Vector2Int levelRange;
     public int chancePercentage;
 

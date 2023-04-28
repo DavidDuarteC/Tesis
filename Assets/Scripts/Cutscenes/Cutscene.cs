@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
-public class Cutscene : MonoBehaviour, IPlayerTriggerable, ISavable
+public class Cutscene : MonoBehaviour, IPlayerTriggerable
 {
     [SerializeReference]
     [SerializeField] List<CutsceneAction> actions;
@@ -53,18 +53,5 @@ public class Cutscene : MonoBehaviour, IPlayerTriggerable, ISavable
     {
         player.Character.Animator.IsMoving = false;
         StartCoroutine(Play());
-    }
-
-    public object CaptureState()
-    {
-        var save = i.isActiveAndEnabled;
-        return save;
-    }
-
-    public void RestoreState(object state)
-    {
-        var save = (bool)state;
-        active = save;
-        i.gameObject.SetActive(save);
     }
 }

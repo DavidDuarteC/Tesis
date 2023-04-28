@@ -18,10 +18,10 @@ public class BattleHud : MonoBehaviour
     [SerializeField] Color parColor;
     [SerializeField] Color frzColor;
 
-    Pokemon _pokemon;
+    Approach _pokemon;
 
     Dictionary<ConditionID, Color> statusColors;
-    public void SetData(Pokemon pokemon) //Asigna el nombre y el nivel para mostrarlo en pantalla
+    public void SetData(Approach pokemon) //Asigna el nombre y el nivel para mostrarlo en pantalla
     {
         if (_pokemon != null)
         {

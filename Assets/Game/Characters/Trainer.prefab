@@ -142,7 +142,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1900988649
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 422236170, guid: 3ae12697ae504414bbf0797ea36dfddd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -235,7 +235,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1651892781
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 1051713971, guid: cf3c923ea13006b4b99ce438ed425d0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abb4dd7647d1d9e44b62e92b1db1088c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 6
 --- !u!114 &2199313186856885447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,7 +340,13 @@ MonoBehaviour:
   - {fileID: -877290964, guid: cf3c923ea13006b4b99ce438ed425d0b, type: 3}
   - {fileID: -724283373, guid: cf3c923ea13006b4b99ce438ed425d0b, type: 3}
   - {fileID: -339277133, guid: cf3c923ea13006b4b99ce438ed425d0b, type: 3}
+  surfSprites: []
   defaultDirection: 1
+  walkDownSpritesGirl: []
+  walkUpSpritesGirl: []
+  walkRightSpritesGirl: []
+  walkLeftSpritesGirl: []
+  surfSpritesGirl: []
 --- !u!114 &2199313186856885454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,13 +360,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Entrenador Matias
-  sprite: {fileID: 21300000, guid: 208cb3850ac356a43b4f7027186741c7, type: 3}
   dialog:
     lines:
     - Mis pokemones son fuertes, dejame mostratelo
   dialogAfterBattle:
     lines:
     - Un dia sere un gran entrenador
+  dialogLoseBattle:
+    lines: []
   exclamation: {fileID: 2199313186270382521}
   fov: {fileID: 2199313186240672060}
   trainerAppearsClip: {fileID: 8300000, guid: a03a9aacef618ea4c8c5eebca5bb7c7b, type: 3}

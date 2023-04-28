@@ -23,7 +23,7 @@ public class ConditionsDB
             {
                 Name = "Veneno",
                 StartMessage = "ha sido envenenado",
-                OnAfterTurn = (Pokemon pokemon) =>
+                OnAfterTurn = (Approach pokemon) =>
                 {
                     pokemon.DecreaseHP(pokemon.MaxHp / 8);
                     pokemon.StatusChanges.Enqueue($"{pokemon.Base.Name} se lastimo debido al veneno"); 
@@ -36,7 +36,7 @@ public class ConditionsDB
             {
                 Name = "Quemar",
                 StartMessage = "ha sido quemado",
-                OnAfterTurn = (Pokemon pokemon) =>
+                OnAfterTurn = (Approach pokemon) =>
                 {
                     pokemon.DecreaseHP(pokemon.MaxHp / 16);
                     pokemon.StatusChanges.Enqueue($"{pokemon.Base.Name} se lastimo debido a la quemadura");
@@ -49,7 +49,7 @@ public class ConditionsDB
             {
                 Name = "Paralizis",
                 StartMessage = "ha sido paralizado",
-                OnBeforeMove = (Pokemon pokemon) =>
+                OnBeforeMove = (Approach pokemon) =>
                 {
                     if(Random.Range(1,5) == 1)
                     {
@@ -66,7 +66,7 @@ public class ConditionsDB
             {
                 Name = "Congelado",
                 StartMessage = "ha sido congelado",
-                OnBeforeMove = (Pokemon pokemon) =>
+                OnBeforeMove = (Approach pokemon) =>
                 {
                     if(Random.Range(1,5) == 1)
                     {
@@ -84,13 +84,13 @@ public class ConditionsDB
             {
                 Name = "Dormido",
                 StartMessage = "se ha dormido",
-                OnStart = (Pokemon pokemon) =>
+                OnStart = (Approach pokemon) =>
                 {
                     //Duerme entre 1 y 3 turnos
                     pokemon.StatusTime  = Random.Range(1,4);
                     Debug.Log($"Estara dormido por {pokemon.StatusTime} movimientos");
                 },
-                OnBeforeMove = (Pokemon pokemon) =>
+                OnBeforeMove = (Approach pokemon) =>
                 {
                     if (pokemon.StatusTime <= 0)
                     {
@@ -111,13 +111,13 @@ public class ConditionsDB
             {
                 Name = "Confusion",
                 StartMessage = "esta confuso",
-                OnStart = (Pokemon pokemon) =>
+                OnStart = (Approach pokemon) =>
                 {
                     //confuso entre 1 y 4 turnos
                     pokemon.VolatileStatusTime  = Random.Range(1,5);
                     Debug.Log($"Estara confundido por {pokemon.VolatileStatusTime} movimientos");
                 },
-                OnBeforeMove = (Pokemon pokemon) =>
+                OnBeforeMove = (Approach pokemon) =>
                 {
                     if (pokemon.VolatileStatusTime <= 0)
                     {

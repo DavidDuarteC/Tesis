@@ -22,7 +22,7 @@ public class Pickup : MonoBehaviour, Interactable, ISavable
 
             AudioManager.i.PlaySfx(AudioId.ItemObteined, pauseMusic: true);
 
-            yield return DialogManager.Instance.ShowDialogText($"{playerName} encontró el coneccionable {item.Name}");
+            yield return DialogManager.Instance.ShowDialogText($"{playerName} encontró el objeto {item.Name}");
             if (item.Collectible)
             {
                 var it = item as CollectibleItem;

@@ -7,7 +7,7 @@ public class PokeBallItem : ItemBase
 {
     [SerializeField] float catchRateModifier = 1;
 
-    public override bool Use(Pokemon pokemon)
+    public override bool Use(Approach pokemon)
     {
         return true;
     }

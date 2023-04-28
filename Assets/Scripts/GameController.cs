@@ -17,6 +17,12 @@ public class GameController : MonoBehaviour
     [SerializeField] CharacterSelectorUI characterSelectorUI;
     [SerializeField] GameObject screenControl;
     [SerializeField] DayUI dayUI;
+    [SerializeField] GameObject passLevel;
+    [SerializeField] GameObject entrar67;
+    [SerializeField] GameObject entrarSalonDos67;
+    [SerializeField] GameObject entrarSalonTres67;
+    [SerializeField] GameObject entrarSalon2Ing;
+    [SerializeField] GameObject entrarSalon3Ing;
 
     GameState state;
     GameState prevState;
@@ -40,8 +46,8 @@ public class GameController : MonoBehaviour
 
         //Cursor.lockState = CursorLockMode.Confined; //Deshabilitar el mouse
         //Cursor.visible= true;
-
-        PokemonDB.Init();
+        
+        ApproachDB.Init();
         MoveDB.Init();
         ConditionsDB.Init();
         ItemDB.Init();
@@ -58,6 +64,9 @@ public class GameController : MonoBehaviour
         battleSystem.OnBattleOver += EndBattle;
 
         partyScreen.Init();
+        
+        dayUI.gameObject.SetActive(true);
+        thermometerUI.gameObject.SetActive(true);
         thermometerUI.SetStress();
 
         DialogManager.Instance.OnShowDialog += () =>
@@ -78,18 +87,18 @@ public class GameController : MonoBehaviour
 
         menuController.onMenuSelected += OnMenuSelected;
 
-        EvolutionManager.i.OnStartEvolution += () =>
-        {
-            stateBeforeEvolution = state;
-            state = GameState.Evolution;
-        };
-        EvolutionManager.i.OnCompleteEvolution += () =>
-        {
-            partyScreen.SetPartyData();
-            state = stateBeforeEvolution;
+        //EvolutionManager.i.OnStartEvolution += () =>
+        //{
+        //    stateBeforeEvolution = state;
+        //    state = GameState.Evolution;
+        //};
+        //EvolutionManager.i.OnCompleteEvolution += () =>
+        //{
+        //    partyScreen.SetPartyData();
+        //    state = stateBeforeEvolution;
 
-            AudioManager.i.PlayMusic(CurrentScene.SceneMusic, fade: true);
-        };
+        //    AudioManager.i.PlayMusic(CurrentScene.SceneMusic, fade: true);
+        //};
 
         ShopController.i.OnStart += () => state = GameState.Shop;
         ShopController.i.OnFinish += () => state = GameState.FreeRoam;
@@ -101,8 +110,6 @@ public class GameController : MonoBehaviour
         QuizGameUI.i.OnFinishQuiz += () => state = GameState.FreeRoam;
 
 
-        thermometerUI.gameObject.SetActive(true);
-        dayUI.gameObject.SetActive(true);
         
     }
 
@@ -129,21 +136,21 @@ public class GameController : MonoBehaviour
         state = GameState.FreeRoam;
     }
 
-    public void StartBattle(BattleTrigger trigger) //Apenas comience la batalla cambia la cama del main con la de la batalla
-    {
-        state = GameState.Battle;
-        battleSystem.gameObject.SetActive(true);
-        worldCamera.gameObject.SetActive(false);
-        thermometerUI.gameObject.SetActive(false);
-        dayUI.gameObject.SetActive(false);
+    //public void StartBattle(BattleTrigger trigger) //Apenas comience la batalla cambia la cama del main con la de la batalla
+    //{
+    //    state = GameState.Battle;
+    //    battleSystem.gameObject.SetActive(true);
+    //    worldCamera.gameObject.SetActive(false);
+    //    thermometerUI.gameObject.SetActive(false);
+    //    dayUI.gameObject.SetActive(false);
 
-        var playerParty = playerController.GetComponent<PokemonParty>();
-        var wildPokmeon = CurrentScene.GetComponent<MapArea>().GetRandonWildPokemon(trigger);
+    //    var playerParty = playerController.GetComponent<ApproachParty>();
+    //    //var wildPokmeon = CurrentScene.GetComponent<MapArea>().GetRandonWildPokemon(trigger);
 
-        var wilPokemonCopy = new Pokemon(wildPokmeon.Base, wildPokmeon.Level);
+    //   // var wilPokemonCopy = new Approach(wildPokmeon.Base, wildPokmeon.Level);
 
-        battleSystem.StartBattle(playerParty, wilPokemonCopy, trigger);
-    }
+    //    battleSystem.StartBattle(playerParty, wilPokemonCopy, trigger);
+    //}
 
     TrainerController trainer;
 
@@ -156,8 +163,8 @@ public class GameController : MonoBehaviour
         dayUI.gameObject.SetActive(false);
 
         this.trainer = trainer;
-        var playerParty = playerController.GetComponent<PokemonParty>();
-        var trainerParty = trainer.GetComponent<PokemonParty>();
+        var playerParty = playerController.GetComponent<ApproachParty>();
+        var trainerParty = trainer.GetComponent<ApproachParty>();
 
         battleSystem.StartTrainerBattle(playerParty, trainerParty);
     }
@@ -178,19 +185,21 @@ public class GameController : MonoBehaviour
 
         partyScreen.SetPartyData();
 
-        state = GameState.FreeRoam;
+        
         battleSystem.gameObject.SetActive(false);
         worldCamera.gameObject.SetActive(true);
         thermometerUI.gameObject.SetActive(true);
         dayUI.gameObject.SetActive(true);
+        state = GameState.FreeRoam;
 
-        var playerParty = playerController.GetComponent<PokemonParty>();
-        bool hasEvolutions = playerParty.CheckForEvolutions();
+        var playerParty = playerController.GetComponent<ApproachParty>();
+        AudioManager.i.PlayMusic(CurrentScene.SceneMusic, fade: true);
+        //bool hasEvolutions = playerParty.CheckForEvolutions();
 
-        if (hasEvolutions)
-            StartCoroutine(playerParty.RunEvolutions());
-        else
-            AudioManager.i.PlayMusic(CurrentScene.SceneMusic, fade: true);
+        //if (hasEvolutions)
+        //    StartCoroutine(playerParty.RunEvolutions());
+        //else
+        //    AudioManager.i.PlayMusic(CurrentScene.SceneMusic, fade: true);
     }
 
     private void Update() //Muestra las pantallas de juego, batalla y el dialogo con los npcs
@@ -200,13 +209,15 @@ public class GameController : MonoBehaviour
         if (state == GameState.FreeRoam)
         {
             playerController.HandleUpdate();
+
+            SemesterEvents();
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 playerController.Character.moveSpeed = 10;
             }
             if (Input.GetKeyUp(KeyCode.Space))
             {
-                playerController.Character.moveSpeed = 5;
+                playerController.Character.moveSpeed = 6;
             }
             thermometerUI.SetStress();
 
@@ -222,7 +233,7 @@ public class GameController : MonoBehaviour
         }
         else if(state == GameState.ChooseCharacter)
         {
-            CharacterSelectorUI.i.HandleUpdate();
+            characterSelectorUI.HandleUpdate();
         }
         else if(state == GameState.Battle)
         {
@@ -285,23 +296,24 @@ public class GameController : MonoBehaviour
     {
         if(selectedItem == 0)
         {
-            //Pokemon
-            partyScreen.gameObject.SetActive(true);
-            //partyScreen.SetPartyData(playerController.GetComponent<PokemonParty>().Pokemons);
-            state = GameState.PartyScreen;
+            //Bolsa
+            inventoryUI.gameObject.SetActive(true);
+            //partyScreen.SetPartyData(playerController.GetComponent<ApproachParty>().Pokemons); //Funciona
+            state = GameState.Bag;
         }
         else if(selectedItem == 1)
         {
-            //Bolsa
-            inventoryUI.gameObject.SetActive(true);
-            //partyScreen.SetPartyData(playerController.GetComponent<PokemonParty>().Pokemons); //Funciona
-            state = GameState.Bag;
+            //Controles
+            screenControl.SetActive(true);
+            state = GameState.Info;
         }
         else if(selectedItem == 2)
         {
-            screenControl.SetActive(true);
-
-            state = GameState.Info;
+            //Cargar
+            SavingSystem.i.Load("saveSlot1");
+            dayUI.changeDay();
+            //QuizManager.i.LoadData();
+            state = GameState.FreeRoam;
         }
         else if(selectedItem == 3)
         {
@@ -312,11 +324,8 @@ public class GameController : MonoBehaviour
         }
         else if(selectedItem == 4)
         {
-            //Guardar
-            SavingSystem.i.Load("saveSlot1");
-            dayUI.changeDay();
-            //QuizManager.i.LoadData();
-            state = GameState.FreeRoam;
+            Debug.Log("Salir...");
+            Application.Quit();
         }
 
     }
@@ -332,6 +341,33 @@ public class GameController : MonoBehaviour
         else
             StartCoroutine(Fader.i.FadeOut(0.5f));
 
+    }
+
+    public void SemesterEvents()
+    {
+        if (playerController.FinishQuices % 2 == 0 && playerController.FinishQuices != 0)
+        {
+            passLevel.SetActive(true);
+        }
+        else
+        {
+            passLevel.SetActive(false);
+        }
+
+        if(playerController.Semester >= 2)
+        {
+            entrar67.SetActive(false);
+            entrarSalon2Ing.SetActive(false);
+        }
+        if(playerController.Semester >= 3)
+        {
+            entrarSalonDos67.SetActive(false);
+            entrarSalon3Ing.SetActive(false);
+        }
+        if( playerController.Semester >= 4)
+        {
+            entrarSalonTres67.SetActive(false);
+        }
     }
 
     //private void OnGUI()
@@ -350,4 +386,8 @@ public class GameController : MonoBehaviour
         get => state;
         set => state = value;
     } 
+    public void ActiveThermometer()
+    {
+        thermometerUI.gameObject.SetActive(true);
+    }
 }

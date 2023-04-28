@@ -22,7 +22,7 @@ public class RecoveyItem : ItemBase
     [SerializeField] bool revive;
     [SerializeField] bool maxRevive;
 
-    public override bool Use(Pokemon pokemon)
+    public override bool Use(Approach pokemon)
     {
         //Revivir
         if(revive || maxRevive)

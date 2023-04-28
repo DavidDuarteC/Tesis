@@ -15,7 +15,8 @@ public class PlayerController : MonoBehaviour, ISavable
 
     bool howIs = true; //True si es hombre y False si es mujer
     int day = 1;
-    int semester = 1;
+    [SerializeField] int semester = 1;
+    int finishQuices = 0;
 
 
     private Vector2 input;//Input para mover al personaje
@@ -102,10 +103,11 @@ public class PlayerController : MonoBehaviour, ISavable
         {
             name = this.name,
             position = new float[] { transform.position.x, transform.position.y },
-            pokemons = GetComponent<PokemonParty>().Pokemons.Select(p => p.GetSaveData()).ToList(),
+            pokemons = GetComponent<ApproachParty>().Pokemons.Select(p => p.GetSaveData()).ToList(),
             isHow = this.howIs ? Moving.Move : Moving.None,
             day = this.day,
             semester = this.semester,
+            finishQuices = this.finishQuices,
         };
         return saveData;
     }
@@ -118,6 +120,7 @@ public class PlayerController : MonoBehaviour, ISavable
         transform.position = new Vector3(pos[0], pos[1]);
         day = saveData.day;
         semester = saveData.semester;
+        finishQuices = saveData.finishQuices;
         isHow = saveData.isHow;
         if (isHow != Moving.None)
         {
@@ -127,7 +130,7 @@ public class PlayerController : MonoBehaviour, ISavable
         ChangeSprites();
 
         //Cargar party
-        GetComponent<PokemonParty>().Pokemons = saveData.pokemons.Select(s => new Pokemon(s)).ToList();
+        GetComponent<ApproachParty>().Pokemons = saveData.pokemons.Select(s => new Approach(s)).ToList();
     }
     public void ChangeSprites()
     {
@@ -170,6 +173,11 @@ public class PlayerController : MonoBehaviour, ISavable
         get => semester;
         set => semester = value;
     }
+    public int FinishQuices
+    {
+        get => finishQuices;
+        set => finishQuices = value;
+    }
 }
 
 [Serializable]
@@ -181,4 +189,5 @@ public class PlayerSaveData
     public List<PokemonSaveData> pokemons;
     public int day;
     public int semester;
+    public int finishQuices;
 }

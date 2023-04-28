@@ -8,12 +8,12 @@ public class PartyScreen : MonoBehaviour
 {
     [SerializeField] Text messageText;
     PartyMemberUI[] memberSlots;
-    List<Pokemon> pokemons;
-    PokemonParty party;
+    List<Approach> pokemons;
+    ApproachParty party;
 
     int selection = 0;
 
-    public Pokemon SelectedMember => pokemons[selection];
+    public Approach SelectedMember => pokemons[selection];
 
     //Party screen puede ser llamada desde diferentes estados como ActionSelection, RunningTurn, AboutToUse
     public BattleState? CalledFrom { get; set; }
@@ -22,13 +22,13 @@ public class PartyScreen : MonoBehaviour
     {
         memberSlots = GetComponentsInChildren<PartyMemberUI>(true);
 
-        party = PokemonParty.GetPlayerParty();
+        party = ApproachParty.GetPlayerParty();
         SetPartyData();
 
         party.OnUpdated += SetPartyData;
     }
 
-    //public void SetPartyData(List<Pokemon> pokemons) //Muestra la informacion de cada uno de los pokemones en la lista
+    //public void SetPartyData(List<Approach> pokemons) //Muestra la informacion de cada uno de los pokemones en la lista
     public void SetPartyData()
     {
         //this.pokemons = pokemons;

@@ -35,7 +35,7 @@ public class Inventory : MonoBehaviour, ISavable
         return currentSlots[itemIndex].Item;
     }
 
-    public ItemBase UseItem(int itemIndex, Pokemon selectedPokemon, int selectedCategory)
+    public ItemBase UseItem(int itemIndex, Approach selectedPokemon, int selectedCategory)
     {
         var item = GetItem(itemIndex, selectedCategory);
         bool itemUsed = item.Use(selectedPokemon);

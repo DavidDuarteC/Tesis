@@ -27,24 +27,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Salon1Ing.unity
     guid: 7cba741959eef52449d858d0f53255be
   - enabled: 1
-    path: Assets/Scenes/Biblioteca.unity
-    guid: 93cca4c1d892afd418c683dd7e2b1a32
+    path: Assets/Scenes/Salon2Ing.unity
+    guid: 4e3cb46fc3af9f44b9f15fcf8993f4f4
+  - enabled: 1
+    path: Assets/Scenes/Salon3Ing.unity
+    guid: da2052f8fb9a813499d570e426be41d9
   - enabled: 1
     path: Assets/Scenes/Pasillo67.unity
     guid: 57c418b652036c440a3879c4bc7b0845
   - enabled: 1
     path: Assets/Scenes/SalonUno67.unity
     guid: 8ff5372444c01634db98cc7cf338c3c3
-  - enabled: 0
-    path: Assets/Scenes/Demo/HomeTown.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Scenes/Demo/Route1.unity
-    guid: 972dbae2c4234d541b40be28f8f48a70
-  - enabled: 0
-    path: Assets/Scenes/Demo/House1.unity
-    guid: 138930f7ca07cb1439867ab240db0023
-  - enabled: 0
-    path: Assets/Scenes/Demo/Town2.unity
-    guid: 2aa2b9a8d7ceb4d40a96aac025074471
+  - enabled: 1
+    path: Assets/Scenes/SalonDos67.unity
+    guid: e808dd1d74dc0624489a176a8826d130
+  - enabled: 1
+    path: Assets/Scenes/SalonTres67.unity
+    guid: 20b4a95b986ebf54f96157ece8d221e4
   m_configObjects: {}

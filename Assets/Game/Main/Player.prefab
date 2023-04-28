@@ -167,7 +167,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1651892781
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 1758334782, guid: f7ec4331084cf20409eca47189df9bc3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abb4dd7647d1d9e44b62e92b1db1088c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 6
 --- !u!50 &2132675003774014453
 Rigidbody2D:
   serializedVersion: 4
@@ -361,43 +361,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0edf89fb2be5fed4186e6d2a70f8d210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slots:
-  - item: {fileID: 11400000, guid: 36eee839a99c15145becb1022798ce1b, type: 2}
-    count: 5
-  - item: {fileID: 11400000, guid: 527505b2adf0aa24684a18570276e3fa, type: 2}
-    count: 2
-  - item: {fileID: 11400000, guid: e229e3a476204e34fb47a7f9d2a39100, type: 2}
-    count: 2
-  - item: {fileID: 11400000, guid: eeedad8e008d374418ffa6379b7e9638, type: 2}
-    count: 2
-  - item: {fileID: 11400000, guid: 0c74d5081465110469f98f7a5f642c2b, type: 2}
-    count: 4
-  - item: {fileID: 11400000, guid: 6e1a0fb985ef606439eaa6699dd501e9, type: 2}
-    count: 1
-  - item: {fileID: 11400000, guid: 36eee839a99c15145becb1022798ce1b, type: 2}
-    count: 5
-  - item: {fileID: 11400000, guid: e229e3a476204e34fb47a7f9d2a39100, type: 2}
-    count: 1
-  - item: {fileID: 11400000, guid: 527505b2adf0aa24684a18570276e3fa, type: 2}
-    count: 2
-  - item: {fileID: 11400000, guid: eeedad8e008d374418ffa6379b7e9638, type: 2}
-    count: 10
-  - item: {fileID: 11400000, guid: 527505b2adf0aa24684a18570276e3fa, type: 2}
-    count: 3
-  - item: {fileID: 11400000, guid: e9407e234b03cb44d8e4f56cf38c784d, type: 2}
-    count: 1
-  pokeballSlots:
-  - item: {fileID: 11400000, guid: 2fc3bc2e402ce2d4a8755346c214ee17, type: 2}
-    count: 5
-  - item: {fileID: 11400000, guid: b261b40ae12544043902b0974a201086, type: 2}
-    count: 2
-  tmSlots:
-  - item: {fileID: 11400000, guid: c1e69d7e01f639c4793771abc86c502b, type: 2}
-    count: 1
-  - item: {fileID: 11400000, guid: cf6916863ddb95f43a060b73f650b9ad, type: 2}
-    count: 1
-  - item: {fileID: 11400000, guid: a69e517b218ca2c4aa354a6c7fe6ae17, type: 2}
-    count: 1
+  slots: []
+  ctoSlots: []
 --- !u!114 &8641183613624250008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,5 +401,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
-  lostMoreTimeRow: 0
-  loseMultiply: 0.1
+  loseMultiply: 0.5
+  videoPlayer: {fileID: 0}
+  medite1: {fileID: 32900000, guid: 0f3db445783defe4f982af7da3ce7e5e, type: 3}
+  urlVideo1: https://DavidDuarteC.github.io/Videos/1Intro.mp4
+  medite2: {fileID: 32900000, guid: 45e6b9c785ae50745971aa92d1396cd7, type: 3}
+  urlVideo2: https://dl.dropboxusercontent.com/s/2xo6fqavb089nkm/2Mudras.mp4
+  medite3: {fileID: 32900000, guid: 800265c8ea93b5e4e96850a049df07ab, type: 3}
+  urlVideo3: 'https://DavidDuarteC.github.io/Videos/3Pranayama.mp4 '
+  medite4: {fileID: 32900000, guid: 2e8279dbc436d8b409784317912b1f24, type: 3}
+  urlVideo4: https://DavidDuarteC.github.io/Videos/4IntroMantras.mp4
+  medite41: {fileID: 32900000, guid: e13d97fe83365f346a1fca5aacb72960, type: 3}
+  urlVideo41: https://DavidDuarteC.github.io/Videos/4.1Mantras.mp4
+  medite5: {fileID: 32900000, guid: 5bffc126c21db3049917a94324f4766b, type: 3}
+  urlVideo5: https://DavidDuarteC.github.io/Videos/5Felicitaciones.mp4

@@ -21,7 +21,9 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
     //[SerializeField] List<DataQuizNpc> categories;
     [SerializeField] List<string> categories;
     [SerializeField] Dialog startQuiz;
-    
+
+    [SerializeField] GameObject questionSymbol;
+    [SerializeField] bool isImportant;
     NPCState state;
     float idleTimer = 0f;
     int currentPattern = 0;
@@ -30,7 +32,7 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
     Character character;
 
     ItemGiver itemGiver;
-    PokemonGiver pokemonGiver;
+    ApproachGiver pokemonGiver;
     Healer healer;
     Merchant merchant;  
     public static NPCController i;
@@ -39,7 +41,7 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
     {
         character = GetComponent<Character>();
         itemGiver = GetComponent<ItemGiver>();
-        pokemonGiver = GetComponent<PokemonGiver>();
+        pokemonGiver = GetComponent<ApproachGiver>();
         healer = GetComponent<Healer>();
         merchant = GetComponent<Merchant>();
     }
@@ -68,6 +70,10 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
 
             if(itemGiver != null && itemGiver.CanBeGiven()) //Permite verificar si el NPC puede dar un item
             {
+                questionSymbol.SetActive(true);
+                yield return new WaitForSeconds(0.5f);
+                questionSymbol.SetActive(false);
+
                 yield return itemGiver.GiveItem(initiator.GetComponent<PlayerController>());
             }
             else if (pokemonGiver != null && pokemonGiver.CanBeGiven()) //Permite verificar si el NPC puede dar un pokemon
@@ -76,6 +82,10 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
             }
             else if (questToStart != null) //Permite verificar si el NPC puede empezar un Quest
             {
+                questionSymbol.SetActive(true);
+                yield return new WaitForSeconds(0.5f);
+                questionSymbol.SetActive(false);
+
                 activeQuest = new Quest(questToStart);
                 yield return activeQuest.StartQuest();
                 questToStart = null;
@@ -108,11 +118,21 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
             }
             else if (haveQuiz != false && categories.Any() == true)
             {
-                StartCoroutine(DialogManager.Instance.ShowDialog(startQuiz));
+                questionSymbol.SetActive(true);
+                yield return new WaitForSeconds(0.5f);
+                questionSymbol.SetActive(false);
+
+                yield return DialogManager.Instance.ShowDialog(startQuiz);
                 yield return QuizGameUI.i.startQuiz(categories);
             }
             else 
             {
+                if (isImportant)
+                {
+                    questionSymbol.SetActive(true);
+                    yield return new WaitForSeconds(0.5f);
+                    questionSymbol.SetActive(false);
+                }
                 yield return DialogManager.Instance.ShowDialog(dialog);
             }
             idleTimer = 0f;
@@ -155,6 +175,7 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
         if (count == categories.Count)
         {
             haveQuiz = false;
+            PlayerController.i.FinishQuices += 1;
         }
             
     }

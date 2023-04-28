@@ -11,11 +11,11 @@ public class Sleep : MonoBehaviour, IPlayerTriggerable
 
     private void Update()
     {
-        if (PlayerController.i.Day <= 2 && PlayerController.i.Semester == 1)
+        if (PlayerController.i.Day >= 2 && PlayerController.i.Semester == 1)
         {
             NpcMovimeintoCplusplus.SetActive(true);
         }
-        if (PlayerController.i.Day <= 3 && PlayerController.i.Semester == 1)
+        if (PlayerController.i.Day >= 3 && PlayerController.i.Semester == 1)
         {
             NpcMovimeintoJava.SetActive(true);
         }
@@ -38,18 +38,18 @@ public class Sleep : MonoBehaviour, IPlayerTriggerable
             yield return Fader.i.FadeIn(0.6f);
             AudioManager.i.PlaySfx(audioClip, true);
             PlayerController.i.Day++;
+            if(PlayerController.i.FinishQuices % 2 == 0 && PlayerController.i.FinishQuices != 0)
+            {
+                PlayerController.i.Semester++;
+                DayUI.i.ChangeSemester();
+                yield return DialogManager.Instance.ShowDialogText("Empezaste un semestre nuevo (Semestre " + player.Semester + ")");
+                PlayerController.i.Day = 1;
+            }
             yield return new WaitForSeconds(audioClip.length);
-            var playerParty = player.GetComponent<PokemonParty>();
+            var playerParty = player.GetComponent<ApproachParty>();
             playerParty.Pokemons.ForEach(p => p.Heal());
             playerParty.PartyUpdate();
-            if (PlayerController.i.Day <= 2 && PlayerController.i.Semester == 1)
-            {
-                NpcMovimeintoCplusplus.SetActive(true);
-            }
-            if (PlayerController.i.Day <= 3 && PlayerController.i.Semester == 1)
-            {
-                NpcMovimeintoJava.SetActive(true);
-            }
+            ActiveEvents();
             DayUI.i.changeDay();
             yield return DialogManager.Instance.ShowDialogText("Hoy es un nuevo día (Día " + player.Day + ")");
             yield return Fader.i.FadeOut(0.6f);
@@ -63,6 +63,21 @@ public class Sleep : MonoBehaviour, IPlayerTriggerable
         }
 
 
+    }
+    public void ActiveEvents()
+    {
+        if (PlayerController.i.Day >= 2 && PlayerController.i.Semester == 1)
+        {
+            NpcMovimeintoCplusplus.SetActive(true);
+        }
+        if (PlayerController.i.Day >= 3 && PlayerController.i.Semester == 1)
+        {
+            NpcMovimeintoJava.SetActive(true);
+        }
+        if(PlayerController.i.Semester >= 2)
+        {
+
+        }
     }
 
     public bool TriggerRepeatedly => false;

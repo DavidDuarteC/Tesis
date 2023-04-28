@@ -67,9 +67,7 @@ MonoBehaviour:
     correctAns: Desarrollo en espiral
     urlVideo: 
   - questionInfo: "\xBFCu\xE1l enfoque de desarrollo de software se centra en la
-      reutilizaci\xF3n de componentes y la modularidad? 5.\t\xBFCu\xE1l enfoque de
-      desarrollo de software se centra en la reutilizaci\xF3n de componentes y la
-      modularidad? "
+      reutilizaci\xF3n de componentes y la modularidad?"
     questionType: 0
     questionImage: {fileID: 0}
     audioClip: {fileID: 0}

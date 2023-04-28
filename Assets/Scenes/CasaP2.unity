@@ -975,130 +975,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &513177187
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 513177188}
-  - component: {fileID: 513177191}
-  - component: {fileID: 513177190}
-  - component: {fileID: 513177189}
-  m_Layer: 14
-  m_Name: CutSceneControles (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &513177188
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513177187}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 55.5, y: 14.5, z: -0.21007204}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1424662919}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &513177189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513177187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4881f89f8b930e34489bbb86116ccd4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueId: 38758de9-f541-4eab-aa43-9c05af4adb96
---- !u!61 &513177190
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513177187}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &513177191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513177187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43572fe10c4bff947b459af43ae0c179, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actions:
-  - rid: 5028548751562113044
-  - rid: 5028548670773264390
-  - rid: 5028548751562113033
-  - rid: 5028548670773264391
-  references:
-    version: 2
-    RefIds:
-    - rid: 5028548670773264390
-      type: {class: DialogueAction, ns: , asm: Assembly-CSharp}
-      data:
-        name: DialogueAction
-        waitForCompletion: 1
-        dialog:
-          lines:
-          - "Con Z no solo puedes seguir el di\xE1logo, sino que tambi\xE9n puedes
-            interactuar con objetos y personajes no jugables"
-    - rid: 5028548670773264391
-      type: {class: DisableObjectAction, ns: , asm: Assembly-CSharp}
-      data:
-        name: DisableObjectAction
-        waitForCompletion: 0
-        go: {fileID: 1424662918}
-    - rid: 5028548751562113033
-      type: {class: TeleportObjectAction, ns: , asm: Assembly-CSharp}
-      data:
-        name: TeleportObjectAction
-        waitForCompletion: 0
-        go: {fileID: 1424662918}
-        position: {x: 82, y: 11}
-    - rid: 5028548751562113044
-      type: {class: TurnActorAction, ns: , asm: Assembly-CSharp}
-      data:
-        name: TurnActorAction
-        waitForCompletion: 1
-        actor:
-          isPlayer: 1
-          character: {fileID: 0}
-        direction: 3
 --- !u!1 &675860856
 GameObject:
   m_ObjectHideFlags: 0
@@ -5286,6 +5162,123 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &1343974267
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 968212833422521858, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: uniqueId
+      value: 12d7a054-b0a6-4ac4-bbd0-30dff52943d3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885446, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: m_Name
+      value: Trainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885447, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: defaultDirection
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885453, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885453, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 63.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885453, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 38.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885453, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885453, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885453, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885453, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885453, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885453, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885453, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885453, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: name
+      value: "Monitor de Programaci\xF3n avanzada"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Veo que tienes un buen manejo de Java
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: dialog.lines.Array.data[1]
+      value: "Pong\xE1moslo a prueba"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: dialogLoseBattle.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: dialogAfterBattle.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: dialogLoseBattle.lines.Array.data[0]
+      value: Ve a tu casa y descansas, nos vemos luego
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: dialogAfterBattle.lines.Array.data[0]
+      value: Veo que vas por buen camino
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: dialogAfterBattle.lines.Array.data[1]
+      value: "Sigue as\xED y te convertir\xE1s en todo un Senior"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885455, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: pokemons.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885455, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: pokemons.Array.data[0]._base
+      value: 
+      objectReference: {fileID: 11400000, guid: b6b6a0cb4c91ea346acc9a8388deec18, type: 2}
+    - target: {fileID: 2199313186856885455, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: pokemons.Array.data[0].level
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885455, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: pokemons.Array.data[1].level
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
 --- !u!1 &1348845236
 GameObject:
   m_ObjectHideFlags: 0
@@ -5350,9 +5343,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2044917176}
-  - {fileID: 2026543082}
-  - {fileID: 2105701937}
-  - {fileID: 513177188}
   m_Father: {fileID: 94407387}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6636,6 +6626,10 @@ PrefabInstance:
       value: "Luego al inventario y busca los objetos de aprendizaje. Selecciona
         uno y apr\xE9ndelo"
       objectReference: {fileID: 0}
+    - target: {fileID: 6192230349635671856, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6679524117132791592, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: uniqueId
       value: d409b1d5-d219-49e4-9d52-ba126fe3b7c1
@@ -6752,6 +6746,10 @@ PrefabInstance:
       value: "Luego al inventario y busca los objetos de aprendizaje. Selecciona
         uno y apr\xE9ndelo"
       objectReference: {fileID: 0}
+    - target: {fileID: 6192230349635671856, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6679524117132791592, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: uniqueId
       value: d409b1d5-d219-49e4-9d52-ba126fe3b7c1
@@ -6774,7 +6772,6 @@ GameObject:
   - component: {fileID: 1778647971}
   - component: {fileID: 1778647970}
   - component: {fileID: 1778647969}
-  - component: {fileID: 1778647972}
   m_Layer: 14
   m_Name: CutSceneCarta
   m_TagString: Untagged
@@ -6865,19 +6862,6 @@ Transform:
   m_Father: {fileID: 94407387}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1778647972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778647968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4881f89f8b930e34489bbb86116ccd4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueId: 
 --- !u!1 &1858639702
 GameObject:
   m_ObjectHideFlags: 0
@@ -6952,130 +6936,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
---- !u!1 &2026543081
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2026543082}
-  - component: {fileID: 2026543085}
-  - component: {fileID: 2026543084}
-  - component: {fileID: 2026543083}
-  m_Layer: 14
-  m_Name: CutSceneControles (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2026543082
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2026543081}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 56.5, y: 15.5, z: -0.21007204}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1424662919}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2026543083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2026543081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4881f89f8b930e34489bbb86116ccd4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueId: 766a1b78-0894-4db0-8c02-ab38ee2e58d5
---- !u!61 &2026543084
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2026543081}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &2026543085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2026543081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43572fe10c4bff947b459af43ae0c179, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actions:
-  - rid: 5028548751562113042
-  - rid: 5028548670773264390
-  - rid: 5028548751562113031
-  - rid: 5028548670773264391
-  references:
-    version: 2
-    RefIds:
-    - rid: 5028548670773264390
-      type: {class: DialogueAction, ns: , asm: Assembly-CSharp}
-      data:
-        name: DialogueAction
-        waitForCompletion: 1
-        dialog:
-          lines:
-          - "Con Z no solo puedes seguir el di\xE1logo, sino que tambi\xE9n puedes
-            interactuar con objetos y personajes no jugables"
-    - rid: 5028548670773264391
-      type: {class: DisableObjectAction, ns: , asm: Assembly-CSharp}
-      data:
-        name: DisableObjectAction
-        waitForCompletion: 0
-        go: {fileID: 1424662918}
-    - rid: 5028548751562113031
-      type: {class: TeleportObjectAction, ns: , asm: Assembly-CSharp}
-      data:
-        name: TeleportObjectAction
-        waitForCompletion: 0
-        go: {fileID: 1424662918}
-        position: {x: 82, y: 11}
-    - rid: 5028548751562113042
-      type: {class: TurnActorAction, ns: , asm: Assembly-CSharp}
-      data:
-        name: TurnActorAction
-        waitForCompletion: 1
-        actor:
-          isPlayer: 1
-          character: {fileID: 0}
-        direction: 1
 --- !u!1 &2029977939
 GameObject:
   m_ObjectHideFlags: 0
@@ -7306,7 +7166,6 @@ GameObject:
   - component: {fileID: 2044917176}
   - component: {fileID: 2044917179}
   - component: {fileID: 2044917178}
-  - component: {fileID: 2044917177}
   m_Layer: 14
   m_Name: CutSceneControles
   m_TagString: Untagged
@@ -7322,26 +7181,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2044917175}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 56.5, y: 13.5, z: -0.21007204}
+  m_LocalPosition: {x: 50, y: 11.5, z: -0.21007204}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1424662919}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2044917177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2044917175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4881f89f8b930e34489bbb86116ccd4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueId: 852ce55c-6878-430c-87b1-eba12acb7b6d
 --- !u!61 &2044917178
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7366,7 +7212,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &2044917179
 MonoBehaviour:
@@ -7381,7 +7227,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actions:
-  - rid: 5028548751562113041
   - rid: 5028548670773264390
   - rid: 5028548751562113030
   - rid: 5028548670773264391
@@ -7395,8 +7240,8 @@ MonoBehaviour:
         waitForCompletion: 1
         dialog:
           lines:
-          - "Con Z no solo puedes seguir el di\xE1logo, sino que tambi\xE9n puedes
-            interactuar con los personajes no jugables"
+          - "Con la tecla Z no solo puedes seguir el di\xE1logo"
+          - "Sino que tambi\xE9n puedes interactuar con los personajes no jugables"
     - rid: 5028548670773264391
       type: {class: DisableObjectAction, ns: , asm: Assembly-CSharp}
       data:
@@ -7410,139 +7255,6 @@ MonoBehaviour:
         waitForCompletion: 0
         go: {fileID: 1424662918}
         position: {x: 82, y: 11}
-    - rid: 5028548751562113041
-      type: {class: TurnActorAction, ns: , asm: Assembly-CSharp}
-      data:
-        name: TurnActorAction
-        waitForCompletion: 1
-        actor:
-          isPlayer: 1
-          character: {fileID: 0}
-        direction: 0
---- !u!1 &2105701936
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2105701937}
-  - component: {fileID: 2105701940}
-  - component: {fileID: 2105701939}
-  - component: {fileID: 2105701938}
-  m_Layer: 14
-  m_Name: CutSceneControles (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2105701937
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2105701936}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 57.5, y: 14.5, z: -0.21007204}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1424662919}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2105701938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2105701936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4881f89f8b930e34489bbb86116ccd4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueId: 54abe38e-1a24-4706-aec7-ee7a78b7788c
---- !u!61 &2105701939
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2105701936}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &2105701940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2105701936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43572fe10c4bff947b459af43ae0c179, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actions:
-  - rid: 5028548751562113043
-  - rid: 5028548670773264390
-  - rid: 5028548751562113032
-  - rid: 5028548670773264391
-  references:
-    version: 2
-    RefIds:
-    - rid: 5028548670773264390
-      type: {class: DialogueAction, ns: , asm: Assembly-CSharp}
-      data:
-        name: DialogueAction
-        waitForCompletion: 1
-        dialog:
-          lines:
-          - "Con Z no solo puedes seguir el di\xE1logo, sino que tambi\xE9n puedes
-            interactuar con objetos y personajes no jugables"
-    - rid: 5028548670773264391
-      type: {class: DisableObjectAction, ns: , asm: Assembly-CSharp}
-      data:
-        name: DisableObjectAction
-        waitForCompletion: 0
-        go: {fileID: 1424662918}
-    - rid: 5028548751562113032
-      type: {class: TeleportObjectAction, ns: , asm: Assembly-CSharp}
-      data:
-        name: TeleportObjectAction
-        waitForCompletion: 0
-        go: {fileID: 1424662918}
-        position: {x: 82, y: 11}
-    - rid: 5028548751562113043
-      type: {class: TurnActorAction, ns: , asm: Assembly-CSharp}
-      data:
-        name: TurnActorAction
-        waitForCompletion: 1
-        actor:
-          isPlayer: 1
-          character: {fileID: 0}
-        direction: 2
 --- !u!1001 &7955098474075040822
 PrefabInstance:
   m_ObjectHideFlags: 0

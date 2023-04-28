@@ -6394,6 +6394,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: categories.Array.data[0]
       value: "Conceptos b\xE1sicos C++"
       objectReference: {fileID: 0}
@@ -6403,15 +6407,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: Sigue, puedes aumentar tus conocimientos
+      value: "Sigue as\xED, puedes aumentar tus conocimientos"
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[1]
       value: Nunca te rindas
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: dialog.lines.Array.data[2]
+      value: Ahora ve a la biblioteca, puede que te encuentres con otro examen
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: movementPattern.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: startQuiz.lines.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: startQuiz.lines.Array.data[0]
@@ -6419,11 +6431,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: startQuiz.lines.Array.data[1]
-      value: Suerte
+      value: "Recuerda que podr\xE1s realizar los ex\xE1menes las veces que quieras
+        hasta que los pases"
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: startQuiz.lines.Array.data[2]
-      value: Cada examen que realices es con el mouse
+      value: Suerte
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: startQuiz.lines.Array.data[3]
+      value: ' Ah, por cierto cada examen que tomes es con el mouse'
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: movementPattern.Array.data[0].x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: movementPattern.Array.data[1].x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: movementPattern.Array.data[1].y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: m_RootOrder

@@ -22,7 +22,7 @@ public class BattleUnit : MonoBehaviour
         get { return hud; }
     }
 
-    public Pokemon Pokemon { get; set; }
+    public Approach Pokemon { get; set; }
     Image image;
     Vector3 originalPos;
     Color originalColor;
@@ -34,7 +34,7 @@ public class BattleUnit : MonoBehaviour
         originalColor = image.color;
     }
 
-    public void Setup(Pokemon pokemon) //Elige que componente mostrar del pokemon
+    public void Setup(Approach pokemon) //Elige que componente mostrar del pokemon
     {
         Pokemon = pokemon;
         if (isPlayerUnit)

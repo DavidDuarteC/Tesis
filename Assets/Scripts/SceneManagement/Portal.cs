@@ -50,4 +50,4 @@ public class Portal : MonoBehaviour, IPlayerTriggerable
 
 }
 
-public enum DestinationIdentifier { CasaP2, CasaP1, ParadaBus, PUJ, PasilloIng, Salon1Ing, Salon2Ing, Biblioteca, Pasillo67, SalonUno67, SalonDos67 ,Torniquete }
+public enum DestinationIdentifier { CasaP2, CasaP1, ParadaBus, PUJ, PasilloIng, Salon1Ing, Salon2Ing, Biblioteca, Pasillo67, SalonUno67, SalonDos67 , SalonTres67, Salon3Ing, Salon4Ing }

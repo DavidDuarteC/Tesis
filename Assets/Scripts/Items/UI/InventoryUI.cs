@@ -22,7 +22,7 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] PartyScreen partyScreen;
     [SerializeField] MoveSelectionUI moveSelectionUI;
 
-    PokemonParty party;
+    ApproachParty party;
 
     List<ItemSlotUI> slotUIList;
 
@@ -52,7 +52,7 @@ public class InventoryUI : MonoBehaviour
 
         inventory.OnUpdated += UpdateItemList;
 
-        party = PokemonParty.GetPlayerParty();
+        party = ApproachParty.GetPlayerParty();
     }
 
     void UpdateItemList()
@@ -190,40 +190,32 @@ public class InventoryUI : MonoBehaviour
     {
         state = InventoryUIState.Busy;
 
-        yield return HandleTMItems();
-
-        var item = inventory.GetItem(selectedItem, selectedCategory);
-        var pokemon = partyScreen.SelectedMember;
-
-        
-        if(item is EvolutionItem)//Maneja la evolucion con un item
+        ApproachParty playerParty = PlayerController.i.GetComponent<ApproachParty>();
+        var lenguagePlayer = playerParty.GetHealthyPokemon();
+        if (lenguagePlayer != null)
         {
-            var evolution = pokemon.CheckForEvolution(item);
-            if(evolution != null)
+            yield return HandleTMItems();
+
+            var item = inventory.GetItem(selectedItem, selectedCategory);
+            var pokemon = partyScreen.SelectedMember;
+            var usedItem = inventory.UseItem(selectedItem, partyScreen.SelectedMember, selectedCategory);
+            if (usedItem != null)
             {
-                yield return EvolutionManager.i.Evolve(pokemon, evolution);
+                if (usedItem is RecoveyItem)
+                    yield return DialogManager.Instance.ShowDialogText($"El jugador uso {usedItem.Name}");
+
+                onItemUsed?.Invoke(usedItem);
             }
             else
             {
-                yield return DialogManager.Instance.ShowDialogText($"No tendra ningun efecto");
-                ClosePartyScreen();
-                yield break;
-            }
-        }
+                if (selectedCategory == (int)ItemCategory.Items)
+                    yield return DialogManager.Instance.ShowDialogText("No tendra ningun efecto");
 
-        var usedItem = inventory.UseItem(selectedItem, partyScreen.SelectedMember, selectedCategory);
-        if (usedItem != null)
-        {
-            if(usedItem is RecoveyItem)
-                yield return DialogManager.Instance.ShowDialogText($"El jugador uso {usedItem.Name}");
-            
-            onItemUsed?.Invoke(usedItem);
+            }
         }
         else
         {
-            if (selectedCategory == (int)ItemCategory.Items)
-                yield return DialogManager.Instance.ShowDialogText("No tendra ningun efecto");
-
+            StartCoroutine(DialogManager.Instance.ShowDialogText("Descansa, alguíen agotado no puede seguir aprendiendo"));
         }
         ClosePartyScreen();
     }
@@ -250,7 +242,7 @@ public class InventoryUI : MonoBehaviour
 
         }
 
-        if (pokemon.Moves.Count < PokemonBase.MaxNumOfMoves)
+        if (pokemon.Moves.Count < ApproachBase.MaxNumOfMoves)
         {
             pokemon.LearnMove(tmItem.Move);
             yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} aprendio {tmItem.Move.Name}");
@@ -260,7 +252,7 @@ public class InventoryUI : MonoBehaviour
         {
             //Olvidar un movimiento
             yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} esta intentando aprender {tmItem.Move.Name}");
-            yield return DialogManager.Instance.ShowDialogText($"Pero no puede aprender mas de {PokemonBase.MaxNumOfMoves} movimientos");
+            yield return DialogManager.Instance.ShowDialogText($"Pero no puede aprender mas de {ApproachBase.MaxNumOfMoves} movimientos");
             yield return ChooseMoveToForget(pokemon, tmItem.Move);
             yield return new WaitUntil(() => state != InventoryUIState.MoveToForget);
 
@@ -268,7 +260,7 @@ public class InventoryUI : MonoBehaviour
 
     }
 
-    IEnumerator ChooseMoveToForget(Pokemon pokemon, MoveBase newMove) //Permite seleccionar el movimiento a olvidar
+    IEnumerator ChooseMoveToForget(Approach pokemon, MoveBase newMove) //Permite seleccionar el movimiento a olvidar
     {
         state = InventoryUIState.Busy;
         yield return DialogManager.Instance.ShowDialogText($"Elige un movimiento que quieras olvidar", true, false);
@@ -352,7 +344,7 @@ public class InventoryUI : MonoBehaviour
 
         DialogManager.Instance.CloseDialog();
         moveSelectionUI.gameObject.SetActive(false);
-        if (moveIndex == PokemonBase.MaxNumOfMoves)
+        if (moveIndex == ApproachBase.MaxNumOfMoves)
         {
             //No va a aprender un nuevo movimiento
             yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} no va a prender {moveToLearn.Name}");

@@ -9,7 +9,7 @@ public class CuttableTree : MonoBehaviour, Interactable
     {
         yield return DialogManager.Instance.ShowDialogText("Este arbol parace que se puede cortar");
 
-        var pokemonWithCut = initiator.GetComponent<PokemonParty>().Pokemons.FirstOrDefault(p => p.Moves.Any(m => m.Base.Name =="Cut"));
+        var pokemonWithCut = initiator.GetComponent<ApproachParty>().Pokemons.FirstOrDefault(p => p.Moves.Any(m => m.Base.Name =="Cut"));
 
         if(pokemonWithCut != null)
         {

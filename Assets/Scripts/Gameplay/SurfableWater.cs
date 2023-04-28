@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class SurfableWater : MonoBehaviour, Interactable, IPlayerTriggerable
+public class SurfableWater : MonoBehaviour, Interactable
 {
     bool isJumpongToWater = false;
 
@@ -19,7 +19,7 @@ public class SurfableWater : MonoBehaviour, Interactable, IPlayerTriggerable
 
         yield return DialogManager.Instance.ShowDialogText("El agua esta fría!");
 
-        var pokemonWithSurf = initiator.GetComponent<PokemonParty>().Pokemons.FirstOrDefault(p => p.Moves.Any(m => m.Base.Name == "Surf"));
+        var pokemonWithSurf = initiator.GetComponent<ApproachParty>().Pokemons.FirstOrDefault(p => p.Moves.Any(m => m.Base.Name == "Surf"));
 
         if (pokemonWithSurf != null)
         {
@@ -45,12 +45,12 @@ public class SurfableWater : MonoBehaviour, Interactable, IPlayerTriggerable
         }
     }
 
-    public void OnPlayerTrigger(PlayerController player)
-    {
-        if (UnityEngine.Random.Range(1, 101) <= 10)
-        {
-            GameController.Instance.StartBattle(BattleTrigger.Water); //Genera los encuentros con los pokemones
-            //Debug.Log("Encontraste un pokemon");
-        }
-    }
+    //public void OnPlayerTrigger(PlayerController player)
+    //{
+    //    if (UnityEngine.Random.Range(1, 101) <= 10)
+    //    {
+    //        GameController.Instance.StartBattle(BattleTrigger.Water); //Genera los encuentros con los pokemones
+    //        //Debug.Log("Encontraste un pokemon");
+    //    }
+    //}
 }

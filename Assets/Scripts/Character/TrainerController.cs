@@ -14,7 +14,7 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
 
     [SerializeField] AudioClip trainerAppearsClip;
 
-    PokemonParty playerParty;
+    ApproachParty playerParty;
 
     //Estado
     bool battleLost = false;
@@ -38,13 +38,13 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
     public IEnumerator Interact(Transform initiator)
     {
         character.LookTowards(initiator.position);
-        playerParty = PlayerController.i.GetComponent<PokemonParty>();
+        playerParty = PlayerController.i.GetComponent<ApproachParty>();
         var lenguagePlayer = playerParty.GetHealthyPokemon();
 
         if (lenguagePlayer == null)
         {
             yield return DialogManager.Instance.ShowDialog(dialogLoseBattle);
-            GameController.Instance.State = GameState.FreeRoam;
+            GameController.Instance.StartFreeRoamState();
             AudioManager.i.PrevPlayMusic();
             yield break;
         }else if (!battleLost )
@@ -68,7 +68,7 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
 
     public IEnumerator TriggerTrainerBattle(PlayerController player)
     {
-        playerParty = PlayerController.i.GetComponent<PokemonParty>();
+        playerParty = PlayerController.i.GetComponent<ApproachParty>();
         var lenguagePlayer = playerParty.GetHealthyPokemon();
         if (lenguagePlayer != null)
             AudioManager.i.PlayMusic(trainerAppearsClip);
@@ -89,7 +89,7 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
         if (lenguagePlayer == null)
         {
             yield return DialogManager.Instance.ShowDialog(dialogLoseBattle);
-            GameController.Instance.State = GameState.FreeRoam;
+            GameController.Instance.StartFreeRoamState();
             AudioManager.i.PrevPlayMusic();
             yield break;
         }else

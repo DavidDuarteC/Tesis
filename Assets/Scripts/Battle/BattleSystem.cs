@@ -30,7 +30,7 @@ public class BattleSystem : MonoBehaviour
     [Header("Background Images")]
     [SerializeField] Image backgorundImage;
     [SerializeField] Sprite grassBackground;
-    [SerializeField] Sprite waterBackground;
+    //[SerializeField] Sprite waterBackground;
 
     public event Action<bool> OnBattleOver;
 
@@ -39,9 +39,9 @@ public class BattleSystem : MonoBehaviour
     int currentMove;
     bool aboutToUseChoice = true;
 
-    PokemonParty playerParty;
-    PokemonParty trainerParty;
-    Pokemon wildPokemon;
+    ApproachParty playerParty;
+    ApproachParty trainerParty;
+    Approach wildPokemon;
 
     bool isTrainerBattle = false;
     PlayerController player;
@@ -53,7 +53,7 @@ public class BattleSystem : MonoBehaviour
     BattleTrigger battleTrigger;
 
 
-    public void StartBattle(PokemonParty playerParty, Pokemon wildPokemon, BattleTrigger trigger = BattleTrigger.LongGrass) // Permite empezar una batalla
+    public void StartBattle(ApproachParty playerParty, Approach wildPokemon, BattleTrigger trigger = BattleTrigger.LongGrass) // Permite empezar una batalla
     {
         this.playerParty = playerParty;
         this.wildPokemon = wildPokemon;
@@ -67,7 +67,7 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(SetupBattle());
     }
 
-    public void StartTrainerBattle(PokemonParty playerParty, PokemonParty trainerParty, BattleTrigger trigger = BattleTrigger.LongGrass) // Permite empezar una batalla
+    public void StartTrainerBattle(ApproachParty playerParty, ApproachParty trainerParty, BattleTrigger trigger = BattleTrigger.LongGrass) // Permite empezar una batalla
     {
         this.playerParty = playerParty;
         this.trainerParty = trainerParty;
@@ -88,7 +88,7 @@ public class BattleSystem : MonoBehaviour
         playerUnit.Clear();
         enemyUnit.Clear();
 
-        backgorundImage.sprite = (battleTrigger == BattleTrigger.LongGrass) ? grassBackground : waterBackground;
+        //backgorundImage.sprite = (battleTrigger == BattleTrigger.LongGrass) ? grassBackground : waterBackground;
 
         if(!isTrainerBattle)
         {
@@ -179,7 +179,7 @@ public class BattleSystem : MonoBehaviour
         dialogBox.EnableMoveSelector(true);
     }
 
-    IEnumerator AboutToUse(Pokemon newPokemon)//Permite enviar un pokemon cuando se le derroto un pokemon al enemigo
+    IEnumerator AboutToUse(Approach newPokemon)//Permite enviar un pokemon cuando se le derroto un pokemon al enemigo
     {
         state = BattleState.Busy;
         yield return dialogBox.TypeDialog($"{trainer.Name} va a enviar a {newPokemon.Base.Name}. Quieres cambiar de pokemon?");
@@ -188,10 +188,10 @@ public class BattleSystem : MonoBehaviour
         dialogBox.EnableChoiceBox(true);
     }
 
-    IEnumerator ChooseMoveToForget(Pokemon pokemon, MoveBase newMove)
+    IEnumerator ChooseMoveToForget(Approach pokemon, MoveBase newMove)
     {
         state = BattleState.Busy;
-        yield return dialogBox.TypeDialog($"Elige un movimiento que quieras olvidar");
+        yield return dialogBox.TypeDialog($"Elige un conocimiento que quieras olvidar");
         moveSelectionUI.gameObject.SetActive(true);
         moveSelectionUI.SetMoveData(pokemon.Moves.Select(x => x.Base).ToList(), newMove);//Genera una lista de Tipo Move y la convierte a una lista de MoveBase
         moveToLearn = newMove;
@@ -328,7 +328,7 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    IEnumerator RunMoveEffects(MoveEffects effects , Pokemon source, Pokemon target, MoveTarget moveTarget)
+    IEnumerator RunMoveEffects(MoveEffects effects , Approach source, Approach target, MoveTarget moveTarget)
     {
 
         //Modifica estadisticas
@@ -373,7 +373,7 @@ public class BattleSystem : MonoBehaviour
 
     }
 
-    bool CheckIfMoveHits(Move move, Pokemon source, Pokemon target)
+    bool CheckIfMoveHits(Move move, Approach source, Approach target)
     {
         if (move.Base.AlwaysHits)
             return true;
@@ -396,7 +396,7 @@ public class BattleSystem : MonoBehaviour
         return UnityEngine.Random.Range(1,101) <= moveAccuracy;
     }
 
-    IEnumerator ShowStatusChanges(Pokemon pokemon) //Muestra si el pokemon tiene algo nuevo
+    IEnumerator ShowStatusChanges(Approach pokemon) //Muestra si el pokemon tiene algo nuevo
     {
         while(pokemon.StatusChanges.Count > 0)
         {
@@ -441,7 +441,7 @@ public class BattleSystem : MonoBehaviour
                 var newMove = playerUnit.Pokemon.GetLearnableMoveAtCurrLevel();
                 if(newMove != null)
                 {
-                    if(playerUnit.Pokemon.Moves.Count < PokemonBase.MaxNumOfMoves)
+                    if(playerUnit.Pokemon.Moves.Count < ApproachBase.MaxNumOfMoves)
                     {
                         playerUnit.Pokemon.LearnMove(newMove.Base);
                         yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} aprendio {newMove.Base.Name}");
@@ -452,7 +452,7 @@ public class BattleSystem : MonoBehaviour
                     {
                         //Olvidar un movimiento
                         yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} Esta tratando de aprender {newMove.Base.Name}");
-                        yield return dialogBox.TypeDialog($"Pero no puede aprender mas de {PokemonBase.MaxNumOfMoves} movimientos");
+                        yield return dialogBox.TypeDialog($"Pero no puede aprender mas de {ApproachBase.MaxNumOfMoves} movimientos");
                         yield return ChooseMoveToForget(playerUnit.Pokemon, newMove.Base);
                         yield return new WaitUntil(() => state != BattleState.MoveToForget);
                         yield return new WaitForSeconds(2f);
@@ -480,6 +480,7 @@ public class BattleSystem : MonoBehaviour
             else
             {
                 //StressLevel.i.AddLevel(StressLevel.i.LostMoreTimeRow ? StressLevel.i.LoseMultiply * 2 : StressLevel.i.LoseMultiply);
+                GameController.Instance.ActiveThermometer();
                 StressLevel.i.AddLevel(StressLevel.i.LoseMultiply);
                 BattleOver(false);
             }
@@ -538,27 +539,27 @@ public class BattleSystem : MonoBehaviour
         {
             HandleAboutToUse();
         }
-        else if(state == BattleState.Bag)
-        {
-            Action onBack = () =>
-            {
-                inventoryUI.gameObject.SetActive(false);
-                state = BattleState.ActionSelection;
-            };
+        //else if(state == BattleState.Bag)
+        //{
+        //    Action onBack = () =>
+        //    {
+        //        inventoryUI.gameObject.SetActive(false);
+        //        state = BattleState.ActionSelection;
+        //    };
 
-            Action<ItemBase> onItemUsed = (ItemBase usedItem) =>
-            {
-                StartCoroutine(OnItemUsed(usedItem));
-            };
+        //    Action<ItemBase> onItemUsed = (ItemBase usedItem) =>
+        //    {
+        //        StartCoroutine(OnItemUsed(usedItem));
+        //    };
 
-            inventoryUI.HandleUpdate(onBack, onItemUsed);
-        }
+        //    inventoryUI.HandleUpdate(onBack, onItemUsed);
+        //}
         else if(state == BattleState.MoveToForget)
         {
             Action<int> onMoveSelected = (moveIndex) =>
             {
                 moveSelectionUI.gameObject.SetActive(false);
-                if(moveIndex == PokemonBase.MaxNumOfMoves)
+                if(moveIndex == ApproachBase.MaxNumOfMoves)
                 {
                     //No va a aprender un nuevo movimiento
                     StartCoroutine(dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} no va a prender {moveToLearn.Name}"));
@@ -586,10 +587,6 @@ public class BattleSystem : MonoBehaviour
             ++currentAction;
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
             --currentAction;
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
-            currentAction += 2;
-        else if(Input.GetKeyDown(KeyCode.UpArrow))
-            currentAction -= 2;
 
         currentAction = Mathf.Clamp(currentAction, 0, 3);
 
@@ -606,21 +603,21 @@ public class BattleSystem : MonoBehaviour
             {
                 //Bag
                 //OpenBag();
-                StartCoroutine(RunTurns(BattleAction.UseItem));
+                StartCoroutine(RunTurns(BattleAction.Run));
                 //inventoryUI.gameObject.SetActive(true);
                 //partyScreen.SetPartyData(); //Funciona
                 //state = BattleState.Bag;
             }
-            else if (currentAction == 2)
-            {
-                //Pokemon
-                OpenPartyScreen();
-            }
-            else if (currentAction == 3)
-            {
-                //Huir
-                StartCoroutine(RunTurns(BattleAction.Run));
-            }
+            //else if (currentAction == 2)
+            //{
+            //    //Approach
+            //    OpenPartyScreen();
+            //}
+            //else if (currentAction == 3)
+            //{
+            //    //Huir
+            //    StartCoroutine(RunTurns(BattleAction.Run));
+            //}
         }
     }
 
@@ -740,7 +737,7 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    IEnumerator SwitchPokemon(Pokemon newPokemon, bool isTrainerAboutToUse = false) //Permite el cambio de pokemones
+    IEnumerator SwitchPokemon(Approach newPokemon, bool isTrainerAboutToUse = false) //Permite el cambio de pokemones
     {
         if(playerUnit.Pokemon.HP > 0){
             yield return dialogBox.TypeDialog($"Vuele {playerUnit.Pokemon.Base.Name}");
@@ -855,7 +852,7 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    int TryCatchPokmon(Pokemon pokemon, PokeBallItem pokeBallItem)
+    int TryCatchPokmon(Approach pokemon, PokeBallItem pokeBallItem)
     {
         float a = 0;
         if (pokeBallItem != null)
@@ -887,7 +884,7 @@ public class BattleSystem : MonoBehaviour
 
         if(isTrainerBattle) 
         {
-            yield return dialogBox.TypeDialog("No puedes huir de batallas con entrenadores");
+            yield return dialogBox.TypeDialog("No puedes huir de batallas con monitores");
             state = BattleState.RunningTurn;
             yield break;
         }

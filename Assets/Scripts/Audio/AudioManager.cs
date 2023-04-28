@@ -100,6 +100,14 @@ public class AudioManager : MonoBehaviour
         musicPlayer.UnPause();
         musicPlayer.DOFade(originalMusicVol, fadeDuration);
     }
+
+    public void Volume(bool volume)
+    {
+        if (!volume)
+            musicPlayer.DOFade(0, fadeDuration);
+        else
+            musicPlayer.DOFade(originalMusicVol, fadeDuration);
+    }
 }
 
 public enum AudioId { UISelect, Hit, Faint, ExpGain, ItemObteined, PokemonObtained }

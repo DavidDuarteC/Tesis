@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510f992e5f6970849b69a3207fea1fb4, type: 3}
+  m_Name: Pruebas y calidad de software
+  m_EditorClassIdentifier: 
+  categoryName: Pruebas y calidad de software
+  questions:
+  - questionInfo: "\xBFQu\xE9 tipo de prueba de software se centra en probar unidades
+      individuales de c\xF3digo, como funciones o clases? "
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - "Prueba de integraci\xF3n"
+    - Prueba de rendimiento
+    - "Prueba de regresi\xF3n"
+    - Pureba untitaria
+    correctAns: Pureba untitaria
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es el prop\xF3sito de las pruebas de aceptaci\xF3n?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Verificar que el software cumple con los requisitos del usuario
+    - "Verificar que las unidades de c\xF3digo funcionan correctamente"
+    - "Asegurar que el software funciona correctamente despu\xE9s de cambios en el
+      c\xF3digo"
+    - Verificar que el software puede manejar grandes cargas de trabajo
+    correctAns: Verificar que el software cumple con los requisitos del usuario
+    urlVideo: 
+  - questionInfo: "\xBFQu\xE9 enfoque de pruebas se basa en la especificaci\xF3n
+      de requisitos y dise\xF1o del sistema? "
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Pruebas de caja negra
+    - Pruebas de caja blanca
+    - Pruebas de rendimiento
+    - "Pruebas de aceptaci\xF3n"
+    correctAns: Pruebas de caja negra
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es el prop\xF3sito de las pruebas de regresi\xF3n?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - "Asegurar que las unidades de c\xF3digo funcionan correctamente"
+    - "Asegurar que el software funciona correctamente despu\xE9s de cambios en el
+      c\xF3digo"
+    - 'Verificar que el software cumple con los requisitos del '
+    - Verificar que el software puede manejar grandes cargas de trabajo
+    correctAns: "Asegurar que el software funciona correctamente despu\xE9s de cambios
+      en el c\xF3digo"
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es una pr\xE1ctica com\xFAn para mejorar la calidad
+      del software en el desarrollo \xE1gil?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - "Integraci\xF3n continua"
+    - Reuniones diarias de seguimiento
+    - Fases de desarrollo bien definidas
+    - Desarrollo basado en prototipos
+    correctAns: "Integraci\xF3n continua"
+    urlVideo: 
