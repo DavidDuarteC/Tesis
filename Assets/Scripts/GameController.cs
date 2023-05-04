@@ -27,7 +27,6 @@ public class GameController : MonoBehaviour
 
     GameState state;
     GameState prevState;
-    GameState stateBeforeEvolution;
 
     //public StateMachine<GameController> StateMachine { get; private set; }
 
@@ -281,7 +280,7 @@ public class GameController : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.X)) 
             { 
                 screenControl.SetActive(false);
-                state = prevState;
+                state = GameState.FreeRoam;
             }
 
         }

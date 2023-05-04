@@ -4420,7 +4420,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4224887452634994808, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: ctoSlots.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4224887452634994808, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: collectibles.Array.size
@@ -4945,6 +4945,10 @@ PrefabInstance:
     - target: {fileID: 4760651130647640847, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789353214912775144, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Este semestre no tienes acceso a este edificio
       objectReference: {fileID: 0}
     - target: {fileID: 4825368659228379128, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: m_AnchorMax.y

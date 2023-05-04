@@ -5078,10 +5078,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.8
-  m_Text: "- Control de movimiento: flechas\n- Interctuar con un NPC, coninuar un
-    dialogo o acci\xF3n: tecla Z\n- Men\xFA principal: tecla ESC\n- Volver al men\xFA
-    anterio: tecla X\n- Aumentar la velocidad del personaje: Mantener presionado
-    espacio\n- Resolver los quices: Mouse\n"
+  m_Text: "- Control de movimiento: teclas de direcci\xF3n (\u2190, \u2191, \u2192,
+    \u2193)\n- Interactuar con un NPC, continuar un di\xE1logo o acci\xF3n: tecla
+    Z\n- Men\xFA principal: tecla ESC\n- Volver al men\xFA anterior: tecla X\n- Resolver
+    los quices: rat\xF3n\n"
 --- !u!1 &4272340410486507862
 GameObject:
   m_ObjectHideFlags: 0
@@ -6550,6 +6550,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stressBar: {fileID: 3474545754760398070}
   dialog:
+    lines: []
+  dialogMeditation:
     lines: []
 --- !u!1 &5243165092307049602
 GameObject:
@@ -10404,7 +10406,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Oprime la tecla Z para seleccionar un personaje
+  m_Text: Presiona la tecla Z para seleccionar un personaje
 --- !u!1 &7909493538627576545
 GameObject:
   m_ObjectHideFlags: 0

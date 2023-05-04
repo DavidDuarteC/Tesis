@@ -367,7 +367,7 @@ MonoBehaviour:
     - "Sigue as\xED y te convertir\xE1s en todo un"
   dialogLoseBattle:
     lines:
-    - Ve a tu casa y descansas, nos vemos luego
+    - "Ve a tu casa y descansas, nos vemos ma\xF1ana"
   exclamation: {fileID: 2199313186270382521}
   fov: {fileID: 2199313186240672060}
   trainerAppearsClip: {fileID: 8300000, guid: a03a9aacef618ea4c8c5eebca5bb7c7b, type: 3}

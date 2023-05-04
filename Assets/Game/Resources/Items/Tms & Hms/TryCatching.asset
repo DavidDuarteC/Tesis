@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TryCatching
   m_EditorClassIdentifier: 
   name: Cto
-  description: "Te ense\xF1a Try Catching en Java"
+  description: "Te ense\xF1a a utilizar Try Catch en Java para manejar excepciones"
   icon: {fileID: -1804011318, guid: 3ae12697ae504414bbf0797ea36dfddd, type: 3}
   price: 0
   isSellable: 0

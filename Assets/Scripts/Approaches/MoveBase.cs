@@ -11,7 +11,7 @@ public class MoveBase : ScriptableObject
     [TextArea]
     [SerializeField] string description;
 
-    [SerializeField] PokemonType type;
+    [SerializeField] ApproachType type;
     [SerializeField] int power;
     [SerializeField] int accuracy;
     [SerializeField] bool alwaysHits;
@@ -37,7 +37,7 @@ public class MoveBase : ScriptableObject
         get { return description; }
     }
 
-    public PokemonType Type
+    public ApproachType Type
     {
         get { return type; }
     }

@@ -58,7 +58,7 @@ public class Quest
             inventory.AddItem(Base.RewardItem);
 
             string playerName = player.GetComponent<PlayerController>().Name;
-            yield return DialogManager.Instance.ShowDialogText($"{playerName} recibio {Base.RewardItem.Name}");
+            yield return DialogManager.Instance.ShowDialogText($"{playerName} recibió {Base.RewardItem.Name}");
         }
 
         var questList = QuestList.GetQuestList();

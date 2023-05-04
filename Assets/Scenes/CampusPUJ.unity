@@ -669,6 +669,8 @@ MonoBehaviour:
           lines:
           - Este es el Hospital San Ignacio
           - "Por si tienes una emergencia, ya sabes a d\xF3nde ir"
+          - "Por ahora no puedes entrar, est\xE1 en remodelaci\xF3n"
+          - "M\xE1s adelante podr\xE1s hacerlo"
     - rid: 5028548710319259652
       type: {class: MoveActorAction, ns: , asm: Assembly-CSharp}
       data:
@@ -3636,7 +3638,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 1ee678e00af6e20498ad340fb47890a3, type: 2}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[0]
@@ -3648,7 +3650,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[2]
-      value: "Te doy un consejo, visita el edificio de ingenier\xEDa primero"
+      value: Te doy un consejo
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: dialog.lines.Array.data[3]
+      value: "Siempre visita primero el edificio de ingenier\xEDa cuando comiences
+        un nuevo semestre o un nuevo d\xEDa"
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: movementPattern.Array.size

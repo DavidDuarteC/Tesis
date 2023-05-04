@@ -22,7 +22,7 @@ public class BattleUnit : MonoBehaviour
         get { return hud; }
     }
 
-    public Approach Pokemon { get; set; }
+    public Approach approach { get; set; }
     Image image;
     Vector3 originalPos;
     Color originalColor;
@@ -36,11 +36,11 @@ public class BattleUnit : MonoBehaviour
 
     public void Setup(Approach pokemon) //Elige que componente mostrar del pokemon
     {
-        Pokemon = pokemon;
+        approach = pokemon;
         if (isPlayerUnit)
-            image.sprite = Pokemon.Base.BackSprite;
+            image.sprite = approach.Base.BackSprite;
         else
-            image.sprite = Pokemon.Base.FrontSprite;
+            image.sprite = approach.Base.FrontSprite;
 
         hud.gameObject.SetActive(true);
         hud.SetData(pokemon);

@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fc4825710424844886f41e8e6a60f0d, type: 3}
   m_Name: Portatil
   m_EditorClassIdentifier: 
-  name: Portatil
-  description: Esta herramineta va a ser de gran ayuda
-  icon: {fileID: 0}
+  name: "Port\xE1til"
+  description: "El port\xE1til permite a los ingenieros de sistemas trabajar en cualquier
+    lugar y en cualquier momento, lo que aumenta su productividad y flexibilidad"
+  icon: {fileID: 21300000, guid: 069310431eec4094ab7fe2c5a8717d1d, type: 3}
   price: 0
   isSellable: 0
   collectible: 0
-  dialog: 
+  dialog:
+    lines: []

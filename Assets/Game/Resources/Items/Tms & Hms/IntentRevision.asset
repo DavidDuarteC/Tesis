@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: IntentRevision
   m_EditorClassIdentifier: 
   name: Cto
-  description: Mejora tus habilidades para desarrollar apliaciones moviles
+  description: "Mejora tus habilidades para desarrollar aplicaciones m\xF3viles"
   icon: {fileID: -1804011318, guid: 3ae12697ae504414bbf0797ea36dfddd, type: 3}
   price: 0
   isSellable: 0

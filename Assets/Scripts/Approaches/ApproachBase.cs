@@ -14,8 +14,8 @@ public class ApproachBase : ScriptableObject //Objeto enfoque
     [SerializeField] Sprite frontSprite;
     [SerializeField] Sprite backSprite;
 
-    [SerializeField] PokemonType type1;
-    [SerializeField] PokemonType type2;
+    [SerializeField] ApproachType type1;
+    [SerializeField] ApproachType type2;
 
     //Estaditicas base
     [SerializeField] int maxHp;
@@ -68,12 +68,12 @@ public class ApproachBase : ScriptableObject //Objeto enfoque
         get { return backSprite;}
     }
 
-    public PokemonType Type1
+    public ApproachType Type1
     {
         get { return type1; }
     }
 
-    public PokemonType Type2
+    public ApproachType Type2
     {
         get { return type2; }
     }
@@ -140,7 +140,7 @@ public class LearnableMove //Crea la funcion para que un pokemon pueda aprender 
     }
 }
 
-public enum PokemonType
+public enum ApproachType
 {
     None,
     Java,
@@ -152,7 +152,7 @@ public enum PokemonType
     Typescript,
     SQL,
     Kotlin,
-    Conocimiento
+    Cto
    
 }
 
@@ -191,9 +191,9 @@ public class TypeChart
         /*Conocimien*/  new float [] { 0f,   0f,   0f,   0f,   0f,   0f,   0f,   0f,   0f,   0f} 
     };
 
-    public static float GetEffectiveness(PokemonType attackType, PokemonType defenseType)
+    public static float GetEffectiveness(ApproachType attackType, ApproachType defenseType)
     {
-        if(attackType == PokemonType.None || defenseType == PokemonType.None) 
+        if(attackType == ApproachType.None || defenseType == ApproachType.None) 
             return 1;
 
         int row = (int)attackType - 1;
