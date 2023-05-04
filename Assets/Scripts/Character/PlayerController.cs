@@ -15,8 +15,9 @@ public class PlayerController : MonoBehaviour, ISavable
 
     bool howIs = true; //True si es hombre y False si es mujer
     int day = 1;
-    [SerializeField] int semester = 1;
+    int semester = 1;
     int finishQuices = 0;
+    int totalQuices = 0;
 
 
     private Vector2 input;//Input para mover al personaje
@@ -108,6 +109,7 @@ public class PlayerController : MonoBehaviour, ISavable
             day = this.day,
             semester = this.semester,
             finishQuices = this.finishQuices,
+            totalQuices = this.totalQuices,
         };
         return saveData;
     }
@@ -122,11 +124,13 @@ public class PlayerController : MonoBehaviour, ISavable
         semester = saveData.semester;
         finishQuices = saveData.finishQuices;
         isHow = saveData.isHow;
+        totalQuices = saveData.totalQuices;
         if (isHow != Moving.None)
         {
             howIs = true;
         }
-
+        DayUI.i.ChangeDay();
+        DayUI.i.ChangeSemester();
         ChangeSprites();
 
         //Cargar party
@@ -178,6 +182,11 @@ public class PlayerController : MonoBehaviour, ISavable
         get => finishQuices;
         set => finishQuices = value;
     }
+    public int TotalQuices
+    {
+        get => totalQuices;
+        set => totalQuices = value;
+    }
 }
 
 [Serializable]
@@ -190,4 +199,5 @@ public class PlayerSaveData
     public int day;
     public int semester;
     public int finishQuices;
+    public int totalQuices;
 }

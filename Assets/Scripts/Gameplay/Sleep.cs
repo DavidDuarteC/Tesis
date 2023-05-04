@@ -6,20 +6,21 @@ using UnityEngine;
 public class Sleep : MonoBehaviour, IPlayerTriggerable
 {
     [SerializeField] AudioClip audioClip;
-    [SerializeField] GameObject NpcMovimeintoCplusplus;
-    [SerializeField] GameObject NpcMovimeintoJava;
+    [SerializeField] GameObject NpcMovimientoCplusplus;
+    [SerializeField] GameObject NpcMovimientoJava;
+    [SerializeField] GameObject NPcMovimientoSQl;
+    [SerializeField] GameObject NPcMovimientoLinux;
+    [SerializeField] GameObject NPcMovimientoC;
+    [SerializeField] GameObject NPcMovimientoKotlin;
+    [SerializeField] GameObject NPcMovimientoAngular;
+    [SerializeField] GameObject NPcMovimientoPython;
+    [SerializeField] Dialog final;
 
     private void Update()
     {
-        if (PlayerController.i.Day >= 2 && PlayerController.i.Semester == 1)
-        {
-            NpcMovimeintoCplusplus.SetActive(true);
-        }
-        if (PlayerController.i.Day >= 3 && PlayerController.i.Semester == 1)
-        {
-            NpcMovimeintoJava.SetActive(true);
-        }
+        ActiveEvents();
     }
+
     public void OnPlayerTrigger(PlayerController player)
     {
         player.Character.Animator.IsMoving = false;
@@ -35,24 +36,38 @@ public class Sleep : MonoBehaviour, IPlayerTriggerable
         if (selectedChoice == 0)
         {
             //Yes
-            yield return Fader.i.FadeIn(0.6f);
-            AudioManager.i.PlaySfx(audioClip, true);
-            PlayerController.i.Day++;
-            if(PlayerController.i.FinishQuices % 2 == 0 && PlayerController.i.FinishQuices != 0)
+                yield return Fader.i.FadeIn(0.6f);
+                AudioManager.i.PlaySfx(audioClip, true);
+                PlayerController.i.Day++;
+                DayUI.i.ChangeDay();
+                if (PlayerController.i.FinishQuices % 2 == 0 && PlayerController.i.FinishQuices != 0)
+                {
+                    PlayerController.i.Semester++;
+                    DayUI.i.ChangeSemester();
+                    yield return DialogManager.Instance.ShowDialogText("Empezaste un semestre nuevo (Semestre " + player.Semester + ")");
+                    PlayerController.i.Day = 1;
+                    PlayerController.i.TotalQuices += PlayerController.i.FinishQuices;
+                    PlayerController.i.FinishQuices = 0;
+                }
+                yield return new WaitForSeconds(audioClip.length);
+                var playerParty = player.GetComponent<ApproachParty>();
+                playerParty.Pokemons.ForEach(p => p.Heal());
+                playerParty.PartyUpdate();
+                ActiveEvents();
+
+                yield return DialogManager.Instance.ShowDialogText("Hoy es un nuevo día (Día " + player.Day + ")");
+                yield return Fader.i.FadeOut(0.6f);
+            
+            if(PlayerController.i.TotalQuices == 8)
             {
-                PlayerController.i.Semester++;
-                DayUI.i.ChangeSemester();
-                yield return DialogManager.Instance.ShowDialogText("Empezaste un semestre nuevo (Semestre " + player.Semester + ")");
-                PlayerController.i.Day = 1;
+                
+                StressLevel.i.Finish = true;
+                yield return DialogManager.Instance.ShowDialog(final);
+                AudioManager.i.Volume(false);
+                StressLevel.i.PlayVideo();
+                PlayerController.i.TotalQuices = 0;
             }
-            yield return new WaitForSeconds(audioClip.length);
-            var playerParty = player.GetComponent<ApproachParty>();
-            playerParty.Pokemons.ForEach(p => p.Heal());
-            playerParty.PartyUpdate();
-            ActiveEvents();
-            DayUI.i.changeDay();
-            yield return DialogManager.Instance.ShowDialogText("Hoy es un nuevo día (Día " + player.Day + ")");
-            yield return Fader.i.FadeOut(0.6f);
+            
             
 
         }
@@ -68,15 +83,35 @@ public class Sleep : MonoBehaviour, IPlayerTriggerable
     {
         if (PlayerController.i.Day >= 2 && PlayerController.i.Semester == 1)
         {
-            NpcMovimeintoCplusplus.SetActive(true);
+            NpcMovimientoCplusplus.SetActive(true);
         }
         if (PlayerController.i.Day >= 3 && PlayerController.i.Semester == 1)
         {
-            NpcMovimeintoJava.SetActive(true);
+            NpcMovimientoJava.SetActive(true);
         }
-        if(PlayerController.i.Semester >= 2)
+        if (PlayerController.i.Day >= 2 && PlayerController.i.Semester == 2)
         {
-
+            NPcMovimientoSQl.SetActive(true);
+        }
+        if (PlayerController.i.Day >= 3 && PlayerController.i.Semester == 2)
+        {
+            NPcMovimientoLinux.SetActive(true);
+        }
+        if (PlayerController.i.Day >= 2 && PlayerController.i.Semester == 3)
+        {
+            NPcMovimientoC.SetActive(true);
+        }
+        if (PlayerController.i.Day >= 3 && PlayerController.i.Semester == 3)
+        {
+            NPcMovimientoKotlin.SetActive(true);
+        }
+        if (PlayerController.i.Day >= 2 && PlayerController.i.Semester == 4)
+        {
+            NPcMovimientoAngular.SetActive(true);
+        }
+        if (PlayerController.i.Day >= 3 && PlayerController.i.Semester == 4)
+        {
+            NPcMovimientoPython.SetActive(true);
         }
     }
 

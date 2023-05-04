@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510f992e5f6970849b69a3207fea1fb4, type: 3}
+  m_Name: "Conceptos b\xE1sicos de desarrollo web"
+  m_EditorClassIdentifier: 
+  categoryName: "Conceptos b\xE1sicos de desarrollo web"
+  questions:
+  - questionInfo: "\xBFCu\xE1l es el lenguaje de marcado utilizado para estructurar
+      el contenido en la web?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - HTML
+    - CSS
+    - JavaScript
+    - Python
+    correctAns: HTML
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es el lenguaje de hojas de estilo utilizado para describir
+      la apariencia de un documento HTML?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - HTML
+    - CSS
+    - JavaScript
+    - PHP
+    correctAns: CSS
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l lenguaje de programaci\xF3n se ejecuta com\xFAnmente
+      en el navegador del cliente para agregar interactividad a las p\xE1ginas web?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - HTML
+    - CSS
+    - JavaScript
+    - Java
+    correctAns: JavaScript
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es un ejemplo de un lenguaje de programaci\xF3n del
+      lado del servidor utilizado en el desarrollo web?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - HTML
+    - CSS
+    - JavaScript
+    - PHP
+    correctAns: PHP
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l protocolo se utiliza para transmitir documentos web
+      entre un cliente y un servidor?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - FTP
+    - SMTP
+    - HTTP
+    - DNS
+    correctAns: HTTP
+    urlVideo: 

@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510f992e5f6970849b69a3207fea1fb4, type: 3}
+  m_Name: "Gesti\xF3n de procesos y recursos"
+  m_EditorClassIdentifier: 
+  categoryName: "Gesti\xF3n de procesos y recursos"
+  questions:
+  - questionInfo: "\xBFCu\xE1l es el prop\xF3sito de un planificador (scheduler)
+      en un sistema operativo?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Asignar memoria a los procesos
+    - "Decidir qu\xE9 proceso se ejecutar\xE1 a continuaci\xF3n"
+    - Gestionar las entradas y salidas de los dispositivos
+    - "Facilitar la comunicaci\xF3n entre procesos"
+    correctAns: "Decidir qu\xE9 proceso se ejecutar\xE1 a continuaci\xF3n"
+    urlVideo: 
+  - questionInfo: "\xBFQu\xE9 tipo de bloqueo se produce cuando un proceso est\xE1
+      esperando un recurso que est\xE1 siendo utilizado por otro proceso, y ese proceso
+      est\xE1 esperando un recurso utilizado por el primero?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Bloqueo mutuo (deadlock)
+    - Bloqueo de recursos
+    - "Inanici\xF3n (starvation)"
+    - "Contenci\xF3n"
+    correctAns: Bloqueo mutuo (deadlock)
+    urlVideo: 
+  - questionInfo: "\xBFQu\xE9 algoritmo de planificaci\xF3n de CPU asigna a cada
+      proceso un intervalo de tiempo fijo para su ejecuci\xF3n?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - First-come, first-served (FCFS)
+    - Shortest job next (SJN)
+    - Round robin
+    - Prioridad
+    correctAns: Round robin
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es un m\xE9todo utilizado por los sistemas operativos
+      para evitar la fragmentaci\xF3n de memoria?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - "Planificaci\xF3n"
+    - "Compresi\xF3n"
+    - "Paginaci\xF3n"
+    - "Segmentaci\xF3n"
+    correctAns: "Paginaci\xF3n"
+    urlVideo: 
+  - questionInfo: "\xBFQu\xE9 componente de un sistema operativo es responsable de
+      gestionar el acceso a los dispositivos de almacenamiento?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Gestor de archivos
+    - "N\xFAcleo (kernel)"
+    - Shell
+    - Gestor de ventanas
+    correctAns: Gestor de archivos
+    urlVideo: 

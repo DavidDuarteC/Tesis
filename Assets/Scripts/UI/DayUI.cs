@@ -13,14 +13,14 @@ public class DayUI : MonoBehaviour
     private void Awake()
     {
         ChangeSemester();
-        changeDay();
+        ChangeDay();
     }
     void Start()
     {
         i = this;
     }
 
-    public void changeDay()
+    public void ChangeDay()
     {
         textDay.text = "Día: " + PlayerController.i.Day;
     }

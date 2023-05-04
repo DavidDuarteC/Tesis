@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: C
   description: 
-  frontSprite: {fileID: 21300000, guid: b7cb97b809b45bf4d9378e8c2fb02815, type: 3}
+  frontSprite: {fileID: 21300000, guid: 16792ff2651fb5746b80a72fccb8353c, type: 3}
   backSprite: {fileID: 0}
   type1: 3
   type2: 0
@@ -31,4 +31,3 @@ MonoBehaviour:
   - moveBase: {fileID: 11400000, guid: a22dc619f262b8243a948cebe3f41f35, type: 2}
     level: 1
   learnableByItems: []
-  evolutions: []

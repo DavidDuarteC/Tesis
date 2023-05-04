@@ -6,22 +6,22 @@ using UnityEngine;
 
 public class ApproachParty : MonoBehaviour
 {
-    [SerializeField] List<Approach> pokemons;
+    [SerializeField] List<Approach> approaches;
 
     public event Action OnUpdated; //Patron observable
 
     public List<Approach> Pokemons
     {
-        get { return pokemons; }
+        get { return approaches; }
         set {
-            pokemons = value;
+            approaches = value;
             OnUpdated?.Invoke();
         }
     }
 
     private void Awake()
     {
-        foreach (var pokemon in pokemons)
+        foreach (var pokemon in approaches)
         {
             pokemon.Init();
         }
@@ -34,14 +34,14 @@ public class ApproachParty : MonoBehaviour
 
     public Approach GetHealthyPokemon() //Me da el primer pokemon vivo que tengo en mi lista
     {
-        return pokemons.Where(x => x.HP > 0).FirstOrDefault();
+        return approaches.Where(x => x.HP > 0).FirstOrDefault();
     }
 
     public void AddPokemon(Approach newPokemon)
     {
-        if (pokemons.Count < 6)
+        if (approaches.Count < 6)
         {
-            pokemons.Add(newPokemon);
+            approaches.Add(newPokemon);
             OnUpdated?.Invoke();
         }
         else

@@ -8,6 +8,7 @@ public class ThermometerUI : MonoBehaviour
 {
     [SerializeField] GameObject stressBar;
     [SerializeField] Dialog dialog;
+    [SerializeField] Dialog dialogMeditation;
     public static ThermometerUI i { get; private set; }
     private void Start()
     {
@@ -31,12 +32,15 @@ public class ThermometerUI : MonoBehaviour
                 StressLevel.i.CountLose += 1;
                 if (StressLevel.i.CountLose == 1)
                     StartCoroutine(DialogManager.Instance.ShowDialog(dialog));
+                if (StressLevel.i.CountLose > 1)
+                    StartCoroutine(DialogManager.Instance.ShowDialog(dialogMeditation));
             }
-            if(GameController.Instance.State == GameState.FreeRoam && (GameController.Instance.State != GameState.Dialog || GameController.Instance.State != GameState.Battle))
+            if(GameController.Instance.State == GameState.FreeRoam)
             {
                 StressLevel.i.ResetLevel();
                 AudioManager.i.Volume(false);
                 StressLevel.i.PlayVideo();
+                
             }
             //newStress = StressLevel.i.Level;
             //stressBar.transform.localScale = new Vector3(1f, newStress);

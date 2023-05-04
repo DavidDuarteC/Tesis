@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510f992e5f6970849b69a3207fea1fb4, type: 3}
+  m_Name: "Tecnolog\xEDas y conceptos"
+  m_EditorClassIdentifier: 
+  categoryName: "Tecnolog\xEDas y conceptos"
+  questions:
+  - questionInfo: "\xBFCu\xE1l es una caracter\xEDstica clave de las Progressive
+      Web Apps (PWAs)?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - "Requieren una conexi\xF3n a Internet constante"
+    - Ofrecen una experiencia similar a las aplicaciones nativas
+    - "Solo est\xE1n disponibles para dispositivos Android"
+    - "Requieren instalaci\xF3n a trav\xE9s de una tienda de aplicaciones"
+    correctAns: Ofrecen una experiencia similar a las aplicaciones nativas
+    urlVideo: 
+  - questionInfo: "\xBFQu\xE9 tecnolog\xEDa de comunicaci\xF3n inal\xE1mbrica de
+      corto alcance permite el intercambio de datos entre dispositivos m\xF3viles?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Wi-Fi
+    - Bluetooth
+    - NFC
+    - GPS
+    correctAns: Bluetooth
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es un sistema de localizaci\xF3n utilizado en dispositivos
+      m\xF3viles para determinar la posici\xF3n geogr\xE1fica del dispositivo?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - RFID
+    - GPS
+    - Wi-Fi
+    - 4G
+    correctAns: GPS
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es un enfoque com\xFAn para desarrollar aplicaciones
+      m\xF3viles multiplataforma?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Desarrollo nativo
+    - "Desarrollo web m\xF3vil"
+    - "Desarrollo h\xEDbrido"
+    - Desarrollo de PWAs
+    correctAns: "Desarrollo h\xEDbrido"
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es un ejemplo de un marco de desarrollo de aplicaciones
+      m\xF3viles multiplataforma?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - React Native
+    - Android Studio
+    - Xcode
+    - Swift
+    correctAns: React Native
+    urlVideo: 

@@ -54,8 +54,8 @@ public class Character : MonoBehaviour
         if (checkCollision && !IsPathClear(targetPos)) // Comprueba si esta cerca del contorno de un objeto solido
             yield break;
 
-        if(animator.IsSurfing && Physics2D.OverlapCircle(targetPos, 0.3f, GameLayers.i.WaterLayer) == null)
-            animator.IsSurfing = false;
+        //if(animator.IsSurfing && Physics2D.OverlapCircle(targetPos, 0.3f, GameLayers.i.WaterLayer) == null)
+        //    animator.IsSurfing = false;
 
         IsMoving = true;
 
@@ -82,8 +82,8 @@ public class Character : MonoBehaviour
         var dir = diff.normalized;
 
         var collisionLayer = GameLayers.i.SolidLayer | GameLayers.i.InteractableLayer | GameLayers.i.PlayerLayer;
-        if (!animator.IsSurfing)
-            collisionLayer = collisionLayer | GameLayers.i.WaterLayer;
+        //if (!animator.IsSurfing)
+        //    collisionLayer = collisionLayer | GameLayers.i.WaterLayer;
 
         if (Physics2D.BoxCast(transform.position + dir, new Vector2(0.2f, 0.2f), 0f, dir, diff.magnitude - 1, collisionLayer) == true)
             return false;

@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510f992e5f6970849b69a3207fea1fb4, type: 3}
+  m_Name: "Conceptos b\xE1sicos de sistemas operativos"
+  m_EditorClassIdentifier: 
+  categoryName: "Conceptos b\xE1sicos de sistemas operativos"
+  questions:
+  - questionInfo: "\xBFCu\xE1l es la funci\xF3n principal de un sistema operativo?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Proporcionar una interfaz de usuario
+    - Gestionar los recursos del hardware
+    - Ejecutar aplicaciones
+    - "Facilitar la comunicaci\xF3n en red"
+    correctAns: Gestionar los recursos del hardware
+    urlVideo: 
+  - questionInfo: "\xBFQu\xE9 componente de un sistema operativo administra la memoria
+      y asigna recursos a los procesos?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - "N\xFAcleo (kernel)"
+    - Shell
+    - Gestor de ventanas
+    - Gestor de archivos
+    correctAns: "N\xFAcleo (kernel)"
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es un ejemplo de un sistema operativo de c\xF3digo
+      abierto?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Windows
+    - macOS
+    - Linux
+    - iOS
+    correctAns: Linux
+    urlVideo: 
+  - questionInfo: "\xBFQu\xE9 concepto de sistemas operativos permite a m\xFAltiples
+      programas ejecutarse al mismo tiempo?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Multitarea
+    - Multiusuario
+    - "Monoprogramaci\xF3n"
+    - Monousuario
+    correctAns: Multitarea
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es un ejemplo de un sistema operativo m\xF3vil?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Windows 95
+    - Unix
+    - Android
+    - DOS
+    correctAns: Android
+    urlVideo: 

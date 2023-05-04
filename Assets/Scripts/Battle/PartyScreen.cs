@@ -28,10 +28,10 @@ public class PartyScreen : MonoBehaviour
         party.OnUpdated += SetPartyData;
     }
 
-    //public void SetPartyData(List<Approach> pokemons) //Muestra la informacion de cada uno de los pokemones en la lista
+    //public void SetPartyData(List<Approach> approaches) //Muestra la informacion de cada uno de los pokemones en la lista
     public void SetPartyData()
     {
-        //this.pokemons = pokemons;
+        //this.approaches = approaches;
         pokemons = party.Pokemons;
 
         for(int i = 0; i < memberSlots.Length; i++)

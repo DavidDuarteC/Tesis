@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510f992e5f6970849b69a3207fea1fb4, type: 3}
+  m_Name: "Conceptos b\xE1sicos de bases de datos"
+  m_EditorClassIdentifier: 
+  categoryName: "Conceptos b\xE1sicos de bases de datos"
+  questions:
+  - questionInfo: "\xBFQu\xE9 es un DBMS?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - "Lenguaje de programaci\xF3n"
+    - "Algoritmo de b\xFAsqueda"
+    - "Sistema de gesti\xF3n de bases de datos"
+    - Sistema de archivos
+    correctAns: "Sistema de gesti\xF3n de bases de datos"
+    urlVideo: 
+  - questionInfo: "\xBFQu\xE9 tipo de base de datos utiliza tablas para organizar
+      datos y relaciones entre ellos?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Relacional
+    - "Jer\xE1rquica"
+    - Orientada a objetos
+    - Red
+    correctAns: Relacional
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es un lenguaje de consulta com\xFAnmente utilizado
+      en bases de datos relacionales?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - SQL
+    - Python
+    - Java
+    - C#
+    correctAns: SQL
+    urlVideo: 
+  - questionInfo: "\xBFQu\xE9 tipo de base de datos no sigue el modelo relacional
+      y puede almacenar datos semiestructurados o no estructurados?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - SQL
+    - No relacional
+    - "Jer\xE1rquica"
+    - Red
+    correctAns: No relacional
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1les son las propiedades ACID en las transacciones de
+      bases de datos?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Atomicidad, Consistencia, Aislamiento, Durabilidad
+    - "Autenticaci\xF3n, Cifrado, Integridad, Durabilidad"
+    - Atomicidad, Coherencia, Integridad, Durabilidad
+    - Acceso, Consistencia, Integridad, Dependabilidad
+    correctAns: Atomicidad, Consistencia, Aislamiento, Durabilidad
+    urlVideo: 

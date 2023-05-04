@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510f992e5f6970849b69a3207fea1fb4, type: 3}
+  m_Name: Protocolos y servicios de red
+  m_EditorClassIdentifier: 
+  categoryName: Protocolos y servicios de red
+  questions:
+  - questionInfo: "\xBFQu\xE9 protocolo se utiliza para transferir archivos entre
+      un cliente y un servidor en una red?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - HTTP
+    - SMTP
+    - Protocolo de transferencia de archivos (FTP)
+    - POP3
+    correctAns: Protocolo de transferencia de archivos (FTP)
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es un ejemplo de un protocolo de enrutamiento?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - "Protocolo de enrutamiento de informaci\xF3n (RIP)"
+    - Protocolo de transferencia de archivos (FTP)
+    - "Protocolo de configuraci\xF3n din\xE1mica de host (DHCP)"
+    - Protocolo de enlace de datos
+    correctAns: "Protocolo de enrutamiento de informaci\xF3n (RIP)"
+    urlVideo: 
+  - questionInfo: "\xBFQu\xE9 protocolo se utiliza para enviar correos electr\xF3nicos
+      entre servidores de correo?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - HTTP
+    - Protocolo simple de transferencia de correo (SMTP)
+    - Protocolo de transferencia de archivos (FTP)
+    - IMAP
+    correctAns: Protocolo simple de transferencia de correo (SMTP)
+    urlVideo: 
+  - questionInfo: "\xBFQu\xE9 tecnolog\xEDa de red permite a los usuarios acceder
+      de forma segura a una red privada a trav\xE9s de Internet?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Red privada virtual (VPN)
+    - "Protocolo de t\xFAnel punto a punto (PPTP)"
+    - "Protocolo de enrutamiento de informaci\xF3n (RIP)"
+    - Protocolo de seguridad de capa de transporte (TLS)
+    correctAns: Red privada virtual (VPN)
+    urlVideo: 
+  - questionInfo: "\xBFQu\xE9 protocolo de red se utiliza para asignar direcciones
+      IP a dispositivos en una red?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - "Protocolo de enrutamiento de informaci\xF3n (RIP)"
+    - "Protocolo de configuraci\xF3n din\xE1mica de host (DHCP)"
+    - Protocolo de transferencia de archivos (FTP)
+    - "Protocolo de resoluci\xF3n de direcciones (ARP)"
+    correctAns: "Protocolo de configuraci\xF3n din\xE1mica de host (DHCP)"
+    urlVideo: 

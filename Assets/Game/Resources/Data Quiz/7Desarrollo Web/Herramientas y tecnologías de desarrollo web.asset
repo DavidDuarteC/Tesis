@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510f992e5f6970849b69a3207fea1fb4, type: 3}
+  m_Name: "Herramientas y tecnolog\xEDas de desarrollo web"
+  m_EditorClassIdentifier: 
+  categoryName: "Herramientas y tecnolog\xEDas de desarrollo web"
+  questions:
+  - questionInfo: "\xBFCu\xE1l es un ejemplo de un sistema de gesti\xF3n de contenidos
+      (CMS) utilizado en el desarrollo web?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - WordPress
+    - MySQL
+    - Apache
+    - PHP
+    correctAns: WordPress
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es un ejemplo de un servidor web popular?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Nginx
+    - SQLite
+    - MongoDB
+    - Visual Studio Code
+    correctAns: Nginx
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es un marco de desarrollo frontend utilizado para
+      dise\xF1ar interfaces de usuario en aplicaciones web?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Django
+    - Flask
+    - Ruby on Rails
+    - React
+    correctAns: React
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es un ejemplo de un marco de desarrollo backend utilizado
+      para crear aplicaciones web?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Angular
+    - Vue.js
+    - Express.js
+    - Ember.js
+    correctAns: Express.js
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es un ejemplo de una base de datos utilizada en aplicaciones
+      web?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - PostgreSQL
+    - Microsoft Word
+    - Adobe Photoshop
+    - Microsoft Excel
+    correctAns: PostgreSQL
+    urlVideo: 

@@ -9,7 +9,7 @@ public class CharacterAnimator : MonoBehaviour
     [SerializeField] List<Sprite> walkUpSprites;
     [SerializeField] List<Sprite> walkRightSprites;
     [SerializeField] List<Sprite> walkLeftSprites;
-    [SerializeField] List<Sprite> surfSprites;
+    //[SerializeField] List<Sprite> surfSprites;
     [SerializeField] FacingDirection defaultDirection = FacingDirection.Down;
 
     [Header("GIRL")]
@@ -17,14 +17,14 @@ public class CharacterAnimator : MonoBehaviour
     [SerializeField] List<Sprite> walkUpSpritesGirl;
     [SerializeField] List<Sprite> walkRightSpritesGirl;
     [SerializeField] List<Sprite> walkLeftSpritesGirl;
-    [SerializeField] List<Sprite> surfSpritesGirl;
+    //[SerializeField] List<Sprite> surfSpritesGirl;
 
     //Parametros
     public float MoveX { get; set; }
     public float MoveY { get; set; }
     public bool IsMoving { get; set; } //Boolean si el personaje esta en movimiento
     public bool IsJumping { get; set; }
-    public bool IsSurfing { get; set; }
+    //public bool IsSurfing { get; set; }
 
 
     //Estados
@@ -56,8 +56,8 @@ public class CharacterAnimator : MonoBehaviour
     {
         var prevAnim = currentAnim;
 
-        if(!IsSurfing)
-        {
+        //if(!IsSurfing)
+        //{
             if (MoveX == 1)
                 currentAnim = walkRightAnim;
             else if (MoveX == -1)
@@ -76,18 +76,18 @@ public class CharacterAnimator : MonoBehaviour
                 currentAnim.HandleUpdate();
             else
                 spriteRenderer.sprite = currentAnim.Frames[0];
-        }
-        else
-        {
-            if (MoveX == 1)
-                spriteRenderer.sprite = surfSprites[2];
-            else if (MoveX == -1)
-                spriteRenderer.sprite = surfSprites[3];
-            else if (MoveY == 1)
-                spriteRenderer.sprite = surfSprites[1];
-            else if (MoveY == -1)
-                spriteRenderer.sprite = surfSprites[0];
-        }
+        //}
+        //else
+        //{
+        //    if (MoveX == 1)
+        //        spriteRenderer.sprite = surfSprites[2];
+        //    else if (MoveX == -1)
+        //        spriteRenderer.sprite = surfSprites[3];
+        //    else if (MoveY == 1)
+        //        spriteRenderer.sprite = surfSprites[1];
+        //    else if (MoveY == -1)
+        //        spriteRenderer.sprite = surfSprites[0];
+        //}
         
 
         wasPreviouslyMoving = IsMoving;

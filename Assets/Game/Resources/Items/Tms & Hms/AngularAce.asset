@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 910bd92b158b156479bdfd847e71fb11, type: 3}
+  m_Name: AngularAce
+  m_EditorClassIdentifier: 
+  name: Cto
+  description: "Mejora tus habilidades para desarrollar p\xE1ginas web"
+  icon: {fileID: -1804011318, guid: 3ae12697ae504414bbf0797ea36dfddd, type: 3}
+  price: 0
+  isSellable: 0
+  collectible: 0
+  move: {fileID: 11400000, guid: e6dd52f418f3b69499b3444a642263b2, type: 2}
+  isHM: 0

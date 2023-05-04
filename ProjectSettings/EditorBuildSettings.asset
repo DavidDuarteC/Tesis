@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/PasilloIng.unity
     guid: 053f5d3249c0fcf49b85a73b87c79297
   - enabled: 1
+    path: Assets/Scenes/Biblioteca.unity
+    guid: 93cca4c1d892afd418c683dd7e2b1a32
+  - enabled: 1
     path: Assets/Scenes/Salon1Ing.unity
     guid: 7cba741959eef52449d858d0f53255be
   - enabled: 1
@@ -32,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Salon3Ing.unity
     guid: da2052f8fb9a813499d570e426be41d9
+  - enabled: 1
+    path: Assets/Scenes/Salon4Ing.unity
+    guid: ed5cc726ed9915a47aea0d64fc5fd797
   - enabled: 1
     path: Assets/Scenes/Pasillo67.unity
     guid: 57c418b652036c440a3879c4bc7b0845

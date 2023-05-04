@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c01880a9026ad844a035ab3b2bb4549, type: 3}
   m_Name: Angular
   m_EditorClassIdentifier: 
-  name: Angluar
+  name: Angular
   description: 
   frontSprite: {fileID: 21300000, guid: 780ca96250049c8459198d93f54f0128, type: 3}
   backSprite: {fileID: 0}
@@ -31,4 +31,3 @@ MonoBehaviour:
   - moveBase: {fileID: 11400000, guid: 4396c9619266489488e71af5440ddb4b, type: 2}
     level: 1
   learnableByItems: []
-  evolutions: []

@@ -76,16 +76,17 @@ public class StressLevel : MonoBehaviour, ISavable
         float duration = 0;
 
         duration = videosInternet();
-        videoPlayer.prepareCompleted += OnPrepareCompleted;
         //duration = videosLocal();
+        videoPlayer.prepareCompleted += OnPrepareCompleted;
+        videoPlayer.loopPointReached += InactiveGameObject;
         //videoPlayer.Play();
         //duration = (float)videoPlayer.clip.length;
 
-        Invoke("InactiveGameObject", duration);
+        //Invoke("InactiveGameObject", duration);
     }
 
 
-    void InactiveGameObject()
+    void InactiveGameObject(VideoPlayer vp)
     {
         videoPlayer.transform.gameObject.SetActive(false);
         GameController.Instance.PauseGame(false);

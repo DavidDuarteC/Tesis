@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510f992e5f6970849b69a3207fea1fb4, type: 3}
+  m_Name: "Sistemas operativos m\xF3viles"
+  m_EditorClassIdentifier: 
+  categoryName: "Sistemas operativos m\xF3viles"
+  questions:
+  - questionInfo: "\xBFCu\xE1l es un ejemplo de un sistema operativo m\xF3vil desarrollado
+      por Google? "
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - iOS
+    - Windows Phone
+    - Android
+    - Blackberry OS
+    correctAns: Android
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es un ejemplo de un sistema operativo m\xF3vil desarrollado
+      por Apple?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - iOS
+    - Windows Phone
+    - Android
+    - Blackberry OS
+    correctAns: iOS
+    urlVideo: 
+  - questionInfo: "\xBFQu\xE9 lenguaje de programaci\xF3n se utiliza com\xFAnmente
+      para desarrollar aplicaciones para Android?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Swift
+    - Objective-C
+    - Java
+    - C#
+    correctAns: Java
+    urlVideo: 
+  - questionInfo: "\xBFQu\xE9 lenguaje de programaci\xF3n se utiliza com\xFAnmente
+      para desarrollar aplicaciones para iOS?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Swift
+    - Objective-C
+    - Java
+    - C#
+    correctAns: Swift
+    urlVideo: 
+  - questionInfo: "\xBFCu\xE1l es una ventaja de las aplicaciones nativas en comparaci\xF3n
+      con las aplicaciones web m\xF3viles?"
+    questionType: 0
+    questionImage: {fileID: 0}
+    audioClip: {fileID: 0}
+    videoClip: {fileID: 0}
+    options:
+    - Mayor compatibilidad entre dispositivos
+    - Menor costo de desarrollo
+    - Mayor rendimiento
+    - "Facilidad de actualizaci\xF3n"
+    correctAns: Mayor rendimiento
+    urlVideo: 

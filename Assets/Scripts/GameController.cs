@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject entrarSalonTres67;
     [SerializeField] GameObject entrarSalon2Ing;
     [SerializeField] GameObject entrarSalon3Ing;
+    [SerializeField] GameObject entrarSalon4Ing;
 
     GameState state;
     GameState prevState;
@@ -311,7 +312,7 @@ public class GameController : MonoBehaviour
         {
             //Cargar
             SavingSystem.i.Load("saveSlot1");
-            dayUI.changeDay();
+            dayUI.ChangeDay();
             //QuizManager.i.LoadData();
             state = GameState.FreeRoam;
         }
@@ -367,6 +368,7 @@ public class GameController : MonoBehaviour
         if( playerController.Semester >= 4)
         {
             entrarSalonTres67.SetActive(false);
+            entrarSalon4Ing.SetActive(false);
         }
     }
 
