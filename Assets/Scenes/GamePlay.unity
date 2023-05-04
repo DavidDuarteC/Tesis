@@ -6048,7 +6048,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5902747771826184707, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: dialogMeditation.lines.Array.data[0]
-      value: Momento de meditar
+      value: 'Pausa activa: momento para meditar'
       objectReference: {fileID: 0}
     - target: {fileID: 5927893807079052932, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: m_AnchorMax.y

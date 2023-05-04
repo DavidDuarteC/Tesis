@@ -227,7 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - Ve a tu casa y descansas
+    - "Ve a tu casa y descansas, vuelve ma\xF1ana"
 --- !u!61 &40126763
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6134,7 +6134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: categories.Array.data[0]
@@ -6146,11 +6146,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: "Ya se termin\xF3 la semana de parciales, ve y descansa"
+      value: "Ya se termin\xF3 la semana de parciales"
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[1]
-      value: "Sigue as\xED, puedes aumentar tus conocimientos"
+      value: Ve a tu casa y descansas
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[2]
@@ -6162,7 +6162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: movementPattern.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: startQuiz.lines.Array.size
@@ -6174,12 +6174,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: startQuiz.lines.Array.data[1]
-      value: "Apenas los termines, vuelve a interactuar conmigo y te dir\xE9 a donde
-        tendras que ir"
+      value: "Tan pronto como termines, vuelve a interactuar conmigo y te dir\xE9
+        a d\xF3nde tendr\xE1s que ir"
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: startQuiz.lines.Array.data[2]
-      value: Suerte
+      value: "\xA1Buena suerte!"
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: startQuiz.lines.Array.data[3]
@@ -6316,6 +6316,90 @@ PrefabInstance:
       propertyPath: defaultDirection
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885447, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: walkUpSprites.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885447, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: walkDownSprites.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885447, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: walkLeftSprites.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885447, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: walkRightSprites.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885447, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: walkUpSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 1326724514, guid: 8fce5a581fd8ed249920aed6f85cff7d, type: 3}
+    - target: {fileID: 2199313186856885447, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: walkUpSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: -437489101, guid: 8fce5a581fd8ed249920aed6f85cff7d, type: 3}
+    - target: {fileID: 2199313186856885447, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: walkUpSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 1859441336, guid: 8fce5a581fd8ed249920aed6f85cff7d, type: 3}
+    - target: {fileID: 2199313186856885447, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: walkUpSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: -1006643348, guid: 8fce5a581fd8ed249920aed6f85cff7d, type: 3}
+    - target: {fileID: 2199313186856885447, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: walkDownSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 1037656202, guid: 8fce5a581fd8ed249920aed6f85cff7d, type: 3}
+    - target: {fileID: 2199313186856885447, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: walkDownSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 1245964096, guid: 8fce5a581fd8ed249920aed6f85cff7d, type: 3}
+    - target: {fileID: 2199313186856885447, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: walkDownSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 290927021, guid: 8fce5a581fd8ed249920aed6f85cff7d, type: 3}
+    - target: {fileID: 2199313186856885447, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: walkDownSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 1111125068, guid: 8fce5a581fd8ed249920aed6f85cff7d, type: 3}
+    - target: {fileID: 2199313186856885447, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: walkLeftSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -349657530, guid: 8fce5a581fd8ed249920aed6f85cff7d, type: 3}
+    - target: {fileID: 2199313186856885447, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: walkLeftSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 354636868, guid: 8fce5a581fd8ed249920aed6f85cff7d, type: 3}
+    - target: {fileID: 2199313186856885447, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: walkLeftSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: -1670357818, guid: 8fce5a581fd8ed249920aed6f85cff7d, type: 3}
+    - target: {fileID: 2199313186856885447, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: walkLeftSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: -333420842, guid: 8fce5a581fd8ed249920aed6f85cff7d, type: 3}
+    - target: {fileID: 2199313186856885447, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: walkRightSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -1447508215, guid: 8fce5a581fd8ed249920aed6f85cff7d, type: 3}
+    - target: {fileID: 2199313186856885447, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: walkRightSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 933360273, guid: 8fce5a581fd8ed249920aed6f85cff7d, type: 3}
+    - target: {fileID: 2199313186856885447, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: walkRightSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 2047285243, guid: 8fce5a581fd8ed249920aed6f85cff7d, type: 3}
+    - target: {fileID: 2199313186856885447, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: walkRightSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: -2109453143, guid: 8fce5a581fd8ed249920aed6f85cff7d, type: 3}
+    - target: {fileID: 2199313186856885452, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1037656202, guid: 8fce5a581fd8ed249920aed6f85cff7d, type: 3}
     - target: {fileID: 2199313186856885453, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -6362,7 +6446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: name
-      value: "Monitor de Computaci\xF3n movil"
+      value: "Monitor de computaci\xF3n movil"
       objectReference: {fileID: 0}
     - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: dialog.lines.Array.size
@@ -6382,7 +6466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: dialogLoseBattle.lines.Array.data[0]
-      value: Ve a tu casa y descansas, nos vemos luego
+      value: "Ve a tu casa y descansas, nos vemos ma\xF1ana"
       objectReference: {fileID: 0}
     - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: dialogAfterBattle.lines.Array.data[0]

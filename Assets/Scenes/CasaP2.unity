@@ -282,7 +282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: Hola, con ese conocimiento puedes dominar el lenguaje
+      value: "Hola, domina el conocimiento que te entregu\xE9"
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[1]
@@ -358,11 +358,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: Te entrego este conocimiento para que lo aprendas
+      value: Te entrego este conocimiento para que puedas aprenderlo
       objectReference: {fileID: 0}
     - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[1]
-      value: "Y puedas vencer el obst\xE1culo que se ha presentado para ti"
+      value: "As\xED podr\xE1s vencer el obst\xE1culo que se te ha presentado"
       objectReference: {fileID: 0}
     - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[2]
@@ -1386,7 +1386,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: Hola, con ese conocimiento puedes dominar el lenguaje
+      value: "Hola, domina el conocimiento que te entregu\xE9"
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[1]
@@ -1399,6 +1399,10 @@ PrefabInstance:
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: movementPattern.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796534, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.875
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: m_RootOrder
@@ -1454,11 +1458,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: Te entrego este conocimiento para que lo aprendas
+      value: Te entrego este conocimiento para que puedas aprenderlo
       objectReference: {fileID: 0}
     - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[1]
-      value: "Y puedas vencer el obst\xE1culo que se ha presentado para ti"
+      value: "As\xED podr\xE1s vencer el obst\xE1culo que se te ha presentado"
       objectReference: {fileID: 0}
     - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[2]
@@ -2455,7 +2459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: Hola, con ese conocimiento puedes dominar el lenguaje
+      value: "Hola, domina el conocimiento que te entregu\xE9"
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[1]
@@ -2523,11 +2527,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: Te entrego este conocimiento para que lo aprendas
+      value: Te entrego este conocimiento para que puedas aprenderlo
       objectReference: {fileID: 0}
     - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[1]
-      value: "Y puedas vencer el obst\xE1culo que se ha presentado para ti"
+      value: "As\xED podr\xE1s vencer el obst\xE1culo que se te ha presentado"
       objectReference: {fileID: 0}
     - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[2]
@@ -5825,7 +5829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: Hola, con ese conocimiento puedes dominar el lenguaje
+      value: "Hola, domina el conocimiento que te entregu\xE9"
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[1]
@@ -5893,11 +5897,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: Te entrego este conocimiento para que lo aprendas
+      value: Te entrego este conocimiento para que puedas aprenderlo
       objectReference: {fileID: 0}
     - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[1]
-      value: "Y puedas vencer el obst\xE1culo que se ha presentado para ti"
+      value: "As\xED podr\xE1s vencer el obst\xE1culo que se te ha presentado"
       objectReference: {fileID: 0}
     - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[2]
@@ -7426,7 +7430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: Hola, con ese conocimiento puedes dominar el lenguaje
+      value: "Hola, domina el conocimiento que te entregu\xE9"
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[1]
@@ -7494,11 +7498,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: Te entrego este conocimiento para que lo aprendas
+      value: Te entrego este conocimiento para que puedas aprenderlo
       objectReference: {fileID: 0}
     - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[1]
-      value: "Y puedas vencer el obst\xE1culo que se ha presentado para ti"
+      value: "As\xED podr\xE1s vencer el obst\xE1culo que se te ha presentado"
       objectReference: {fileID: 0}
     - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[2]
@@ -7549,7 +7553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: Hola, con ese conocimiento puedes dominar el lenguaje
+      value: "Hola, domina el conocimiento que te entregu\xE9"
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[1]
@@ -7617,11 +7621,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: Te entrego este conocimiento para que lo aprendas
+      value: Te entrego este conocimiento para que puedas aprenderlo
       objectReference: {fileID: 0}
     - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[1]
-      value: "Y puedas vencer el obst\xE1culo que se ha presentado para ti"
+      value: "As\xED podr\xE1s vencer el obst\xE1culo que se te ha presentado"
       objectReference: {fileID: 0}
     - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[2]
@@ -7752,7 +7756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: Hola, con ese conocimiento puedes dominar el lenguaje
+      value: "Hola, domina el conocimiento que te entregu\xE9"
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[1]
@@ -7824,16 +7828,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: Te entrego este conocimiento para que lo aprendas
+      value: Te entrego este conocimiento para que puedas aprenderlo
       objectReference: {fileID: 0}
     - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[1]
-      value: "Y puedas vencer el obst\xE1culo que se ha presentado para ti"
+      value: "As\xED podr\xE1s vencer el obst\xE1culo que se te ha presentado"
       objectReference: {fileID: 0}
     - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[2]
-      value: "Luego al inventario y busca los objetos de aprendizaje. Selecciona
-        uno y apr\xE9ndelo"
+      value: "As\xED podr\xE1s vencer el obst\xE1culo que se te ha presentado"
       objectReference: {fileID: 0}
     - target: {fileID: 6192230349635671856, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: m_IsActive

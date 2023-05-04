@@ -202,20 +202,20 @@ public class InventoryUI : MonoBehaviour
             if (usedItem != null)
             {
                 if (usedItem is RecoveyItem)
-                    yield return DialogManager.Instance.ShowDialogText($"El jugador uso {usedItem.Name}");
+                    yield return DialogManager.Instance.ShowDialogText($"El jugador usó {usedItem.Name}");
 
                 onItemUsed?.Invoke(usedItem);
             }
             else
             {
                 if (selectedCategory == (int)ItemCategory.Items)
-                    yield return DialogManager.Instance.ShowDialogText("No tendra ningun efecto");
+                    yield return DialogManager.Instance.ShowDialogText("No tendrá ningún efecto");
 
             }
         }
         else
         {
-            StartCoroutine(DialogManager.Instance.ShowDialogText("Descansa, alguíen agotado no puede seguir aprendiendo"));
+            StartCoroutine(DialogManager.Instance.ShowDialogText("Descansa, alguien agotado no puede seguir aprendiendo"));
         }
         ClosePartyScreen();
     }
@@ -245,14 +245,14 @@ public class InventoryUI : MonoBehaviour
         if (pokemon.Moves.Count < ApproachBase.MaxNumOfMoves)
         {
             pokemon.LearnMove(tmItem.Move);
-            yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} aprendio {tmItem.Move.Name}");
+            yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} aprendió {tmItem.Move.Name}");
 
         }
         else
         {
             //Olvidar un movimiento
-            yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} esta intentando aprender {tmItem.Move.Name}");
-            yield return DialogManager.Instance.ShowDialogText($"Pero no puede aprender mas de {ApproachBase.MaxNumOfMoves} movimientos");
+            yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} está intentando aprender {tmItem.Move.Name}");
+            yield return DialogManager.Instance.ShowDialogText($"Pero no puede aprender más de {ApproachBase.MaxNumOfMoves} movimientos");
             yield return ChooseMoveToForget(pokemon, tmItem.Move);
             yield return new WaitUntil(() => state != InventoryUIState.MoveToForget);
 
@@ -347,13 +347,13 @@ public class InventoryUI : MonoBehaviour
         if (moveIndex == ApproachBase.MaxNumOfMoves)
         {
             //No va a aprender un nuevo movimiento
-            yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} no va a prender {moveToLearn.Name}");
+            yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} no va a aprender {moveToLearn.Name}");
         }
         else
         {
             //Olvida el movimeinto elegido y aprende el nuevo
             var selectedMove = pokemon.Moves[moveIndex].Base;
-            yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} olvido {selectedMove.Name} y aprendio {moveToLearn.Name}");
+            yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} olvidó {selectedMove.Name} y aprendió {moveToLearn.Name}");
 
 
             pokemon.Moves[moveIndex] = new Move(moveToLearn);

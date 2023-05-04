@@ -3591,7 +3591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - Ve a tu casa y descansas
+    - "Ve a tu casa y descansas, vuelve ma\xF1ana"
 --- !u!61 &906603164
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3874,7 +3874,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: name
-      value: Monitor sistemas operativos
+      value: Monitor de sistemas operativos
       objectReference: {fileID: 0}
     - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: dialog.lines.Array.size
@@ -3893,12 +3893,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: dialogAfterBattle.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: dialogLoseBattle.lines.Array.data[0]
-      value: Ve a tu casa y descansas, nos vemos luego
+      value: "Ve a tu casa y descansas, nos vemos ma\xF1ana"
       objectReference: {fileID: 0}
     - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: dialogAfterBattle.lines.Array.data[0]
-      value: "Sigue as\xED y te convertir\xE1s en todo un experto"
+      value: Veo que vas por buen camino
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
+      propertyPath: dialogAfterBattle.lines.Array.data[1]
+      value: "Sigue as\xED y te convertir\xE1s en todo un experto en Linux"
       objectReference: {fileID: 0}
     - target: {fileID: 2199313186856885455, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: approaches.Array.size

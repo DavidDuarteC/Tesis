@@ -8769,7 +8769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: categories.Array.data[0]
@@ -8781,19 +8781,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: "Ya se termin\xF3 la semana de parciales, ve y descansa"
+      value: "Ya se termin\xF3 la semana de parciales"
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[1]
-      value: Sigue, puedes aumentar tus conocimientos
+      value: Ve a tu casa y descansas
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[2]
+      value: Sigue, puedes aumentar tus conocimientos
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: dialog.lines.Array.data[3]
       value: Nunca te rindas
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: movementPattern.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: startQuiz.lines.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: startQuiz.lines.Array.data[0]
@@ -8801,12 +8809,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: startQuiz.lines.Array.data[1]
-      value: "Si terminas el quiz, vuelve a hablar conmigo y as\xED podr\xE9 decirte
-        a d\xF3nde tienes que dirigirte"
+      value: "Tan pronto como termines, vuelve a interactuar conmigo y te dir\xE9
+        a d\xF3nde tendr\xE1s que ir"
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: startQuiz.lines.Array.data[2]
-      value: Suerte
+      value: "Recuerda que podr\xE1s realizar los ex\xE1menes las veces que quieras
+        hasta que los apruebes"
+      objectReference: {fileID: 0}
+    - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: startQuiz.lines.Array.data[3]
+      value: "\xA1Buena suerte!"
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: m_RootOrder
@@ -9011,7 +9024,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: name
-      value: "Monitor de Programaci\xF3n avanzada"
+      value: "Monitor de programaci\xF3n avanzada"
       objectReference: {fileID: 0}
     - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: dialog.lines.Array.size
@@ -9035,7 +9048,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: dialogLoseBattle.lines.Array.data[0]
-      value: Ve a tu casa y descansas, nos vemos luego
+      value: "Ve a tu casa y descansas, nos vemos ma\xF1ana"
       objectReference: {fileID: 0}
     - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: dialogAfterBattle.lines.Array.data[0]
@@ -9043,7 +9056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2199313186856885454, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: dialogAfterBattle.lines.Array.data[1]
-      value: "Sigue as\xED y te convertir\xE1s en todo un Senior"
+      value: "Sigue as\xED y te convertir\xE1s en todo un experto en Java"
       objectReference: {fileID: 0}
     - target: {fileID: 2199313186856885455, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: pokemons.Array.size
@@ -9214,7 +9227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - "Ve y descansa, ma\xF1ana hay clase"
+    - "Ve a tu casa y descansas, vuelve ma\xF1ana"
 --- !u!61 &1841934993
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -36,27 +36,27 @@ public class Sleep : MonoBehaviour, IPlayerTriggerable
         if (selectedChoice == 0)
         {
             //Yes
-                yield return Fader.i.FadeIn(0.6f);
-                AudioManager.i.PlaySfx(audioClip, true);
-                PlayerController.i.Day++;
-                DayUI.i.ChangeDay();
-                if (PlayerController.i.FinishQuices % 2 == 0 && PlayerController.i.FinishQuices != 0)
-                {
-                    PlayerController.i.Semester++;
-                    DayUI.i.ChangeSemester();
-                    yield return DialogManager.Instance.ShowDialogText("Empezaste un semestre nuevo (Semestre " + player.Semester + ")");
-                    PlayerController.i.Day = 1;
-                    PlayerController.i.TotalQuices += PlayerController.i.FinishQuices;
-                    PlayerController.i.FinishQuices = 0;
-                }
-                yield return new WaitForSeconds(audioClip.length);
-                var playerParty = player.GetComponent<ApproachParty>();
-                playerParty.Pokemons.ForEach(p => p.Heal());
-                playerParty.PartyUpdate();
-                ActiveEvents();
+            yield return Fader.i.FadeIn(0.6f);
+            PlayerController.i.Day++;
+            AudioManager.i.PlaySfx(audioClip, true);
+            if (PlayerController.i.FinishQuices % 2 == 0 && PlayerController.i.FinishQuices != 0)
+            {
+                PlayerController.i.Semester++;
+                DayUI.i.ChangeSemester();
+                yield return DialogManager.Instance.ShowDialogText("Empezaste un semestre nuevo (Semestre " + player.Semester + ")");
+                PlayerController.i.Day = 1;
+                PlayerController.i.TotalQuices += PlayerController.i.FinishQuices;
+                PlayerController.i.FinishQuices = 0;
+            }
+            DayUI.i.ChangeDay();
+            yield return new WaitForSeconds(audioClip.length);
+            var playerParty = player.GetComponent<ApproachParty>();
+            playerParty.Pokemons.ForEach(p => p.Heal());
+            playerParty.PartyUpdate();
+            ActiveEvents();
 
-                yield return DialogManager.Instance.ShowDialogText("Hoy es un nuevo día (Día " + player.Day + ")");
-                yield return Fader.i.FadeOut(0.6f);
+            yield return DialogManager.Instance.ShowDialogText("Hoy es un nuevo día (Día " + player.Day + ")");
+            yield return Fader.i.FadeOut(0.6f);
             
             if(PlayerController.i.TotalQuices == 8)
             {
@@ -85,33 +85,65 @@ public class Sleep : MonoBehaviour, IPlayerTriggerable
         {
             NpcMovimientoCplusplus.SetActive(true);
         }
+        else
+        {
+            NpcMovimientoCplusplus.SetActive(false);
+        }
         if (PlayerController.i.Day >= 3 && PlayerController.i.Semester == 1)
         {
             NpcMovimientoJava.SetActive(true);
+        }
+        else
+        {
+            NpcMovimientoJava.SetActive(false);
         }
         if (PlayerController.i.Day >= 2 && PlayerController.i.Semester == 2)
         {
             NPcMovimientoSQl.SetActive(true);
         }
+        else
+        {
+            NPcMovimientoSQl.SetActive(false);
+        }
         if (PlayerController.i.Day >= 3 && PlayerController.i.Semester == 2)
         {
             NPcMovimientoLinux.SetActive(true);
+        }
+        else
+        {
+            NPcMovimientoLinux.SetActive(false);
         }
         if (PlayerController.i.Day >= 2 && PlayerController.i.Semester == 3)
         {
             NPcMovimientoC.SetActive(true);
         }
+        else
+        {
+            NPcMovimientoC.SetActive(false);
+        }
         if (PlayerController.i.Day >= 3 && PlayerController.i.Semester == 3)
         {
             NPcMovimientoKotlin.SetActive(true);
+        }
+        else
+        {
+            NPcMovimientoKotlin.SetActive(false);
         }
         if (PlayerController.i.Day >= 2 && PlayerController.i.Semester == 4)
         {
             NPcMovimientoAngular.SetActive(true);
         }
+        else
+        {
+            NPcMovimientoAngular.SetActive(false);
+        }
         if (PlayerController.i.Day >= 3 && PlayerController.i.Semester == 4)
         {
             NPcMovimientoPython.SetActive(true);
+        }
+        else
+        {
+            NPcMovimientoPython.SetActive(false);
         }
     }
 
