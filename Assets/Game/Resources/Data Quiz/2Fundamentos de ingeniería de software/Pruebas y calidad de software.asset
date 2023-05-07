@@ -24,8 +24,8 @@ MonoBehaviour:
     - "Prueba de integraci\xF3n"
     - Prueba de rendimiento
     - "Prueba de regresi\xF3n"
-    - Pureba untitaria
-    correctAns: Pureba untitaria
+    - Prueba untitaria
+    correctAns: Prueba untitaria
     urlVideo: 
   - questionInfo: "\xBFCu\xE1l es el prop\xF3sito de las pruebas de aceptaci\xF3n?"
     questionType: 0

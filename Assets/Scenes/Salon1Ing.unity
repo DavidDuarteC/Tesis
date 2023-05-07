@@ -1193,7 +1193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796534, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.125
+      value: 2.375
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796534, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
@@ -1205,11 +1205,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.5
+      value: 11.5
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 62.2
+      value: 62.8
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1242,6 +1242,23 @@ PrefabInstance:
     - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 09b434d0407407249baff96187713c10, type: 2}
+    - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: "Te presto mis apuntes de introducci\xF3n a la programaci\xF3n para
+        que puedas estudiar"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: dialog.lines.Array.data[1]
+      value: Tal vez te sean de utilidad
       objectReference: {fileID: 0}
     - target: {fileID: 6679524117132791592, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: uniqueId
