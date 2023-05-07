@@ -12302,19 +12302,35 @@ PrefabInstance:
     - target: {fileID: 299747428922796531, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: walkLeftSprites.Array.data[0]
       value: 
-      objectReference: {fileID: 854066592, guid: 2a348422083a39a46b3e666516802f32, type: 3}
+      objectReference: {fileID: -1407977106, guid: 2a348422083a39a46b3e666516802f32, type: 3}
     - target: {fileID: 299747428922796531, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: walkLeftSprites.Array.data[1]
       value: 
-      objectReference: {fileID: -1092447290, guid: 2a348422083a39a46b3e666516802f32, type: 3}
+      objectReference: {fileID: -902197388, guid: 2a348422083a39a46b3e666516802f32, type: 3}
     - target: {fileID: 299747428922796531, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: walkLeftSprites.Array.data[2]
       value: 
-      objectReference: {fileID: 2071419985, guid: 2a348422083a39a46b3e666516802f32, type: 3}
+      objectReference: {fileID: 1057849196, guid: 2a348422083a39a46b3e666516802f32, type: 3}
     - target: {fileID: 299747428922796531, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: walkLeftSprites.Array.data[3]
       value: 
-      objectReference: {fileID: 140587122, guid: 2a348422083a39a46b3e666516802f32, type: 3}
+      objectReference: {fileID: 237025350, guid: 2a348422083a39a46b3e666516802f32, type: 3}
+    - target: {fileID: 299747428922796531, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: walkLeftSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: -1407977106, guid: 2a348422083a39a46b3e666516802f32, type: 3}
+    - target: {fileID: 299747428922796531, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: walkLeftSprites.Array.data[5]
+      value: 
+      objectReference: {fileID: -902197388, guid: 2a348422083a39a46b3e666516802f32, type: 3}
+    - target: {fileID: 299747428922796531, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: walkLeftSprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 1057849196, guid: 2a348422083a39a46b3e666516802f32, type: 3}
+    - target: {fileID: 299747428922796531, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: walkLeftSprites.Array.data[7]
+      value: 
+      objectReference: {fileID: 237025350, guid: 2a348422083a39a46b3e666516802f32, type: 3}
     - target: {fileID: 299747428922796531, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: walkDownSprites.Array.data[10]
       value: 
@@ -12678,19 +12694,19 @@ PrefabInstance:
     - target: {fileID: 299747428922796531, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: walkRightSprites.Array.data[0]
       value: 
-      objectReference: {fileID: -1407977106, guid: 2a348422083a39a46b3e666516802f32, type: 3}
+      objectReference: {fileID: 854066592, guid: 2a348422083a39a46b3e666516802f32, type: 3}
     - target: {fileID: 299747428922796531, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: walkRightSprites.Array.data[1]
       value: 
-      objectReference: {fileID: -902197388, guid: 2a348422083a39a46b3e666516802f32, type: 3}
+      objectReference: {fileID: -1092447290, guid: 2a348422083a39a46b3e666516802f32, type: 3}
     - target: {fileID: 299747428922796531, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: walkRightSprites.Array.data[2]
       value: 
-      objectReference: {fileID: 1057849196, guid: 2a348422083a39a46b3e666516802f32, type: 3}
+      objectReference: {fileID: 2071419985, guid: 2a348422083a39a46b3e666516802f32, type: 3}
     - target: {fileID: 299747428922796531, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: walkRightSprites.Array.data[3]
       value: 
-      objectReference: {fileID: 237025350, guid: 2a348422083a39a46b3e666516802f32, type: 3}
+      objectReference: {fileID: 140587122, guid: 2a348422083a39a46b3e666516802f32, type: 3}
     - target: {fileID: 299747428922796531, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: walkRightSprites.Array.data[4]
       value: 

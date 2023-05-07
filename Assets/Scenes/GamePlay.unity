@@ -1211,6 +1211,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 379458988}
     - target: {fileID: 253629661372716219, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: blockPassLevel
+      value: 
+      objectReference: {fileID: 379651733}
+    - target: {fileID: 253629661372716219, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: entrarSalon2Ing
       value: 
       objectReference: {fileID: 1179955184}
@@ -4580,7 +4584,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4380729269988066699, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: actions.Array.data[2]
-      value: 5566030251174133760
+      value: 5566030383652798464
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380729269988066699, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: managedReferences[-2]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4380729269988066699, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: managedReferences[5028548852091453440]
@@ -4595,11 +4603,19 @@ PrefabInstance:
       value: Assembly-CSharp DisableObjectAction
       objectReference: {fileID: 0}
     - target: {fileID: 4380729269988066699, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: managedReferences[5566030383652798464]
+      value: Assembly-CSharp DisableObjectAction
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380729269988066699, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: managedReferences[5028548852091453441].go
       value: 
       objectReference: {fileID: 379651733}
     - target: {fileID: 4380729269988066699, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: managedReferences[5566030251174133760].go
+      value: 
+      objectReference: {fileID: 1179955183}
+    - target: {fileID: 4380729269988066699, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: managedReferences[5566030383652798464].go
       value: 
       objectReference: {fileID: 1179955183}
     - target: {fileID: 4380729269988066699, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
@@ -4615,15 +4631,23 @@ PrefabInstance:
       value: DisableObjectAction
       objectReference: {fileID: 0}
     - target: {fileID: 4380729269988066699, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: managedReferences[5566030383652798464].name
+      value: DisableObjectAction
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380729269988066699, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: managedReferences[5028548852091453440].waitForCompletion
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4380729269988066699, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: managedReferences[5028548852091453441].waitForCompletion
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4380729269988066699, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: managedReferences[5566030251174133760].waitForCompletion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380729269988066699, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: managedReferences[5566030383652798464].waitForCompletion
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4380729269988066699, guid: 527182dd61ed34e4690411213b6988ff, type: 3}

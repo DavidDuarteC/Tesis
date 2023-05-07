@@ -17,7 +17,9 @@ public class GameController : MonoBehaviour
     [SerializeField] CharacterSelectorUI characterSelectorUI;
     [SerializeField] GameObject screenControl;
     [SerializeField] DayUI dayUI;
+    [SerializeField] MainMenu mainMenu;
     [SerializeField] GameObject passLevel;
+    [SerializeField] GameObject blockPassLevel;
     [SerializeField] GameObject entrar67;
     [SerializeField] GameObject entrarSalonDos67;
     [SerializeField] GameObject entrarSalonTres67;
@@ -351,6 +353,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
+            blockPassLevel.SetActive(false);
             passLevel.SetActive(false);
         }
 
