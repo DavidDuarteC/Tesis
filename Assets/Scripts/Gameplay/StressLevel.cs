@@ -75,8 +75,8 @@ public class StressLevel : MonoBehaviour, ISavable
         videoPlayer.transform.gameObject.SetActive(true);
         float duration = 0;
 
-        //duration = videosInternet();
-        duration = videosLocal();
+        duration = videosInternet();
+        //duration = videosLocal();
         videoPlayer.prepareCompleted += OnPrepareCompleted;
         videoPlayer.loopPointReached += InactiveGameObject;
         //videoPlayer.Play();
