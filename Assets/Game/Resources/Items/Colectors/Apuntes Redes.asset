@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fc4825710424844886f41e8e6a60f0d, type: 3}
-  m_Name: Apuntes IntroPro
+  m_Name: Apuntes Redes
   m_EditorClassIdentifier: 
-  name: Apuntes Intro Pro
-  description: "...Un while es una estructura de control que se ejecuta mientras
-    se cumpla una condici\xF3n..."
-  icon: {fileID: -14617325, guid: 01cf801088ee0894e8c33ef8ee8b41c5, type: 3}
+  name: Apuntes Redes
+  description: ...Un servidor DNS traduce nombres de dominio en direcciones IP...
+  icon: {fileID: 1461396192, guid: 01cf801088ee0894e8c33ef8ee8b41c5, type: 3}
   price: 0
   isSellable: 0
   collectible: 0

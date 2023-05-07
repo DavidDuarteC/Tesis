@@ -5903,6 +5903,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 8e880e36bf2f09946bb083f06d383b8b, type: 2}
+    - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Te presto mis apuntes de Bases de Datos para que puedas estudiar
+      objectReference: {fileID: 0}
+    - target: {fileID: 1912475707660616632, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
+      propertyPath: dialog.lines.Array.data[1]
+      value: Tal vez te sean de utilidad
+      objectReference: {fileID: 0}
     - target: {fileID: 6679524117132791592, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: uniqueId
       value: 13895467-d0aa-41a9-9a9e-1a7a7e1a809c
