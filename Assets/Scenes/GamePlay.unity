@@ -1155,6 +1155,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 253629660168947005, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: wildBattleMusic
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 253629660168947005, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: trainerBattleMusic
       value: 
       objectReference: {fileID: 8300000, guid: 1555836638cd34283a3780a19b58d4c6, type: 3}
@@ -4013,7 +4017,7 @@ PrefabInstance:
     - target: {fileID: 3440709867524889826, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: sfxList.Array.data[2].clip
       value: 
-      objectReference: {fileID: 8300000, guid: aeca79c4815efe74e91e196b977ba400, type: 3}
+      objectReference: {fileID: 8300000, guid: 86b818475c3ef394e9f64418771e0c2e, type: 3}
     - target: {fileID: 3440709867524889826, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: sfxList.Array.data[3].clip
       value: 

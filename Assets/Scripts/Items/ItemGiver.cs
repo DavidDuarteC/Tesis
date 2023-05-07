@@ -20,7 +20,6 @@ public class ItemGiver : MonoBehaviour, ISavable
         AudioManager.i.PlaySfx(AudioId.ItemObteined, pauseMusic: true);
 
         string dialogText = $"{player.Name} recibe {item.Name}";
-
         if(count > 1)
         {
             dialogText = $"{player.Name} recibe {count} {item.Name}s";

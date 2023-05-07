@@ -370,7 +370,7 @@ MonoBehaviour:
     - "Ve a tu casa y descansas, nos vemos ma\xF1ana"
   exclamation: {fileID: 2199313186270382521}
   fov: {fileID: 2199313186240672060}
-  trainerAppearsClip: {fileID: 8300000, guid: a03a9aacef618ea4c8c5eebca5bb7c7b, type: 3}
+  trainerAppearsClip: {fileID: 8300000, guid: 21c4a490b24ba2045bc815f7626a40ef, type: 3}
 --- !u!114 &2199313186856885455
 MonoBehaviour:
   m_ObjectHideFlags: 0

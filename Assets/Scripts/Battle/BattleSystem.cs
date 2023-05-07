@@ -23,7 +23,6 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] MoveSelectionUI moveSelectionUI;
 
     [Header("Audio")]
-    [SerializeField] AudioClip wildBattleMusic;
     [SerializeField] AudioClip trainerBattleMusic;
     [SerializeField] AudioClip battleVictoryMusic;
 
@@ -51,21 +50,6 @@ public class BattleSystem : MonoBehaviour
     MoveBase moveToLearn;
 
     BattleTrigger battleTrigger;
-
-
-    public void StartBattle(ApproachParty playerParty, Approach wildPokemon, BattleTrigger trigger = BattleTrigger.LongGrass) // Permite empezar una batalla
-    {
-        this.playerParty = playerParty;
-        this.wildPokemon = wildPokemon;
-        player = playerParty.GetComponent<PlayerController>();
-        isTrainerBattle = false;
-
-        battleTrigger = trigger;
-
-        AudioManager.i.PlayMusic(wildBattleMusic);
-
-        StartCoroutine(SetupBattle());
-    }
 
     public void StartTrainerBattle(ApproachParty playerParty, ApproachParty trainerParty, BattleTrigger trigger = BattleTrigger.LongGrass) // Permite empezar una batalla
     {
