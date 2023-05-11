@@ -875,6 +875,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1147995502 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 253629661788804349, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+  m_PrefabInstance: {fileID: 1179955180}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1167809036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1155,9 +1166,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 253629660168947005, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: monitorImage
+      value: 
+      objectReference: {fileID: 1147995502}
+    - target: {fileID: 253629660168947005, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: wildBattleMusic
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 253629660168947005, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: monitorBattleMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 1555836638cd34283a3780a19b58d4c6, type: 3}
     - target: {fileID: 253629660168947005, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: trainerBattleMusic
       value: 
@@ -1813,6 +1832,10 @@ PrefabInstance:
     - target: {fileID: 253629661660353983, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 253629661788804346, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
+      propertyPath: m_Name
+      value: MonitorCharacter
       objectReference: {fileID: 0}
     - target: {fileID: 253629661831836933, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6892,7 +6915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6875751945685238445, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: m_Volume
-      value: 0.8
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 6879282209026878054, guid: 527182dd61ed34e4690411213b6988ff, type: 3}
       propertyPath: m_AnchorMax.y

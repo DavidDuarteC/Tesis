@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrainerController : MonoBehaviour, Interactable, ISavable
+public class MonitorController : MonoBehaviour, Interactable, ISavable
 {
     [SerializeField] new string name;
     //[SerializeField] Sprite sprite;
@@ -12,7 +12,7 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
     [SerializeField] GameObject exclamation;
     [SerializeField] GameObject fov;
 
-    [SerializeField] AudioClip trainerAppearsClip;
+    [SerializeField] AudioClip monitorAppearsClip;
 
     ApproachParty playerParty;
 
@@ -39,7 +39,7 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
     {
         character.LookTowards(initiator.position);
         playerParty = PlayerController.i.GetComponent<ApproachParty>();
-        var lenguagePlayer = playerParty.GetHealthyPokemon();
+        var lenguagePlayer = playerParty.GetHealthyApproach();
 
         if (lenguagePlayer == null)
         {
@@ -49,9 +49,9 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
             yield break;
         }else if (!battleLost )
         {
-            AudioManager.i.PlayMusic(trainerAppearsClip);
+            AudioManager.i.PlayMusic(monitorAppearsClip);
             yield return DialogManager.Instance.ShowDialog(dialog);
-            GameController.Instance.StartTrainerBattle(this);
+            GameController.Instance.StartMonitorBattle(this);
             Debug.Log("Empezo la batalla");
         }
         else
@@ -69,9 +69,9 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
     public IEnumerator TriggerTrainerBattle(PlayerController player)
     {
         playerParty = PlayerController.i.GetComponent<ApproachParty>();
-        var lenguagePlayer = playerParty.GetHealthyPokemon();
+        var lenguagePlayer = playerParty.GetHealthyApproach();
         if (lenguagePlayer != null)
-            AudioManager.i.PlayMusic(trainerAppearsClip);
+            AudioManager.i.PlayMusic(monitorAppearsClip);
 
         exclamation.SetActive(true);
         yield return new WaitForSeconds(0.5f);
@@ -95,7 +95,7 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
         }else
         {
             yield return DialogManager.Instance.ShowDialog(dialog);
-            GameController.Instance.StartTrainerBattle(this);
+            GameController.Instance.StartMonitorBattle(this);
             Debug.Log("Empezo la batalla");
         }
         

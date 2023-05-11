@@ -8,12 +8,12 @@ public class PartyScreen : MonoBehaviour
 {
     [SerializeField] Text messageText;
     PartyMemberUI[] memberSlots;
-    List<Approach> pokemons;
+    List<Approach> approaches;
     ApproachParty party;
 
     int selection = 0;
 
-    public Approach SelectedMember => pokemons[selection];
+    public Approach SelectedMember => approaches[selection];
 
     //Party screen puede ser llamada desde diferentes estados como ActionSelection, RunningTurn, AboutToUse
     public BattleState? CalledFrom { get; set; }
@@ -28,18 +28,18 @@ public class PartyScreen : MonoBehaviour
         party.OnUpdated += SetPartyData;
     }
 
-    //public void SetPartyData(List<Approach> approaches) //Muestra la informacion de cada uno de los pokemones en la lista
+    //public void SetPartyData(List<Approach> approaches) //Muestra la informacion de cada uno de los approaches en la lista
     public void SetPartyData()
     {
         //this.approaches = approaches;
-        pokemons = party.Pokemons;
+        approaches = party.Approaches;
 
         for(int i = 0; i < memberSlots.Length; i++)
         {
-            if (i < pokemons.Count)
+            if (i < approaches.Count)
             {
                 memberSlots[i].gameObject.SetActive(true);
-                memberSlots[i].Init(pokemons[i]);
+                memberSlots[i].Init(approaches[i]);
             }
             else
                 memberSlots[i].gameObject.SetActive(false);
@@ -47,12 +47,12 @@ public class PartyScreen : MonoBehaviour
 
         UpdateMemberSelection(selection);
 
-        messageText.text = "Elige un pokemon";
+        messageText.text = "Elige tu conocimiento";
 
-       // party.OnUpdated += SetPartyData; //Se subscribe al evento para actulizar y mostrar los pokemones actuales
+       // party.OnUpdated += SetPartyData; //Se subscribe al evento para actulizar y mostrar los approaches actuales
     }
 
-    public void HandleUpdate(Action onSelected, Action onBack) //Permite relizar el cambio de pokemones
+    public void HandleUpdate(Action onSelected, Action onBack) //Permite relizar el cambio de approaches
     {
         var prevSelection = selection;
 
@@ -65,7 +65,7 @@ public class PartyScreen : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.UpArrow))
             selection -= 2;
 
-        selection = Mathf.Clamp(selection, 0, pokemons.Count - 1);
+        selection = Mathf.Clamp(selection, 0, approaches.Count - 1);
 
         if(selection != prevSelection)
             UpdateMemberSelection(selection);
@@ -82,7 +82,7 @@ public class PartyScreen : MonoBehaviour
 
     public void UpdateMemberSelection(int selectMember) 
     {
-        for(int i = 0; i < pokemons.Count; i++)
+        for(int i = 0; i < approaches.Count; i++)
         {
             if (i == selectMember)
                 memberSlots[i].SetSelected(true);
@@ -93,16 +93,16 @@ public class PartyScreen : MonoBehaviour
 
     public void ShowIfTmIsUsable(CtoItem tmItem)
     {
-        for (int i = 0; i < pokemons.Count; i++)
+        for (int i = 0; i < approaches.Count; i++)
         {
-            string message = tmItem.CanBeTaught(pokemons[i]) ? "ABLE!" : "NOT ABLE!";
+            string message = tmItem.CanBeTaught(approaches[i]) ? "ABLE!" : "NOT ABLE!";
             memberSlots[i].SetMessage(message);
         }
     }
 
     public void ClearMemberSlotMessages()
     {
-        for (int i = 0; i < pokemons.Count; i++)
+        for (int i = 0; i < approaches.Count; i++)
         {
             memberSlots[i].SetMessage("");
         }

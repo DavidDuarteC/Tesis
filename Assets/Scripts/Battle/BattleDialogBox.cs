@@ -64,7 +64,7 @@ public class BattleDialogBox : MonoBehaviour
         moveSelector.SetActive(enabled);
         moveDetails.SetActive(enabled);
     }
-    public void EnableChoiceBox(bool enabled) //Muestra las opciones de cambiar pokemon o seguir peleando con el que esta
+    public void EnableChoiceBox(bool enabled) //Muestra las opciones de cambiar Approach o seguir peleando con el que esta
     {
         choiceBox.SetActive(enabled);
     }

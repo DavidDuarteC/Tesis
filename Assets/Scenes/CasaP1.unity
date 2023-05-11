@@ -278,7 +278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796532, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: dialog.lines.Array.data[0]
-      value: Hola hermanito, juega conmigo
+      value: Hola hermanito/a, juega conmigo
       objectReference: {fileID: 0}
     - target: {fileID: 299747428922796535, guid: dd145184dcb5d834496c0bcfbe8024cb, type: 3}
       propertyPath: m_RootOrder

@@ -12,6 +12,28 @@ public class SavableEntity : MonoBehaviour
 
     public string UniqueId => uniqueId;
 
+    private bool IsUnique(string candidate)
+    {
+        if (!globalLookup.ContainsKey(candidate)) return true;
+
+        if (globalLookup[candidate] == this) return true;
+
+        // Handle scene unloading cases
+        if (globalLookup[candidate] == null)
+        {
+            globalLookup.Remove(candidate);
+            return true;
+        }
+
+        // Handle edge cases like designer manually changing the UUID
+        if (globalLookup[candidate].UniqueId != candidate)
+        {
+            globalLookup.Remove(candidate);
+            return true;
+        }
+
+        return false;
+    }
     // Used to capture state of the gameobject on which the savableEntity is attached
     public object CaptureState()
     {
@@ -59,26 +81,5 @@ public class SavableEntity : MonoBehaviour
     }
 #endif
 
-    private bool IsUnique(string candidate)
-    {
-        if (!globalLookup.ContainsKey(candidate)) return true;
 
-        if (globalLookup[candidate] == this) return true;
-
-        // Handle scene unloading cases
-        if (globalLookup[candidate] == null)
-        {
-            globalLookup.Remove(candidate);
-            return true;
-        }
-
-        // Handle edge cases like designer manually changing the UUID
-        if (globalLookup[candidate].UniqueId != candidate)
-        {
-            globalLookup.Remove(candidate);
-            return true;
-        }
-
-        return false;
-    }
 }

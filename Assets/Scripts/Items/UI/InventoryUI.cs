@@ -120,7 +120,7 @@ public class InventoryUI : MonoBehaviour
             //Handle Party Selection
             Action onSelected = () =>
             {
-                //Usar el item en el pokemon seleccionado
+                //Usar el item en el approach seleccionado
                 //partyScreen.gameObject.SetActive(true);
                 StartCoroutine(UseItem());
             };
@@ -180,7 +180,7 @@ public class InventoryUI : MonoBehaviour
         if(selectedCategory == (int)ItemCategory.Cto)
         {
             OpenPartyScreen();
-            if(item is CtoItem)//Muestra si es usable por el pokemon
+            if(item is CtoItem)//Muestra si es usable por el approach
                 partyScreen.ShowIfTmIsUsable(item as CtoItem);
                 
         }
@@ -191,13 +191,13 @@ public class InventoryUI : MonoBehaviour
         state = InventoryUIState.Busy;
 
         ApproachParty playerParty = PlayerController.i.GetComponent<ApproachParty>();
-        var lenguagePlayer = playerParty.GetHealthyPokemon();
+        var lenguagePlayer = playerParty.GetHealthyApproach();
         if (lenguagePlayer != null)
         {
             yield return HandleTMItems();
 
             var item = inventory.GetItem(selectedItem, selectedCategory);
-            var pokemon = partyScreen.SelectedMember;
+            var approach = partyScreen.SelectedMember;
             var usedItem = inventory.UseItem(selectedItem, partyScreen.SelectedMember, selectedCategory);
             if (usedItem != null)
             {
@@ -226,46 +226,46 @@ public class InventoryUI : MonoBehaviour
         if (tmItem == null)
             yield break;
 
-        var pokemon = partyScreen.SelectedMember;
+        var approach = partyScreen.SelectedMember;
 
-        if (pokemon.HasMove(tmItem.Move))
+        if (approach.HasMove(tmItem.Move))
         {
-            yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} ya tiene {tmItem.Move.Name}");
+            yield return DialogManager.Instance.ShowDialogText($"{approach.Base.Name} ya tiene {tmItem.Move.Name}");
             yield break;
 
         }
 
-        if (!tmItem.CanBeTaught(pokemon))
+        if (!tmItem.CanBeTaught(approach))
         {
-            yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} no puede aprender {tmItem.Move.Name}");
+            yield return DialogManager.Instance.ShowDialogText($"{approach.Base.Name} no puede aprender {tmItem.Move.Name}");
             yield break;
 
         }
 
-        if (pokemon.Moves.Count < ApproachBase.MaxNumOfMoves)
+        if (approach.Moves.Count < ApproachBase.MaxNumOfMoves)
         {
-            pokemon.LearnMove(tmItem.Move);
-            yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} aprendió {tmItem.Move.Name}");
+            approach.LearnMove(tmItem.Move);
+            yield return DialogManager.Instance.ShowDialogText($"{approach.Base.Name} aprendió {tmItem.Move.Name}");
 
         }
         else
         {
             //Olvidar un movimiento
-            yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} está intentando aprender {tmItem.Move.Name}");
+            yield return DialogManager.Instance.ShowDialogText($"{approach.Base.Name} está intentando aprender {tmItem.Move.Name}");
             yield return DialogManager.Instance.ShowDialogText($"Pero no puede aprender más de {ApproachBase.MaxNumOfMoves} movimientos");
-            yield return ChooseMoveToForget(pokemon, tmItem.Move);
+            yield return ChooseMoveToForget(approach, tmItem.Move);
             yield return new WaitUntil(() => state != InventoryUIState.MoveToForget);
 
         }
 
     }
 
-    IEnumerator ChooseMoveToForget(Approach pokemon, MoveBase newMove) //Permite seleccionar el movimiento a olvidar
+    IEnumerator ChooseMoveToForget(Approach approach, MoveBase newMove) //Permite seleccionar el movimiento a olvidar
     {
         state = InventoryUIState.Busy;
         yield return DialogManager.Instance.ShowDialogText($"Elige un movimiento que quieras olvidar", true, false);
         moveSelectionUI.gameObject.SetActive(true);
-        moveSelectionUI.SetMoveData(pokemon.Moves.Select(x => x.Base).ToList(), newMove);//Genera una lista de Tipo Move y la convierte a una lista de MoveBase
+        moveSelectionUI.SetMoveData(approach.Moves.Select(x => x.Base).ToList(), newMove);//Genera una lista de Tipo Move y la convierte a una lista de MoveBase
         moveToLearn = newMove;
 
         state = InventoryUIState.MoveToForget;
@@ -323,14 +323,14 @@ public class InventoryUI : MonoBehaviour
         itemDescription.text = "";
     }
 
-    void OpenPartyScreen() //Abre la pantalla de mostrar pokemones
+    void OpenPartyScreen() //Abre la pantalla de mostrar approaches
     {
         state = InventoryUIState.PartySelection;
-        //partyScreen.SetPartyData(party.Pokemons);
+        //partyScreen.SetPartyData(party.Approaches);
         partyScreen.gameObject.SetActive(true);
     }
 
-    void ClosePartyScreen() //Cierra la pantalla de mostrar pokemones
+    void ClosePartyScreen() //Cierra la pantalla de mostrar approaches
     {
         state = InventoryUIState.ItemSelection;
 
@@ -340,23 +340,23 @@ public class InventoryUI : MonoBehaviour
 
     IEnumerator OnMoveToForgetSelected(int moveIndex)
     {
-        var pokemon = partyScreen.SelectedMember;
+        var approach = partyScreen.SelectedMember;
 
         DialogManager.Instance.CloseDialog();
         moveSelectionUI.gameObject.SetActive(false);
         if (moveIndex == ApproachBase.MaxNumOfMoves)
         {
             //No va a aprender un nuevo movimiento
-            yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} no va a aprender {moveToLearn.Name}");
+            yield return DialogManager.Instance.ShowDialogText($"{approach.Base.Name} no va a aprender {moveToLearn.Name}");
         }
         else
         {
             //Olvida el movimeinto elegido y aprende el nuevo
-            var selectedMove = pokemon.Moves[moveIndex].Base;
-            yield return DialogManager.Instance.ShowDialogText($"{pokemon.Base.Name} olvidó {selectedMove.Name} y aprendió {moveToLearn.Name}");
+            var selectedMove = approach.Moves[moveIndex].Base;
+            yield return DialogManager.Instance.ShowDialogText($"{approach.Base.Name} olvidó {selectedMove.Name} y aprendió {moveToLearn.Name}");
 
 
-            pokemon.Moves[moveIndex] = new Move(moveToLearn);
+            approach.Moves[moveIndex] = new Move(moveToLearn);
         }
 
         moveToLearn = null;

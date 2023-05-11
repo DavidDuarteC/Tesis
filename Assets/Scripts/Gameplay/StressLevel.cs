@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.Video;
@@ -75,8 +76,8 @@ public class StressLevel : MonoBehaviour, ISavable
         videoPlayer.transform.gameObject.SetActive(true);
         float duration = 0;
 
-        duration = videosInternet();
-        //duration = videosLocal();
+        //duration = videosInternet();
+        duration = videosLocal();
         videoPlayer.prepareCompleted += OnPrepareCompleted;
         videoPlayer.loopPointReached += InactiveGameObject;
         //videoPlayer.Play();
@@ -89,7 +90,8 @@ public class StressLevel : MonoBehaviour, ISavable
     void InactiveGameObject(VideoPlayer vp)
     {
         videoPlayer.transform.gameObject.SetActive(false);
-        GameController.Instance.PauseGame(false);
+        //GameController.Instance.PauseGame(false);
+        GameController.Instance.StartFreeRoamState();
         AudioManager.i.Volume(true);
     }
 
@@ -104,6 +106,7 @@ public class StressLevel : MonoBehaviour, ISavable
         if (finish)
         {
             //videoPlayer.source = UnityEngine.Video.VideoSource.Url;
+            GameController.Instance.State = GameState.Paused;
             videoPlayer.url = urlVideo5;
             videoPlayer.Prepare();
             duration = (float)medite5.length;
@@ -176,6 +179,7 @@ public class StressLevel : MonoBehaviour, ISavable
         float duration = 0;
         if (finish)
         {
+            GameController.Instance.State = GameState.Paused;
             videoPlayer.clip = medite5;
             duration = (float)medite5.length;
         }

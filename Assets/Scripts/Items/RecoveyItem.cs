@@ -22,38 +22,38 @@ public class RecoveyItem : ItemBase
     [SerializeField] bool revive;
     [SerializeField] bool maxRevive;
 
-    public override bool Use(Approach pokemon)
+    public override bool Use(Approach approach)
     {
         //Revivir
         if(revive || maxRevive)
         {
-            if(pokemon.HP > 0)
+            if(approach.HP > 0)
                 return false;
 
             if (revive)
-                pokemon.IncreaseHP(pokemon.MaxHp / 2);
+                approach.IncreaseHP(approach.MaxHp / 2);
             else if(maxRevive)
-                pokemon.IncreaseHP(pokemon.MaxHp);
+                approach.IncreaseHP(approach.MaxHp);
 
-            pokemon.CureStatus();
+            approach.CureStatus();
 
             return true;
         }
 
-        //No se puede usar otros items en pokemones derrotados
-        if(pokemon.HP == 0)
+        //No se puede usar otros items en approaches derrotados
+        if(approach.HP == 0)
             return false;
 
         //Restaurar HP
         if(restoreMaxHp  || hpAmount > 0)
         {
-            if (pokemon.HP == pokemon.MaxHp)
+            if (approach.HP == approach.MaxHp)
                 return false;
 
             if (restoreMaxHp)
-                pokemon.IncreaseHP(pokemon.MaxHp);
+                approach.IncreaseHP(approach.MaxHp);
             else
-                pokemon.IncreaseHP(hpAmount);
+                approach.IncreaseHP(hpAmount);
 
 
         }
@@ -61,20 +61,20 @@ public class RecoveyItem : ItemBase
         //Recuperarse de Status
         if(recoveryAllStatus || status != ConditionID.none)
         {
-            if (pokemon.Status == null && pokemon.VolatileStatus == null)
+            if (approach.Status == null && approach.VolatileStatus == null)
                 return false;
 
             if (recoveryAllStatus)
             {
-                pokemon.CureStatus();
-                pokemon.CureVolatileStatus();
+                approach.CureStatus();
+                approach.CureVolatileStatus();
             }
             else
             {
-                if (pokemon.Status.Id == status)
-                    pokemon.CureStatus();
-                else if (pokemon.VolatileStatus.Id == status)
-                    pokemon.CureVolatileStatus();
+                if (approach.Status.Id == status)
+                    approach.CureStatus();
+                else if (approach.VolatileStatus.Id == status)
+                    approach.CureVolatileStatus();
                 else
                     return false;
             }
@@ -83,11 +83,11 @@ public class RecoveyItem : ItemBase
         //Restaurar el PP
         if (restoreMaxPP)
         {
-            pokemon.Moves.ForEach(m => m.IncreasePP(m.Base.PP));
+            approach.Moves.ForEach(m => m.IncreasePP(m.Base.PP));
         }
         else if(ppAmount > 0)
         {
-            pokemon.Moves.ForEach(m => m.IncreasePP(ppAmount));
+            approach.Moves.ForEach(m => m.IncreasePP(ppAmount));
 
         }
 

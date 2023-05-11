@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Healer : MonoBehaviour
 {
-    public IEnumerator Heal(Transform player, Dialog dialog) // Permite curar los pokemones que tenga el personaje
+    public IEnumerator Heal(Transform player, Dialog dialog) // Permite curar los approaches que tenga el personaje
     {
         int selectedChoice = 0;
         yield return DialogManager.Instance.ShowDialogText("Te ves cansado, deberias descansar un poco", 
@@ -17,12 +17,12 @@ public class Healer : MonoBehaviour
             yield return Fader.i.FadeIn(0.5f);
 
             var playerParty = player.GetComponent<ApproachParty>();
-            playerParty.Pokemons.ForEach(p => p.Heal());
+            playerParty.Approaches.ForEach(p => p.Heal());
             playerParty.PartyUpdate();
 
             yield return Fader.i.FadeOut(0.5f);
 
-            yield return DialogManager.Instance.ShowDialogText("Tus pokemones estan curados");
+            yield return DialogManager.Instance.ShowDialogText("Tus approaches estan curados");
 
         }
         else if(selectedChoice == 1)

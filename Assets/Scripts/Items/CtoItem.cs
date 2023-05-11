@@ -8,15 +8,15 @@ public class CtoItem : ItemBase
 
     public override string Name => base.Name + $": {move.Name}";
 
-    public override bool Use(Approach pokemon)
+    public override bool Use(Approach approach)
     {
         //El movimiento se maneja desde la intefza de usuario del inventario, si se aprendio, devuelve verdadero
-        return pokemon.HasMove(move);
+        return approach.HasMove(move);
     }
 
-    public bool CanBeTaught(Approach pokemon)
+    public bool CanBeTaught(Approach approach)
     {
-        return pokemon.Base.LearnableByItems.Contains(Move);
+        return approach.Base.LearnableByItems.Contains(Move);
     }
 
     public override bool IsReusable => isHM;

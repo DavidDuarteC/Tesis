@@ -10,7 +10,7 @@ public class ApproachParty : MonoBehaviour
 
     public event Action OnUpdated; //Patron observable
 
-    public List<Approach> Pokemons
+    public List<Approach> Approaches
     {
         get { return approaches; }
         set {
@@ -21,9 +21,9 @@ public class ApproachParty : MonoBehaviour
 
     private void Awake()
     {
-        foreach (var pokemon in approaches)
+        foreach (var approach in approaches)
         {
-            pokemon.Init();
+            approach.Init();
         }
     }
 
@@ -32,16 +32,16 @@ public class ApproachParty : MonoBehaviour
         
     }
 
-    public Approach GetHealthyPokemon() //Me da el primer pokemon vivo que tengo en mi lista
+    public Approach GetHealthyApproach() //Me da el primer approach vivo que tengo en mi lista
     {
         return approaches.Where(x => x.HP > 0).FirstOrDefault();
     }
 
-    public void AddPokemon(Approach newPokemon)
+    public void AddApproach(Approach newApproach)
     {
         if (approaches.Count < 6)
         {
-            approaches.Add(newPokemon);
+            approaches.Add(newApproach);
             OnUpdated?.Invoke();
         }
         else

@@ -32,7 +32,7 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
     Character character;
 
     ItemGiver itemGiver;
-    ApproachGiver pokemonGiver;
+    ApproachGiver approachGiver;
     Healer healer;
     Merchant merchant;  
     public static NPCController i;
@@ -41,7 +41,7 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
     {
         character = GetComponent<Character>();
         itemGiver = GetComponent<ItemGiver>();
-        pokemonGiver = GetComponent<ApproachGiver>();
+        approachGiver = GetComponent<ApproachGiver>();
         healer = GetComponent<Healer>();
         merchant = GetComponent<Merchant>();
     }
@@ -76,9 +76,9 @@ public class NPCController : MonoBehaviour, Interactable, ISavable
 
                 yield return itemGiver.GiveItem(initiator.GetComponent<PlayerController>());
             }
-            else if (pokemonGiver != null && pokemonGiver.CanBeGiven()) //Permite verificar si el NPC puede dar un pokemon
+            else if (approachGiver != null && approachGiver.CanBeGiven()) //Permite verificar si el NPC puede dar un approach
             {
-                yield return pokemonGiver.GivePokemon(initiator.GetComponent<PlayerController>());
+                yield return approachGiver.GiveApproach(initiator.GetComponent<PlayerController>());
             }
             else if (questToStart != null) //Permite verificar si el NPC puede empezar un Quest
             {

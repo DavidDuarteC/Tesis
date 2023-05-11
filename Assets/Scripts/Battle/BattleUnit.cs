@@ -9,7 +9,7 @@ public class BattleUnit : MonoBehaviour
 {
 
     [SerializeField] bool isPlayerUnit;
-    [SerializeField] BattleHud hud; //Informacion a mostrar del pokemon
+    [SerializeField] BattleHud hud; //Informacion a mostrar del approaches
 
 
     public bool IsPlayerUnit
@@ -34,16 +34,16 @@ public class BattleUnit : MonoBehaviour
         originalColor = image.color;
     }
 
-    public void Setup(Approach pokemon) //Elige que componente mostrar del pokemon
+    public void Setup(Approach approaches) //Elige que componente mostrar del approaches
     {
-        approach = pokemon;
+        approach = approaches;
         if (isPlayerUnit)
             image.sprite = approach.Base.BackSprite;
         else
             image.sprite = approach.Base.FrontSprite;
 
         hud.gameObject.SetActive(true);
-        hud.SetData(pokemon);
+        hud.SetData(approaches);
 
         transform.localScale = new Vector3(1, 1, 1);
         image.color = originalColor;
@@ -65,7 +65,7 @@ public class BattleUnit : MonoBehaviour
         image.transform.DOLocalMoveX(originalPos.x, 1f);
     }
 
-    public void PlayAttackAnimation() //Genera la animaciones de ataca para los pokemones
+    public void PlayAttackAnimation() //Genera la animaciones de ataca para los approaches
     {
         var sequence = DOTween.Sequence();
         if (isPlayerUnit)
@@ -76,21 +76,21 @@ public class BattleUnit : MonoBehaviour
         sequence.Append(image.transform.DOLocalMoveX(originalPos.x, 0.25f));
     }
 
-    public void PlayHitAnimation() //Genera la animaicones del impacto del ataque en los pokemones
+    public void PlayHitAnimation() //Genera la animaicones del impacto del ataque en los approaches
     {
         var sequence = DOTween.Sequence();
         sequence.Append(image.DOColor(Color.gray, 0.1f));
         sequence.Append(image.DOColor(originalColor, 0.1f));
     }
     
-    public void PlayFaintedAnimation() //Genera la animacion de muerte en los pokemones
+    public void PlayFaintedAnimation() //Genera la animacion de muerte en los approaches
     {
         var sequence = DOTween.Sequence();
         sequence.Append(image.transform.DOLocalMoveY(originalPos.y - 150f, 0.5f));
         sequence.Join(image.DOFade(0f, 0.5f));
     }
 
-    public IEnumerator PlayCaptureAnimation() //Genera la animacion de que el pokemon entre a la pokeball para ser capturado
+    public IEnumerator PlayCaptureAnimation() //Genera la animacion de que el approaches entre a la pokeball para ser capturado
     {
         var sequence = DOTween.Sequence();
         sequence.Append(image.DOFade(0, 0.5f));
@@ -100,7 +100,7 @@ public class BattleUnit : MonoBehaviour
 
     }
 
-    public IEnumerator PlayBreakOutAnimation() //Genera la animacion de que el pokemon se escapa de la pokeball
+    public IEnumerator PlayBreakOutAnimation() //Genera la animacion de que el approaches se escapa de la pokeball
     {
         var sequence = DOTween.Sequence();
         sequence.Append(image.DOFade(1, 0.5f));

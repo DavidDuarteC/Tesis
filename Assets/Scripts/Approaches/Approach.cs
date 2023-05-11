@@ -79,7 +79,7 @@ public class Approach
         VolatileStatus = null;
     }
 
-    public Approach(PokemonSaveData saveData) //Carga los datos que fueron recientemente guardados de los pokemones
+    public Approach(ApproachSaveData saveData) //Carga los datos que fueron recientemente guardados de los approaches
     {
         _base = ApproachDB.GetObjectByName(saveData.name);
         HP = saveData.hp;
@@ -99,9 +99,9 @@ public class Approach
         VolatileStatus = null;
     }
 
-    public PokemonSaveData GetSaveData() //Crea el objeto con los datos para guadar la info de un pokemon
+    public ApproachSaveData GetSaveData() //Crea el objeto con los datos para guadar la info de un approach
     {
-        var saveData = new PokemonSaveData()
+        var saveData = new ApproachSaveData()
         {
             name = Base.name,
             hp = HP,
@@ -359,7 +359,7 @@ public class DamageDetails
 }
 
 [System.Serializable]
-public class PokemonSaveData
+public class ApproachSaveData
 {
     public string name;
     public int hp;

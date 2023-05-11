@@ -5940,7 +5940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2199313186856885446, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2199313186856885447, guid: 3cc54ac1d07532b47866ccda00c0d061, type: 3}
       propertyPath: defaultDirection

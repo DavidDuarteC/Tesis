@@ -6,24 +6,24 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public enum BattleState { Start, ActionSelection, MoveSelection, RunningTurn, Busy, PartyScreen, AboutToUse, MoveToForget , BattleOver , Bag} //Estados del jugador en el juego
-public enum BattleAction { Move, SwitchPokemon, UseItem, Run  }
+public enum BattleAction { Move, SwitchApproach, UseItem, Run  }
 
 public enum BattleTrigger { LongGrass, Water }
 
 public class BattleSystem : MonoBehaviour
 {
-    [SerializeField] BattleUnit playerUnit; //Objeto pokemon del jugador
-    [SerializeField] BattleUnit enemyUnit; //Objeto pokemon del enemigo
+    [SerializeField] BattleUnit playerUnit; //Objeto approach del jugador
+    [SerializeField] BattleUnit enemyUnit; //Objeto approach del enemigo
     [SerializeField] BattleDialogBox dialogBox;
     [SerializeField] PartyScreen partyScreen;
     [SerializeField] InventoryUI inventoryUI;
     [SerializeField] Image playerImage;
-    [SerializeField] Image trainerImage;
+    [SerializeField] Image monitorImage;
     [SerializeField] GameObject pokeballSprite;
     [SerializeField] MoveSelectionUI moveSelectionUI;
 
     [Header("Audio")]
-    [SerializeField] AudioClip trainerBattleMusic;
+    [SerializeField] AudioClip monitorBattleMusic;
     [SerializeField] AudioClip battleVictoryMusic;
 
     [Header("Background Images")]
@@ -39,30 +39,30 @@ public class BattleSystem : MonoBehaviour
     bool aboutToUseChoice = true;
 
     ApproachParty playerParty;
-    ApproachParty trainerParty;
-    Approach wildPokemon;
+    ApproachParty monitorParty;
+    Approach wildApproach;
 
     bool isTrainerBattle = false;
     PlayerController player;
-    TrainerController trainer;
+    MonitorController monitor;
 
     int escapeAttempts;
     MoveBase moveToLearn;
 
     BattleTrigger battleTrigger;
 
-    public void StartTrainerBattle(ApproachParty playerParty, ApproachParty trainerParty, BattleTrigger trigger = BattleTrigger.LongGrass) // Permite empezar una batalla
+    public void StartTrainerBattle(ApproachParty playerParty, ApproachParty monitorParty, BattleTrigger trigger = BattleTrigger.LongGrass) // Permite empezar una batalla
     {
         this.playerParty = playerParty;
-        this.trainerParty = trainerParty;
+        this.monitorParty = monitorParty;
 
         isTrainerBattle = true;
         player = playerParty.GetComponent<PlayerController>();
-        trainer = trainerParty.GetComponent<TrainerController>();
+        monitor = monitorParty.GetComponent<MonitorController>();
 
         battleTrigger = trigger;
 
-        AudioManager.i.PlayMusic(trainerBattleMusic);
+        AudioManager.i.PlayMusic(monitorBattleMusic);
 
         StartCoroutine(SetupBattle());
     }
@@ -76,11 +76,11 @@ public class BattleSystem : MonoBehaviour
 
         if(!isTrainerBattle)
         {
-            //Encontrar un pokemon
-            playerUnit.Setup(playerParty.GetHealthyPokemon());
-            enemyUnit.Setup(wildPokemon);
+            //Encontrar un approach
+            playerUnit.Setup(playerParty.GetHealthyApproach());
+            enemyUnit.Setup(wildApproach);
 
-            dialogBox.SetMoveNames(playerUnit.approach.Moves); //Llama a la funcion mostrar los movimientos de los pokemon
+            dialogBox.SetMoveNames(playerUnit.approach.Moves); //Llama a la funcion mostrar los movimientos de los approach
             yield return dialogBox.TypeDialog($"¡Un {enemyUnit.approach.Base.Name} salvaje!"); //Muestra el texto animado
             yield return dialogBox.TypeDialog($"¡Adelante, {playerUnit.approach.Base.Name}!"); //Muestra el texto animado
             dialogBox.SetDialog($"¿Qué debería hacer {playerUnit.approach.Base.Name}?");
@@ -95,26 +95,26 @@ public class BattleSystem : MonoBehaviour
             enemyUnit.gameObject.SetActive(false);
             
             //playerImage.gameObject.SetActive(true);
-            //trainerImage.gameObject.SetActive(true);
+            //monitorImage.gameObject.SetActive(true);
             //playerImage.sprite = player.Sprite;
-            //trainerImage.sprite = trainer.Sprite;
+            //monitorImage.sprite = monitor.Sprite;
 
-            yield return dialogBox.TypeDialog($"{trainer.Name} quiere una batalla");
+            yield return dialogBox.TypeDialog($"{monitor.Name} quiere una batalla");
 
-            //Enviar el primer pokemon del entrenador
-            trainerImage.gameObject.SetActive(false);
+            //Enviar el primer approach del entrenador
+            monitorImage.gameObject.SetActive(false);
             enemyUnit.gameObject.SetActive(true);
-            var enemyPokemon = trainerParty.GetHealthyPokemon();
-            enemyUnit.Setup(enemyPokemon);
-            yield return dialogBox.TypeDialog($"{trainer.Name} envía a {enemyPokemon.Base.Name}");
+            var enemyApproach = monitorParty.GetHealthyApproach();
+            enemyUnit.Setup(enemyApproach);
+            yield return dialogBox.TypeDialog($"{monitor.Name} envía a {enemyApproach.Base.Name}");
 
-            //Enviar el primer pokemon del jugador
+            //Enviar el primer approach del jugador
             playerImage.gameObject.SetActive(false);
             playerUnit.gameObject.SetActive(true);
-            var playerPokemon = playerParty.GetHealthyPokemon();
-            playerUnit.Setup(playerPokemon);
+            var playerApproach = playerParty.GetHealthyApproach();
+            playerUnit.Setup(playerApproach);
             yield return dialogBox.TypeDialog($"¡Adelante, {playerUnit.approach.Base.Name}!"); //Muestra el texto animado
-            dialogBox.SetMoveNames(playerUnit.approach.Moves); //Llama a la funcion mostrar los movimientos de los pokemon
+            dialogBox.SetMoveNames(playerUnit.approach.Moves); //Llama a la funcion mostrar los movimientos de los approach
 
         }
 
@@ -126,7 +126,7 @@ public class BattleSystem : MonoBehaviour
     void BattleOver(bool won) //Verifica si la batalla termino
     {
         state = BattleState.BattleOver;
-        playerParty.Pokemons.ForEach(p => p.OnBattleOver());
+        playerParty.Approaches.ForEach(p => p.OnBattleOver());
         playerUnit.Hud.ClearData();
         enemyUnit.Hud.ClearData();
         OnBattleOver(won);
@@ -140,11 +140,11 @@ public class BattleSystem : MonoBehaviour
 
     }
 
-    void OpenPartyScreen() //Muestra la pantalla para escoger a cada uno de los pokemones en la lista
+    void OpenPartyScreen() //Muestra la pantalla para escoger a cada uno de los approaches en la lista
     {
         partyScreen.CalledFrom = state;
         state = BattleState.PartyScreen;
-        //partyScreen.SetPartyData(playerParty.Pokemons);
+        //partyScreen.SetPartyData(playerParty.Approaches);
         partyScreen.gameObject.SetActive(true);
     }
 
@@ -163,21 +163,21 @@ public class BattleSystem : MonoBehaviour
         dialogBox.EnableMoveSelector(true);
     }
 
-    IEnumerator AboutToUse(Approach newPokemon)//Permite enviar un pokemon cuando se le derroto un pokemon al enemigo
+    IEnumerator AboutToUse(Approach newApproach)//Permite enviar un approach cuando se le derroto un approach al enemigo
     {
         state = BattleState.Busy;
-        yield return dialogBox.TypeDialog($"{trainer.Name} va a enviar a {newPokemon.Base.Name}. Quieres cambiar de pokemon?");
+        yield return dialogBox.TypeDialog($"{monitor.Name} va a enviar a {newApproach.Base.Name}. Quieres cambiar de enfoque?");
 
         state = BattleState.AboutToUse;
         dialogBox.EnableChoiceBox(true);
     }
 
-    IEnumerator ChooseMoveToForget(Approach pokemon, MoveBase newMove)
+    IEnumerator ChooseMoveToForget(Approach approach, MoveBase newMove)
     {
         state = BattleState.Busy;
         yield return dialogBox.TypeDialog($"Elige un conocimiento que quieras olvidar");
         moveSelectionUI.gameObject.SetActive(true);
-        moveSelectionUI.SetMoveData(pokemon.Moves.Select(x => x.Base).ToList(), newMove);//Genera una lista de Tipo Move y la convierte a una lista de MoveBase
+        moveSelectionUI.SetMoveData(approach.Moves.Select(x => x.Base).ToList(), newMove);//Genera una lista de Tipo Move y la convierte a una lista de MoveBase
         moveToLearn = newMove;
 
         state = BattleState.MoveToForget;
@@ -195,7 +195,7 @@ public class BattleSystem : MonoBehaviour
             int playerMovePriority = playerUnit.approach.CurrentMove.Base.Priority;
             int enemyMovePriority = enemyUnit.approach.CurrentMove.Base.Priority;
 
-            //Check cual pokemon va primero
+            //Check cual approach va primero
             bool playerGoesFirst = true;
             if(enemyMovePriority > playerMovePriority)
                 playerGoesFirst = false;
@@ -205,14 +205,14 @@ public class BattleSystem : MonoBehaviour
             var firstUnit = (playerGoesFirst) ? playerUnit : enemyUnit;
             var secondUnit = (playerGoesFirst) ? enemyUnit: playerUnit;
 
-            var secondPokemon = secondUnit.approach;
+            var secondApproach = secondUnit.approach;
 
             //Primer turno
             yield return RunMove(firstUnit, secondUnit, firstUnit.approach.CurrentMove);
             yield return RunAfterTurn(firstUnit);
             if (state == BattleState.BattleOver) yield break;
 
-            if(secondPokemon.HP > 0)
+            if(secondApproach.HP > 0)
             {
                 //Segundo turno
                 yield return RunMove(secondUnit, firstUnit, secondUnit.approach.CurrentMove);
@@ -222,11 +222,11 @@ public class BattleSystem : MonoBehaviour
         }
         else
         {
-            if(playerAction == BattleAction.SwitchPokemon)
+            if(playerAction == BattleAction.SwitchApproach)
             {
-                var selectedPokemon = partyScreen.SelectedMember;
+                var selectedApproach = partyScreen.SelectedMember;
                 state = BattleState.Busy;
-                yield return SwitchPokemon(selectedPokemon);
+                yield return SwitchApproach(selectedApproach);
             }
             else if(playerAction == BattleAction.Run)
             {
@@ -295,7 +295,7 @@ public class BattleSystem : MonoBehaviour
 
             if (targetUnit.approach.HP <= 0)
             {
-                yield return HandlePokemonFainted(targetUnit);
+                yield return HandleApproachFainted(targetUnit);
             }
         }
         else
@@ -337,13 +337,13 @@ public class BattleSystem : MonoBehaviour
         if (state == BattleState.BattleOver) yield break;
         yield return new WaitUntil(() => state == BattleState.RunningTurn);
 
-        //Ataques como quemar or envenenar dañaran al pokemon despues de su turno
+        //Ataques como quemar or envenenar dañaran al approach despues de su turno
         sourceUnit.approach.OnAfterTurn();
         yield return ShowStatusChanges(sourceUnit.approach);
         yield return sourceUnit.Hud.UpdateHPAsync();
         if (sourceUnit.approach.HP <= 0)
         {
-            yield return HandlePokemonFainted(sourceUnit);
+            yield return HandleApproachFainted(sourceUnit);
             yield return new WaitUntil(() => state == BattleState.RunningTurn);
         }
 
@@ -372,18 +372,18 @@ public class BattleSystem : MonoBehaviour
         return UnityEngine.Random.Range(1,101) <= moveAccuracy;
     }
 
-    IEnumerator ShowStatusChanges(Approach pokemon) //Muestra si el pokemon tiene algo nuevo
+    IEnumerator ShowStatusChanges(Approach approach) //Muestra si el approach tiene algo nuevo
     {
-        while(pokemon.StatusChanges.Count > 0)
+        while(approach.StatusChanges.Count > 0)
         {
-            var message = pokemon.StatusChanges.Dequeue();
+            var message = approach.StatusChanges.Dequeue();
             yield return dialogBox.TypeDialog(message);
         }
     }
 
-    IEnumerator HandlePokemonFainted(BattleUnit fanitedUnit) //Termina la batalla si el pokemon fue derrotado
+    IEnumerator HandleApproachFainted(BattleUnit fanitedUnit) //Termina la batalla si el approach fue derrotado
     {
-        yield return dialogBox.TypeDialog($"{fanitedUnit.approach.Base.Name} está muerto");
+        yield return dialogBox.TypeDialog($"{fanitedUnit.approach.Base.Name} está derrotado");
         fanitedUnit.PlayFaintedAnimation();
         yield return new WaitForSeconds(2f);
 
@@ -391,7 +391,7 @@ public class BattleSystem : MonoBehaviour
         {
             bool battleWon = true;
             if(isTrainerBattle)
-                battleWon = trainerParty.GetHealthyPokemon() == null;
+                battleWon = monitorParty.GetHealthyApproach() == null;
 
             if(battleWon)
                 AudioManager.i.PlayMusic(battleVictoryMusic);
@@ -400,9 +400,9 @@ public class BattleSystem : MonoBehaviour
             //Gane exp
             int expYield = fanitedUnit.approach.Base.ExpYield;
             int enemyLevel = fanitedUnit.approach.Level;
-            float trainerBonus = (isTrainerBattle) ? 1.5f : 1f;
+            float monitorBonus = (isTrainerBattle) ? 1.5f : 1f;
 
-            int expGain = Mathf.FloorToInt((expYield * enemyLevel * trainerBonus) / 7);
+            int expGain = Mathf.FloorToInt((expYield * enemyLevel * monitorBonus) / 7);
             playerUnit.approach.Exp += expGain;
             yield return dialogBox.TypeDialog($"{playerUnit.approach.Base.Name} ganó {expGain} exp");
             yield return playerUnit.Hud.SetExpSmooth();
@@ -450,8 +450,8 @@ public class BattleSystem : MonoBehaviour
     {
         if (faintedUnit.IsPlayerUnit)
         {
-            var nextPokemon = playerParty.GetHealthyPokemon();
-            if (nextPokemon != null)
+            var nextApproach = playerParty.GetHealthyApproach();
+            if (nextApproach != null)
                 OpenPartyScreen();
             else
             {
@@ -470,10 +470,10 @@ public class BattleSystem : MonoBehaviour
             }
             else
             {
-                var nextPokemon = trainerParty.GetHealthyPokemon();
-                if (nextPokemon != null)
-                    //Envia el siguiente pokemon
-                    StartCoroutine(AboutToUse(nextPokemon));
+                var nextApproach = monitorParty.GetHealthyApproach();
+                if (nextApproach != null)
+                    //Envia el siguiente approach
+                    StartCoroutine(AboutToUse(nextApproach));
                 else
                 {
                     //StressLevel.i.LostMoreTimeRow = false;
@@ -497,7 +497,7 @@ public class BattleSystem : MonoBehaviour
             
     }
 
-    public void HandleUpdate() //Permite realiza el movimiento de escoger entre pelear o huir y lo mismo con cada uno de los movimientos del pokemon
+    public void HandleUpdate() //Permite realiza el movimiento de escoger entre pelear o huir y lo mismo con cada uno de los movimientos del approach
     {
         if (state == BattleState.ActionSelection) 
         {
@@ -572,7 +572,7 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    void HandleMoveSelection() //Permite moverse libremente para escoger uno de los 4 movimientos del pokemon
+    void HandleMoveSelection() //Permite moverse libremente para escoger uno de los 4 movimientos del approach
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
             ++currentMove;
@@ -604,7 +604,7 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    void HandlePartySelection() //Permite relizar el cambio de pokemones
+    void HandlePartySelection() //Permite relizar el cambio de approaches
     {
         Action onSelected = () =>
         {
@@ -624,13 +624,13 @@ public class BattleSystem : MonoBehaviour
 
             if (partyScreen.CalledFrom == BattleState.ActionSelection)
             {
-                StartCoroutine(RunTurns(BattleAction.SwitchPokemon));
+                StartCoroutine(RunTurns(BattleAction.SwitchApproach));
             }
             else
             {
                 state = BattleState.Busy;
                 bool isTrainerAboutToUse = partyScreen.CalledFrom == BattleState.AboutToUse;
-                StartCoroutine(SwitchPokemon(selectedMember, isTrainerAboutToUse));
+                StartCoroutine(SwitchApproach(selectedMember, isTrainerAboutToUse));
             }
 
             partyScreen.CalledFrom = null;
@@ -649,7 +649,7 @@ public class BattleSystem : MonoBehaviour
 
             if (partyScreen.CalledFrom == BattleState.AboutToUse)
             {
-                StartCoroutine(SendNextTrainerPokemon());
+                StartCoroutine(SendNextTrainerApproach());
             }
             else
                 ActionSelection();
@@ -677,18 +677,18 @@ public class BattleSystem : MonoBehaviour
             else
             {
                 //Opcion no
-                StartCoroutine(SendNextTrainerPokemon());
+                StartCoroutine(SendNextTrainerApproach());
             }
 
         }
         else if (Input.GetKeyDown(KeyCode.X))
         {
             dialogBox.EnableChoiceBox(false);
-            StartCoroutine(SendNextTrainerPokemon());
+            StartCoroutine(SendNextTrainerApproach());
         }
     }
 
-    IEnumerator SwitchPokemon(Approach newPokemon, bool isTrainerAboutToUse = false) //Permite el cambio de pokemones
+    IEnumerator SwitchApproach(Approach newApproach, bool isTrainerAboutToUse = false) //Permite el cambio de approaches
     {
         if(playerUnit.approach.HP > 0){
             yield return dialogBox.TypeDialog($"Vuelve {playerUnit.approach.Base.Name}");
@@ -697,23 +697,23 @@ public class BattleSystem : MonoBehaviour
         }
         
 
-        playerUnit.Setup(newPokemon);
-        dialogBox.SetMoveNames(newPokemon.Moves); //Llama a la funcion mostrar los movimientos de los pokemon
-        yield return dialogBox.TypeDialog($"¡Adelante, {newPokemon.Base.Name}!"); //Muestra el texto animado
+        playerUnit.Setup(newApproach);
+        dialogBox.SetMoveNames(newApproach.Moves); //Llama a la funcion mostrar los movimientos de los approach
+        yield return dialogBox.TypeDialog($"¡Adelante, {newApproach.Base.Name}!"); //Muestra el texto animado
 
         if (isTrainerAboutToUse)
-            StartCoroutine(SendNextTrainerPokemon());
+            StartCoroutine(SendNextTrainerApproach());
         else
             state = BattleState.RunningTurn;
     }
 
-    IEnumerator SendNextTrainerPokemon() //Envia el siguiente pokemon del entrenador cuando uno fue derrotado
+    IEnumerator SendNextTrainerApproach() //Envia el siguiente approach del entrenador cuando uno fue derrotado
     {
         state = BattleState.Busy;
 
-        var nextPokemon = trainerParty.GetHealthyPokemon();
-        enemyUnit.Setup(nextPokemon);
-        yield return dialogBox.TypeDialog($"{trainer.Name} enviá a {nextPokemon.Base.Name}!");
+        var nextApproach = monitorParty.GetHealthyApproach();
+        enemyUnit.Setup(nextApproach);
+        yield return dialogBox.TypeDialog($"{monitor.Name} enviá a {nextApproach.Base.Name}!");
         state = BattleState.RunningTurn;
 
     }

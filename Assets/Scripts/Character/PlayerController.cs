@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour, ISavable
                     //if (triggerable == currentlyInTrigger)
                     break;
 
-                triggerable.OnPlayerTrigger(this); //Dispara un trigger que genera los encuentros con los pokemones y entrenadores
+                triggerable.OnPlayerTrigger(this); //Dispara un trigger que genera los encuentros con los approaches y entrenadores
                 currentlyInTrigger = triggerable;
                 break;
             }
@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour, ISavable
         {
             name = this.name,
             position = new float[] { transform.position.x, transform.position.y },
-            pokemons = GetComponent<ApproachParty>().Pokemons.Select(p => p.GetSaveData()).ToList(),
+            approaches = GetComponent<ApproachParty>().Approaches.Select(p => p.GetSaveData()).ToList(),
             isHow = this.howIs ? Moving.Move : Moving.None,
             day = this.day,
             semester = this.semester,
@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour, ISavable
         ChangeSprites();
 
         //Cargar party
-        GetComponent<ApproachParty>().Pokemons = saveData.pokemons.Select(s => new Approach(s)).ToList();
+        GetComponent<ApproachParty>().Approaches = saveData.approaches.Select(s => new Approach(s)).ToList();
     }
     public void ChangeSprites()
     {
@@ -195,7 +195,7 @@ public class PlayerSaveData
     public string name;
     public float[] position;
     public Moving isHow;
-    public List<PokemonSaveData> pokemons;
+    public List<ApproachSaveData> approaches;
     public int day;
     public int semester;
     public int finishQuices;

@@ -88,6 +88,7 @@ public class QuizManager : MonoBehaviour, ISavable
         if (currentTime <= 0)
         {
             //Game Over
+            StressLevel.i.AddLevel(StressLevel.i.LoseMultiply);
             GameEnd();
         }
     }

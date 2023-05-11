@@ -23,10 +23,10 @@ public class ConditionsDB
             {
                 Name = "Veneno",
                 StartMessage = "ha sido envenenado",
-                OnAfterTurn = (Approach pokemon) =>
+                OnAfterTurn = (Approach approach) =>
                 {
-                    pokemon.DecreaseHP(pokemon.MaxHp / 8);
-                    pokemon.StatusChanges.Enqueue($"{pokemon.Base.Name} se lastimo debido al veneno"); 
+                    approach.DecreaseHP(approach.MaxHp / 8);
+                    approach.StatusChanges.Enqueue($"{approach.Base.Name} se lastimo debido al veneno"); 
                 }
             }
         },
@@ -36,10 +36,10 @@ public class ConditionsDB
             {
                 Name = "Quemar",
                 StartMessage = "ha sido quemado",
-                OnAfterTurn = (Approach pokemon) =>
+                OnAfterTurn = (Approach approach) =>
                 {
-                    pokemon.DecreaseHP(pokemon.MaxHp / 16);
-                    pokemon.StatusChanges.Enqueue($"{pokemon.Base.Name} se lastimo debido a la quemadura");
+                    approach.DecreaseHP(approach.MaxHp / 16);
+                    approach.StatusChanges.Enqueue($"{approach.Base.Name} se lastimo debido a la quemadura");
                 }
             }
         },
@@ -49,11 +49,11 @@ public class ConditionsDB
             {
                 Name = "Paralizis",
                 StartMessage = "ha sido paralizado",
-                OnBeforeMove = (Approach pokemon) =>
+                OnBeforeMove = (Approach approach) =>
                 {
                     if(Random.Range(1,5) == 1)
                     {
-                        pokemon.StatusChanges.Enqueue($"{pokemon.Base.Name} esta paralizado y no se puede mover");
+                        approach.StatusChanges.Enqueue($"{approach.Base.Name} esta paralizado y no se puede mover");
                         return false;
                     }
                     return true;
@@ -66,12 +66,12 @@ public class ConditionsDB
             {
                 Name = "Congelado",
                 StartMessage = "ha sido congelado",
-                OnBeforeMove = (Approach pokemon) =>
+                OnBeforeMove = (Approach approach) =>
                 {
                     if(Random.Range(1,5) == 1)
                     {
-                        pokemon.CureStatus();
-                        pokemon.StatusChanges.Enqueue($"{pokemon.Base.Name} no esta congelado");
+                        approach.CureStatus();
+                        approach.StatusChanges.Enqueue($"{approach.Base.Name} no esta congelado");
                         return true;
                     }
                     return false;
@@ -84,22 +84,22 @@ public class ConditionsDB
             {
                 Name = "Dormido",
                 StartMessage = "se ha dormido",
-                OnStart = (Approach pokemon) =>
+                OnStart = (Approach approach) =>
                 {
                     //Duerme entre 1 y 3 turnos
-                    pokemon.StatusTime  = Random.Range(1,4);
-                    Debug.Log($"Estara dormido por {pokemon.StatusTime} movimientos");
+                    approach.StatusTime  = Random.Range(1,4);
+                    Debug.Log($"Estara dormido por {approach.StatusTime} movimientos");
                 },
-                OnBeforeMove = (Approach pokemon) =>
+                OnBeforeMove = (Approach approach) =>
                 {
-                    if (pokemon.StatusTime <= 0)
+                    if (approach.StatusTime <= 0)
                     {
-                        pokemon.CureStatus();
-                        pokemon.StatusChanges.Enqueue($"{pokemon.Base.Name} desperto!");
+                        approach.CureStatus();
+                        approach.StatusChanges.Enqueue($"{approach.Base.Name} desperto!");
                         return true;
                     }
-                    pokemon.StatusTime --;
-                    pokemon.StatusChanges.Enqueue($"{pokemon.Base.Name} esta durmiendo");
+                    approach.StatusTime --;
+                    approach.StatusChanges.Enqueue($"{approach.Base.Name} esta durmiendo");
                     return false;
                 }
             }
@@ -111,30 +111,30 @@ public class ConditionsDB
             {
                 Name = "Confusion",
                 StartMessage = "esta confuso",
-                OnStart = (Approach pokemon) =>
+                OnStart = (Approach approach) =>
                 {
                     //confuso entre 1 y 4 turnos
-                    pokemon.VolatileStatusTime  = Random.Range(1,5);
-                    Debug.Log($"Estara confundido por {pokemon.VolatileStatusTime} movimientos");
+                    approach.VolatileStatusTime  = Random.Range(1,5);
+                    Debug.Log($"Estara confundido por {approach.VolatileStatusTime} movimientos");
                 },
-                OnBeforeMove = (Approach pokemon) =>
+                OnBeforeMove = (Approach approach) =>
                 {
-                    if (pokemon.VolatileStatusTime <= 0)
+                    if (approach.VolatileStatusTime <= 0)
                     {
-                        pokemon.CureVolatileStatus();
-                        pokemon.StatusChanges.Enqueue($"{pokemon.Base.Name} ya no esta confuso!");
+                        approach.CureVolatileStatus();
+                        approach.StatusChanges.Enqueue($"{approach.Base.Name} ya no esta confuso!");
                         return true;
                     }
-                    pokemon.VolatileStatusTime --;
+                    approach.VolatileStatusTime --;
 
                     //50% de hacer un movimiento
                     if(Random.Range(1,3) == 1)
                         return true;
 
                     //Golpe por confusion
-                    pokemon.StatusChanges.Enqueue($"{pokemon.Base.Name} esta confundido");
-                    pokemon.DecreaseHP(pokemon.MaxHp /8);
-                    pokemon.StatusChanges.Enqueue($"Se golpeo solo, por la confusion");
+                    approach.StatusChanges.Enqueue($"{approach.Base.Name} esta confundido");
+                    approach.DecreaseHP(approach.MaxHp /8);
+                    approach.StatusChanges.Enqueue($"Se golpeo solo, por la confusion");
                     return false;
                 }
             }

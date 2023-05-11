@@ -124,7 +124,7 @@ public class ApproachBase : ScriptableObject //Objeto enfoque
 }
 
 [System.Serializable]
-public class LearnableMove //Crea la funcion para que un pokemon pueda aprender un movimiento
+public class LearnableMove //Crea la funcion para que un approach pueda aprender un movimiento
 {
     [SerializeField] MoveBase moveBase;
     [SerializeField] int level;

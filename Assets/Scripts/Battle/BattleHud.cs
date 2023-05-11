@@ -18,22 +18,22 @@ public class BattleHud : MonoBehaviour
     [SerializeField] Color parColor;
     [SerializeField] Color frzColor;
 
-    Approach _pokemon;
+    Approach _approach;
 
     Dictionary<ConditionID, Color> statusColors;
-    public void SetData(Approach pokemon) //Asigna el nombre y el nivel para mostrarlo en pantalla
+    public void SetData(Approach approach) //Asigna el nombre y el nivel para mostrarlo en pantalla
     {
-        if (_pokemon != null)
+        if (_approach != null)
         {
-            _pokemon.OnHPChanged -= UpdateHP;
-            _pokemon.OnStatusChanged -= SetStatusText;
+            _approach.OnHPChanged -= UpdateHP;
+            _approach.OnStatusChanged -= SetStatusText;
         }
 
-        _pokemon = pokemon;
+        _approach = approach;
 
-        nameText.text = pokemon.Base.Name;
+        nameText.text = approach.Base.Name;
         SetLevel();
-        hpBar.SetHP((float)pokemon.HP / pokemon.MaxHp);
+        hpBar.SetHP((float)approach.HP / approach.MaxHp);
         SetExp();
 
         statusColors = new Dictionary<ConditionID, Color>()
@@ -46,26 +46,26 @@ public class BattleHud : MonoBehaviour
         };
 
         SetStatusText();
-        _pokemon.OnStatusChanged += SetStatusText;
-        _pokemon.OnHPChanged += UpdateHP;
+        _approach.OnStatusChanged += SetStatusText;
+        _approach.OnHPChanged += UpdateHP;
     }
 
     void SetStatusText()
     {
-        if(_pokemon.Status == null)
+        if(_approach.Status == null)
         {
             statusText.text = "";
         }
         else
         {
-            statusText.text = _pokemon.Status.Id.ToString().ToUpper();
-            statusText.color = statusColors[_pokemon.Status.Id];
+            statusText.text = _approach.Status.Id.ToString().ToUpper();
+            statusText.color = statusColors[_approach.Status.Id];
         }
     }
 
     public void SetLevel()
     {
-        levelText.text = "Lvl " + _pokemon.Level;
+        levelText.text = "Lvl " + _approach.Level;
 
     }
 
@@ -91,10 +91,10 @@ public class BattleHud : MonoBehaviour
 
     float GetNormalizedExp()
     {
-        int currLevelExp = _pokemon.Base.GetExpForLevel(_pokemon.Level);
-        int nextLevelExp = _pokemon.Base.GetExpForLevel(_pokemon.Level + 1);
+        int currLevelExp = _approach.Base.GetExpForLevel(_approach.Level);
+        int nextLevelExp = _approach.Base.GetExpForLevel(_approach.Level + 1);
 
-        float normalizedExp = (float)(_pokemon.Exp - currLevelExp) / (nextLevelExp - currLevelExp);
+        float normalizedExp = (float)(_approach.Exp - currLevelExp) / (nextLevelExp - currLevelExp);
         return Mathf.Clamp01(normalizedExp);
     }
 
@@ -102,24 +102,24 @@ public class BattleHud : MonoBehaviour
 
     public void UpdateHP()
     {
-        if(_pokemon.HpChanged)
+        if(_approach.HpChanged)
         {
-            _pokemon.HpChanged = false;
+            _approach.HpChanged = false;
         }
         StartCoroutine(UpdateHPAsync());
     }
 
     public IEnumerator UpdateHPAsync()
     {
-        yield return hpBar.SetHPSmooth((float)_pokemon.HP / _pokemon.MaxHp);
+        yield return hpBar.SetHPSmooth((float)_approach.HP / _approach.MaxHp);
     }
 
     public void ClearData()
     {
-        if (_pokemon != null)
+        if (_approach != null)
         {
-            _pokemon.OnHPChanged -= UpdateHP;
-            _pokemon.OnStatusChanged -= SetStatusText;
+            _approach.OnHPChanged -= UpdateHP;
+            _approach.OnStatusChanged -= SetStatusText;
         }
     }
 

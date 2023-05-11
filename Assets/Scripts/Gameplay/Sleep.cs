@@ -24,10 +24,12 @@ public class Sleep : MonoBehaviour, IPlayerTriggerable
     public void OnPlayerTrigger(PlayerController player)
     {
         player.Character.Animator.IsMoving = false;
+        GameController.Instance.PauseGame(true);
         StartCoroutine(SleepeEvent(player.transform, player));
     }
-    public IEnumerator SleepeEvent(Transform transform, PlayerController player) // Permite curar los pokemones que tenga el personaje
+    public IEnumerator SleepeEvent(Transform transform, PlayerController player) // Permite curar los approaches que tenga el personaje
     {
+        
         int selectedChoice = 0;
         yield return DialogManager.Instance.ShowDialogText("Te ves cansado, deberías dormir un poco",
             choices: new List<string>() { "Sí", "No" },
@@ -51,24 +53,24 @@ public class Sleep : MonoBehaviour, IPlayerTriggerable
             DayUI.i.ChangeDay();
             yield return new WaitForSeconds(audioClip.length);
             var playerParty = player.GetComponent<ApproachParty>();
-            playerParty.Pokemons.ForEach(p => p.Heal());
+            playerParty.Approaches.ForEach(p => p.Heal());
             playerParty.PartyUpdate();
             ActiveEvents();
 
             yield return DialogManager.Instance.ShowDialogText("Hoy es un nuevo día (Día " + player.Day + ")");
             yield return Fader.i.FadeOut(0.6f);
-            
-            if(PlayerController.i.TotalQuices == 8)
+
+            if (PlayerController.i.TotalQuices == 8)
             {
-                
+
                 StressLevel.i.Finish = true;
                 yield return DialogManager.Instance.ShowDialog(final);
                 AudioManager.i.Volume(false);
                 StressLevel.i.PlayVideo();
                 PlayerController.i.TotalQuices = 0;
             }
-            
-            
+
+
 
         }
         else if (selectedChoice == 1)
@@ -76,8 +78,7 @@ public class Sleep : MonoBehaviour, IPlayerTriggerable
             //No
             yield return DialogManager.Instance.ShowDialogText("Ok, vuelve cuando quieras");
         }
-
-
+        GameController.Instance.StartFreeRoamState();
     }
     public void ActiveEvents()
     {

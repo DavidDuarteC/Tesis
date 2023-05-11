@@ -138,25 +138,9 @@ public class GameController : MonoBehaviour
         state = GameState.FreeRoam;
     }
 
-    //public void StartBattle(BattleTrigger trigger) //Apenas comience la batalla cambia la cama del main con la de la batalla
-    //{
-    //    state = GameState.Battle;
-    //    battleSystem.gameObject.SetActive(true);
-    //    worldCamera.gameObject.SetActive(false);
-    //    thermometerUI.gameObject.SetActive(false);
-    //    dayUI.gameObject.SetActive(false);
+    MonitorController monitor;
 
-    //    var playerParty = playerController.GetComponent<ApproachParty>();
-    //    //var wildPokmeon = CurrentScene.GetComponent<MapArea>().GetRandonWildPokemon(trigger);
-
-    //   // var wilPokemonCopy = new Approach(wildPokmeon.Base, wildPokmeon.Level);
-
-    //    battleSystem.StartBattle(playerParty, wilPokemonCopy, trigger);
-    //}
-
-    TrainerController trainer;
-
-    public void StartTrainerBattle(TrainerController trainer) //Apenas comience la batalla cambia la cama del main con la de la batalla
+    public void StartMonitorBattle(MonitorController monitor) //Apenas comience la batalla cambia la cama del main con la de la batalla
     {
         state = GameState.Battle;
         battleSystem.gameObject.SetActive(true);
@@ -164,25 +148,25 @@ public class GameController : MonoBehaviour
         thermometerUI.gameObject.SetActive(false);
         dayUI.gameObject.SetActive(false);
 
-        this.trainer = trainer;
+        this.monitor = monitor;
         var playerParty = playerController.GetComponent<ApproachParty>();
-        var trainerParty = trainer.GetComponent<ApproachParty>();
+        var monitorParty = monitor.GetComponent<ApproachParty>();
 
-        battleSystem.StartTrainerBattle(playerParty, trainerParty);
+        battleSystem.StartTrainerBattle(playerParty, monitorParty);
     }
 
-    public void OnEnterTrainersView(TrainerController trainer)//Perimite comprobar si entre a la vista de un entrenador
+    public void OnEnterTrainersView(MonitorController monitor)//Perimite comprobar si entre a la vista de un entrenador
     {
         state = GameState.Cutscene;
-        StartCoroutine(trainer.TriggerTrainerBattle(playerController));
+        StartCoroutine(monitor.TriggerTrainerBattle(playerController));
     }
 
     void EndBattle(bool won) //Apenas termine la batalla cambia la camara a la del main
     {
-        if(trainer != null && won == true)
+        if(monitor != null && won == true)
         {
-            trainer.BattleLost();
-            trainer = null;
+            monitor.BattleLost();
+            monitor = null;
         }
 
         partyScreen.SetPartyData();
@@ -213,14 +197,14 @@ public class GameController : MonoBehaviour
             playerController.HandleUpdate();
 
             SemesterEvents();
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                playerController.Character.moveSpeed = 10;
-            }
-            if (Input.GetKeyUp(KeyCode.Space))
-            {
-                playerController.Character.moveSpeed = 6;
-            }
+            //if (Input.GetKeyDown(KeyCode.Space))
+            //{
+            //    playerController.Character.moveSpeed = 10;
+            //}
+            //if (Input.GetKeyUp(KeyCode.Space))
+            //{
+            //    playerController.Character.moveSpeed = 6;
+            //}
             thermometerUI.SetStress();
 
             if (Input.GetKeyDown(KeyCode.Escape)) //Acceder al menu principal
@@ -253,7 +237,7 @@ public class GameController : MonoBehaviour
         {
             Action onSelected = () =>
             {
-                //Info del pokemon
+                //Info del aproach
             };
 
             Action onBack = () =>
@@ -300,7 +284,7 @@ public class GameController : MonoBehaviour
         {
             //Bolsa
             inventoryUI.gameObject.SetActive(true);
-            //partyScreen.SetPartyData(playerController.GetComponent<ApproachParty>().Pokemons); //Funciona
+            //partyScreen.SetPartyData(playerController.GetComponent<ApproachParty>().Approaches); //Funciona
             state = GameState.Bag;
         }
         else if(selectedItem == 1)

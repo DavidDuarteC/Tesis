@@ -46,11 +46,6 @@ public class SavingSystem : MonoBehaviour
         RestoreState(gameState);
     }
 
-    public void Delete(string saveFile)
-    {
-        File.Delete(GetPath(saveFile));
-    }
-
     // Used to capture states of all savable objects in the game
     private void CaptureState(Dictionary<string, object> state)
     {

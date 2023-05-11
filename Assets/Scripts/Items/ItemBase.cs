@@ -19,7 +19,7 @@ public class ItemBase : ScriptableObject
     public float Price => price;
     public bool IsSellable => isSellable;
 
-    public virtual bool Use(Approach pokemon)
+    public virtual bool Use(Approach approach)
     {
         return false;
     }
