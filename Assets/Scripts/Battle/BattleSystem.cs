@@ -148,13 +148,6 @@ public class BattleSystem : MonoBehaviour
         partyScreen.gameObject.SetActive(true);
     }
 
-    void OpenBag()
-    {
-        state = BattleState.Bag;
-        //partyScreen.SetPartyData();
-        inventoryUI.gameObject.SetActive(true);
-    }
-
     void MoveSelection() //Muestra los diferentes movimientos a escoger
     {
         state = BattleState.MoveSelection;
