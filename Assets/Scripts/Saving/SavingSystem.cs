@@ -13,6 +13,18 @@ public class SavingSystem : MonoBehaviour
 
     Dictionary<string, object> gameState = new Dictionary<string, object>();
 
+    public void Save(string saveFile)
+    {
+        CaptureState(gameState);
+        SaveFile(saveFile, gameState);
+    }
+
+    public void Load(string saveFile)
+    {
+        gameState = LoadFile(saveFile);
+        RestoreState(gameState);
+    }
+
     public void CaptureEntityStates(List<SavableEntity> savableEntities)
     {
         foreach (SavableEntity savable in savableEntities)
@@ -31,28 +43,9 @@ public class SavingSystem : MonoBehaviour
         }
     }
 
-    public void Save(string saveFile)
-    {
-        CaptureState(gameState);
-        SaveFile(saveFile, gameState);
-    }
+    
+    
 
-    public void Load(string saveFile)
-    {
-        gameState = LoadFile(saveFile);
-        RestoreState(gameState);
-    }
-
-    // Used to capture states of all savable objects in the game
-    private void CaptureState(Dictionary<string, object> state)
-    {
-        foreach (SavableEntity savable in FindObjectsOfType<SavableEntity>())
-        {
-            state[savable.UniqueId] = savable.CaptureState();
-        }
-    }
-
-    // Used to restore states of all savable objects in the game
     private void RestoreState(Dictionary<string, object> state)
     {
         foreach (SavableEntity savable in FindObjectsOfType<SavableEntity>())
@@ -68,11 +61,18 @@ public class SavingSystem : MonoBehaviour
         if(gameState.ContainsKey(entity.UniqueId))
             entity.RestoreState(gameState[entity.UniqueId]);
     }
+    private void CaptureState(Dictionary<string, object> state)
+    {
+        foreach (SavableEntity savable in FindObjectsOfType<SavableEntity>())
+        {
+            state[savable.UniqueId] = savable.CaptureState();
+        }
+    }
 
     void SaveFile(string saveFile, Dictionary<string, object> state)
     {
         string path = GetPath(saveFile);
-        print($"saving to {path}");
+        Debug.Log($"Guardar en {path}");
 
         using (FileStream fs = File.Open(path, FileMode.Create))
         {
